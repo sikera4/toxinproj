@@ -1,6 +1,7 @@
 @import '../../common.blocks/ui-kit-layout/layout';
 body {
     height: 900px;
+    background: #fff;
 }
 .display-1 {
     @include colorDisplay;
