@@ -1,8 +1,60 @@
-doctype html 
-html
-    head 
-    body 
-        h1 YO My MAN
-        h2 lol kek
-        h3 blah
-        p lol
+- let pageTitle = 'Colors & Type';
+include ../common.blocks/ui-kit-layout/layout.pug
+.content 
+    .content__colors 
+        .color 
+            .display-1
+            .text 
+                h2 Dark Shade 100%
+                .text-light #1F2041
+        .color 
+            .display-2
+            .text 
+                h2 Dark Shade 75%
+                .text-light #1F2041
+        .color 
+            .display-3
+            .text 
+                h2 Dark Shade 50%
+                .text-light #1F2041
+        .color 
+            .display-4
+            .text 
+                h2 Dark Shade 25%
+                .text-light #1F2041
+        .color 
+            .display-5
+            .text 
+                h2 Dark Shade 5%
+                .text-light #1F2041
+        .color 
+            .display-6
+            .text 
+                h2 Purple
+                .text-light #BC9CFF
+        .color 
+            .display-7
+            .text 
+                h2 Green
+                .text-light #6FCF97
+    .content__type
+        .type 
+            .name.h1 H1
+            h1. 
+                This one is the sub-section or
+                widget title
+        .type.two
+            .name.h2 H2
+            h2. 
+                Next one is the item title inside
+                widgets
+        .type.three
+            .name.h3 H3
+            h3. 
+                This is a label or CTA text
+        .type 
+            .name.body Body
+            .text. 
+                This is the body text which is used for most <br />
+                of the design, like paragraphs, lists, etc.
+

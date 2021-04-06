@@ -1,0 +1,52 @@
+@import 'fonts';
+
+@mixin colorDisplay {
+    height: 70px;
+    width: 70px;
+    border-radius: 6px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.75);
+    background: #fff;
+    width: 1440px;
+    margin: 0 auto;
+}
+h1 {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    color: #1F2041;
+}
+h2 {
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 24px;
+    color: #1F2041;
+}
+h3 {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1F2041;
+}
+
+img {
+    margin: 30px 0 0 30px;
+    height: 48px;
+    width: 48px;
+}
+
+
+
