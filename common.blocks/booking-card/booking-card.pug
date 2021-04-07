@@ -4,17 +4,29 @@
     .booking-card__date-pickers
         .booking-card__date-picker-arrival
             h3 Прибытие
-            input(type='date' placeholder='ДД.ММ.ГГГГ')
+            .input-container
+                input(type='text' placeholder='ДД.ММ.ГГГГ').datepicker-here
+                .icon
+                    span.material-icons expand_more
         .booking-card__date-picker-departure
             h3 Выезд
-            input(type='date' placeholder='ДД.ММ.ГГГГ')
+            .input-container
+                input(type='text' placeholder='ДД.ММ.ГГГГ').datepicker-here
+                .icon
+                    span.material-icons expand_more
     .booking-card__guests-num
         h3 Гости
-        select(size='1' )
-            option(disabled selected) Сколько гостей
-            option(value='1') 1 гость
-            option(value='2') 2 гостя
-            option(value="3") 3 гостя
+        .select-container
+            select(size='1').nice-select
+                option(disabled selected) Сколько гостей
+                option(value='1') 1 гость
+                option(value='2') 2 гостя
+                option(value="3") 3 гостя
+            .icon
+                span.material-icons expand_more
     .booking-card__button 
         button 
             h3 подобрать номер 
+            .icon
+                span.material-icons &#xe5c8
+

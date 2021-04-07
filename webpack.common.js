@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 let templates = [];
@@ -21,7 +22,11 @@ files.forEach(file => {
 module.exports = {
     entry:  "./src/index.js",
     plugins: [
-        ...templates
+        ...templates,
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery"
+        })
     ],
     module: {
         rules: [
@@ -42,6 +47,11 @@ module.exports = {
                 generator: {
                     filename: 'fonts/[name][hash][ext]'
                   }
+            },
+            {
+                test: /\.css$/,
+                use: ["style-loader",
+                "css-loader"]
             }
         ]
     },
