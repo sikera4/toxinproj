@@ -1,8 +1,12 @@
 @import '../../common.blocks/ui-kit-layout/layout';
 @import '../../common.blocks/booking-card/booking-card';
+@import '../../common.blocks/registration-card/registration-card';
 body {
     background: #E5E5E5;
 }
 .cards {
     margin: 66px 140px 140px 140px;
+}
+.registration {
+    margin: 40px 0 0 0;
 }

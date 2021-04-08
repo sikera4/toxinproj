@@ -1,0 +1,22 @@
+.registration-card 
+    .registration-card__header 
+        h1 Регистрация аккаунта
+    .registration-card__name-inputs 
+        input(type='text' placeholder='Имя')
+        input(type='text' placeholder='Фамилия')
+        .radio
+            .man
+                input(type='radio' name='sex' value='man' id='man' checked)
+                label(for='man') 
+                    span.choice-name Мужчина
+            .woman
+                input(type='radio' name='sex' value='woman' id='woman')
+                label(for='woman') 
+                    span.choice-name Женщина
+    .registration-card__date-of-birth 
+        h3 дата рождения
+        input(type='text' placeholder='ДД.ММ.ГГГГ')
+    .registration-card__entry-data 
+        h3 данные для входа в сервис
+        input(type='text' placeholder='Email')
+        input(type='text' placeholder='Пароль')

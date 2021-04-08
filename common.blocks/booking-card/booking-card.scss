@@ -45,7 +45,8 @@
             background: none;
             &::placeholder {
                 position:absolute;
-                top: 10.5px;
+                top: 11px;
+                color: rgba(31, 32, 65, 0.75);
             }
         }
         .icon {
@@ -60,7 +61,6 @@
         }
         select {
             margin-top: 5px;
-            margin-bottom: 31px;
             position: static;
             padding-left: 14px;
             padding-top: -1px;
@@ -90,25 +90,25 @@
         }
     }
     &__button {
-        button {
-            width: 320px;
-            height: 44px;
-            background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-            border-color: #BC9CFF;
-            border-radius: 22px;
-            position: relative;
-            h3 {
-                margin-left: 0;
-                color: #FFFFFF;
-                line-height: 10px;
-                letter-spacing: 0.76px;
-            }
-            .icon {
-                @include icon;
-                color: #FFFFFF;
-                left: 275px;
-                top: -1px;
-            }
+        margin-top: 80px;
+        position: relative;
+        width: 320px;
+        height: 44px;
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        border-color: #BC9CFF;
+        border-radius: 22px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h3 {
+            margin-right: 3px;
+            color: #FFFFFF;
+        }
+        .icon {
+            @include icon;
+            color: #FFFFFF;
+            left: 276px;
+            top: 0;
         }
     }
 }
