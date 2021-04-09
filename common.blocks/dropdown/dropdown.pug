@@ -1,0 +1,10 @@
+mixin dropdown(ddData) 
+    h3= ddData.header
+    .select-container
+        select(size='1').nice-select
+            option(disabled selected)= ddData.defOpt
+            option(value='1')= ddData.opt1
+            option(value='2')= ddData.opt2
+            option(value="3")= ddData.opt3
+        .icon
+            span.material-icons expand_more

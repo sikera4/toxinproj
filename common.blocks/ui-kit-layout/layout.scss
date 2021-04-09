@@ -6,6 +6,18 @@
     border-radius: 6px;
 }
 
+@mixin icon {
+    position: absolute;
+    height: 44px;
+    width: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 5px;
+    color: rgba(31, 32, 65, 0.5);
+    cursor: pointer;
+    z-index: 1;
+}
 * {
     box-sizing: border-box;
     margin: 0;
@@ -46,6 +58,11 @@ img {
     height: 48px;
     width: 48px;
 }
-
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
 
 

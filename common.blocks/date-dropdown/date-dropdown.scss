@@ -1,0 +1,38 @@
+.input-container {
+    position: relative;
+    input[type="text"] {
+        font-family: Montserrat;
+        font-size: 14px;
+        line-height: 18px;
+        color: rgba(31, 32, 65, 0.75);
+        margin-top: 5px;
+        width: 150px;
+        height: 44px;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        box-sizing: border-box;
+        border-radius: 4px;
+        padding-left: 14px;
+        position: relative;
+        z-index: 3;
+        background: none;
+        &::placeholder {
+            position:absolute;
+            top: 11px;
+            color: rgba(31, 32, 65, 0.75);
+        }
+    }
+    .icon {
+        @include icon;
+        left: 106px;
+        }
+}
+#filter {
+    input[type="text"] {
+        margin-top: 5.5px;
+        width: 266px;
+        height: 44px;
+    }
+    .icon {
+        left: 222px;
+        }
+}

@@ -1,0 +1,50 @@
+@mixin input-text {
+    padding-left: 14px;
+    height: 44px;
+    width: 320px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px;
+    font-family: Montserrat;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(31, 32, 65, 0.75);
+    &::placeholder {
+        color: rgba(31, 32, 65, 0.25);
+    }
+}
+
+.text-field {
+    position: relative;
+    input[type='text'] {
+        @include input-text;
+        margin-top: 5px;
+        &:hover {
+            border: 1px solid rgba(31, 32, 65, 0.5);
+        }
+        &:focus {
+            border: 1px solid rgba(31, 32, 65, 0.5);
+        }
+    }
+}
+
+.icon {
+    position: absolute;
+    height: 44px;
+    width: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 20px;
+    color: rgba(31, 32, 65, 0.5);
+    cursor: pointer;
+    z-index: 1;
+    left: 222px;
+}
+
+#sub {
+    position: relative;
+    z-index: 2;
+    width: 266px;
+    background: none;
+    padding-left: 13px;
+}

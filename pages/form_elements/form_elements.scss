@@ -1,0 +1,63 @@
+@import '../../common.blocks/ui-kit-layout/layout';
+@import '../../common.blocks/text-field/text-field';
+@import '../../common.blocks/dropdown/dropdown.scss';
+@import '../../common.blocks/date-dropdown/date-dropdown';
+
+body {
+    background: #FFFFFF;
+}
+.elements {
+    padding: 59px 141px 131px 141px;
+    .type {
+        position: absolute;
+        font-size: 12px;
+        line-height: 15px;
+        color: rgba(31, 32, 65, 0.5);
+    }
+    .col1 {
+        width: 320px;
+        .tfdefault {
+            position: relative;
+            .type {
+                top: -3px;
+                left: 264px;
+            }
+        }
+        .tffocus {
+            margin-top: 20px;
+            position: relative;
+                input[type='text'] {
+                    border: 1px solid rgba(31, 32, 65, 0.5);
+                    &::placeholder {
+                        color: rgba(31, 32, 65, 0.75);
+                        position:absolute;
+                        top: 11px;
+                        letter-spacing: -0.18px;
+                }  
+            }
+            .type {
+                text-transform: uppercase;
+                top: 0px;
+                left: 225px;
+                letter-spacing: -0.25px;
+            }
+        }
+        .dropdown  {
+            margin-top: 21px;
+        }
+        .tfmasked {
+            margin-top: 72px;
+        }
+        .datepickers {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 41px;
+        }
+        .filterdatedrop {
+            margin-top: 41px;
+        }
+        .tfsub {
+            margin-top: 41.5px;
+        }
+    }
+}

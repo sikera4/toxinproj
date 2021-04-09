@@ -1,0 +1,7 @@
+mixin textField(tfData)
+    .text-field 
+        h3= tfData.header
+        input(type='text' placeholder=tfData.placeholder id=tfData.modif)
+        if tfData.modif === 'sub'
+            .icon
+                span.material-icons &#xe5c8
