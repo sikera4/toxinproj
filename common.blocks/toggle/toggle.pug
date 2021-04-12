@@ -1,0 +1,9 @@
+mixin toggle(swdt)
+    .toggle-switch
+        label.switch(id='switch1')
+            if (swdt.checked)
+                input(type='checkbox' checked)
+            else 
+                input(type='checkbox')
+            span.round
+        label.spec(for='switch1')= swdt.label

@@ -2,12 +2,17 @@
 @import '../../common.blocks/text-field/text-field';
 @import '../../common.blocks/dropdown/dropdown.scss';
 @import '../../common.blocks/date-dropdown/date-dropdown';
-
+@import '../../common.blocks/checkbox-btns/checkbox-btns';
+@import '../../common.blocks/radio-btns/radio-btns';
+@import '../../common.blocks/toggle/toggle';
+@import '../../common.blocks/like-btn/like-btn';
+@import '../../common.blocks/rating/rating';
 body {
     background: #FFFFFF;
 }
-.elements {
-    padding: 59px 141px 131px 141px;
+.elements1 {
+    display: flex;
+    padding: 58px 141px 131px 141px;
     .type {
         position: absolute;
         font-size: 12px;
@@ -24,7 +29,7 @@ body {
             }
         }
         .tffocus {
-            margin-top: 20px;
+            margin-top: 21px;
             position: relative;
                 input[type='text'] {
                     border: 1px solid rgba(31, 32, 65, 0.5);
@@ -58,6 +63,48 @@ body {
         }
         .tfsub {
             margin-top: 41.5px;
+        }
+    }
+    .col2 {
+        width: 260px;
+        margin-left: 126px;
+        .radiobtns {
+            margin-top: 42.5px;
+            .radio {
+                margin-top: 16px;
+            }
+        }
+        .toggle {
+            margin-top: 37px;
+            letter-spacing: -0.55px;
+            h3 {
+                margin-bottom: 16px;
+            }
+            .toggle-switch {
+                margin-top: 9px;
+            }
+        }
+        .likebtns {
+            margin-top: 41px;
+            h3 {
+                margin-bottom: 16px;
+            }
+            .btns {
+                display: flex;
+                .likebutton {
+                    margin-right: 10px;
+                }
+            }
+        }
+        .ratebtns {
+            margin-top: 40px;
+            .ratingexs {
+                display: flex;
+            }
+            .rating {
+                margin-top: 16px;
+                margin-right: 20px;
+            }
         }
     }
 }

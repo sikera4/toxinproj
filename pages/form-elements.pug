@@ -1,9 +1,14 @@
 - let pageTitle = 'Form Elements';
 include ../common.blocks/ui-kit-layout/layout.pug
-.elements 
-    include ../common.blocks/text-field/text-field.pug 
-    include ../common.blocks/dropdown/dropdown.pug
-    include ../common.blocks/date-dropdown/date-dropdown.pug
+include ../common.blocks/text-field/text-field.pug 
+include ../common.blocks/dropdown/dropdown.pug
+include ../common.blocks/date-dropdown/date-dropdown.pug
+include ../common.blocks/checkbox-btns/checkbox-btns.pug
+include ../common.blocks/radio-btns/radio-btns.pug
+include ../common.blocks/toggle/toggle.pug
+include ../common.blocks/like-btn/like-btn.pug
+include ../common.blocks/rating/rating.pug
+.elements1
     .col1 
         .tfdefault
             span.type DEFAULT
@@ -30,4 +35,27 @@ include ../common.blocks/ui-kit-layout/layout.pug
         .tfsub 
             - const sub = {header:'subscription text field', placeholder: 'Email', modif: 'sub'}
             +textField(sub)
-    
+    .col2 
+        .checkboxbtns
+            h3 checkbox buttons
+            +checkbox
+        .radiobtns
+            h3 radio buttons
+            +radio
+        .toggle
+            h3 toggle
+            - const tgl = {checked: true, label: 'Получать спецпредложения'}
+            +toggle(tgl)
+            - const tgl2 = {label: 'Получать спецпредложения'}
+            +toggle(tgl2)
+        .likebtns 
+            h3 like button
+            .btns 
+                - const likedta = {count: 2, id: 'unfocused'}
+                +likebtn(likedta)
+                - const lkdta = {count: 12, id: 'focused'}
+                +likebtn(lkdta)
+        .ratebtns 
+            h3 rate button
+            .ratingexs 
+                +rating

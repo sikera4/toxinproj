@@ -1,0 +1,8 @@
+mixin likebtn(likedta)
+    .likebutton(id=likedta.id)
+        .heart
+            if (likedta.id == 'focused')
+                span.material-icons favorite
+            else 
+                span.material-icons favorite_border
+        .count= likedta.count

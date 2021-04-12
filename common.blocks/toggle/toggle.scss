@@ -1,0 +1,49 @@
+.toggle-switch {
+    position: relative;
+    .switch {
+        position: relative;
+        width: 40px;
+        height: 20px;
+        display: inline-block;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        border-radius: 10px;
+        input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+            &:checked {
+                border: 1px solid #BC9CFF;
+            }
+            &:checked + .round::before {
+                background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+                transform: translateX(20px);
+            }
+        }
+        .round {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transition: .4s;
+            &::before {
+                position: absolute;
+                content: "";
+                height: 12px;
+                width: 12px;
+                transition: .4s;
+                background: rgba(31, 32, 65, 0.25);
+                border-radius: 50%;
+                top: 2.5px;
+                left: 2.5px;
+            }
+        }
+    }
+    .spec {
+        position: absolute;
+        bottom: 3.5px;
+        left: 50px;
+        letter-spacing: 0.01px;
+    }
+}

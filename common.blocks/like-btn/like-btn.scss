@@ -1,0 +1,40 @@
+.likebutton {
+    display: flex;
+    width: 40px;
+    height: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    padding-top: 0;
+    .heart {
+        position: relative;
+        height: 20px;
+        width: 20px;
+        span {
+            position: absolute;
+            font-size: 10px;
+            line-height: 9px;
+            top: 4px;
+            left: 4px;
+        }
+    }
+    .count {
+        margin-top: -3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+        line-height: 12px;
+    }
+    &:hover {
+        border: 1px solid #BC9CFF;
+        color: #BC9CFF;
+    }
+}
+#unfocused {
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    color: rgba(31, 32, 65, 0.25);
+}
+#focused {
+    border: 1px solid #BC9CFF;
+    color: #BC9CFF;
+}
