@@ -7,6 +7,7 @@
 @import '../../common.blocks/toggle/toggle';
 @import '../../common.blocks/like-btn/like-btn';
 @import '../../common.blocks/rating/rating';
+@import '../../common.blocks/range-slider/range-slider';
 body {
     background: #FFFFFF;
 }
@@ -106,5 +107,9 @@ body {
                 margin-right: 20px;
             }
         }
+    }
+    .col3 {
+        margin-left: 132px;
+        width: 320px;
     }
 }

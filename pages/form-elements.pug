@@ -8,6 +8,7 @@ include ../common.blocks/radio-btns/radio-btns.pug
 include ../common.blocks/toggle/toggle.pug
 include ../common.blocks/like-btn/like-btn.pug
 include ../common.blocks/rating/rating.pug
+include ../common.blocks/range-slider/range-slider.pug
 .elements1
     .col1 
         .tfdefault
@@ -59,3 +60,6 @@ include ../common.blocks/rating/rating.pug
             h3 rate button
             .ratingexs 
                 +rating
+    .col3 
+        .range
+            +rangeslider('range slider')
