@@ -6,8 +6,7 @@
     .output {
         position: absolute;
         top: 0;
-        left: 165px;
-        letter-spacing: 0.47px;
+        left: 164px;
         font-size: 12px;
         line-height: 15px;
         color: rgba(31, 32, 65, 0.5);
@@ -43,6 +42,7 @@
         background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
         border: 2px solid #FFFFFF;
         border-radius: 10px;
+        box-shadow: none;
         &::before {
             display: none;
         }
@@ -53,5 +53,6 @@
     .noUi-connect {
         background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
         border-radius: 3px;
+        border: none;
     }
 }

@@ -1,0 +1,10 @@
+mixin button(type)
+    div(class=type.type)
+        if (type.type === 'long')
+            h3= type.header 
+            .icon
+                span.material-icons &#xe5c8
+        else 
+            h3= type.header 
+        
+        

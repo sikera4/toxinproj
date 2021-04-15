@@ -9,6 +9,9 @@ include ../common.blocks/toggle/toggle.pug
 include ../common.blocks/like-btn/like-btn.pug
 include ../common.blocks/rating/rating.pug
 include ../common.blocks/range-slider/range-slider.pug
+include ../common.blocks/buttons/buttons.pug
+include ../common.blocks/pagination/pagination.pug
+include ../common.blocks/quantity-dropdown/quantity-dropdown.pug
 .elements1
     .col1 
         .tfdefault
@@ -51,7 +54,7 @@ include ../common.blocks/range-slider/range-slider.pug
             +toggle(tgl2)
         .likebtns 
             h3 like button
-            .btns 
+            .lbtns 
                 - const likedta = {count: 2, id: 'unfocused'}
                 +likebtn(likedta)
                 - const lkdta = {count: 12, id: 'focused'}
@@ -63,3 +66,30 @@ include ../common.blocks/range-slider/range-slider.pug
     .col3 
         .range
             +rangeslider('range slider')
+        .buttons 
+            h3 buttons 
+            .btn-filled
+                - const btn1 = {type: 'filled', header: 'click me'};
+                +button(btn1)
+                - const btn2 = {type: 'filled filled_disabled', header: 'click me'};
+                +button(btn2)
+            .btn-empty 
+                - const btn3 = {type: 'empty', header: 'click me'};
+                +button(btn3)
+                - const btn4 = {type: 'empty empty_disabled', header: 'click me'};
+                +button(btn4)
+            .btn-noborder 
+                - const btn5 = {type: 'noborder', header: 'click me'};
+                +button(btn5)
+                - const btn6 = {type: 'noborder noborder_disabled', header: 'click me'};
+                +button(btn6)
+            - const btn7 = {type: 'long', header: 'перейти к оплате'}
+            +button(btn7)
+        .pagination-cont 
+            h3 pagination
+            +pagination
+.elements2 
+    .col1
+        +iqdropdown
+
+            

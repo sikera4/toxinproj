@@ -9,6 +9,8 @@ import '../node_modules/inputmask/dist/jquery.inputmask.js';
 import * as noUiSlider from 'nouislider/distribute/nouislider.js';
 import '../node_modules/nouislider/distribute/nouislider.css';
 import * as wNumb from '../node_modules/wnumb/wNumb.js';
+import '../node_modules/item-quantity-dropdown/lib/item-quantity-dropdown.min.js';
+
 let slider = document.getElementById('rangeslider');
 let sliderOutput = $('.output').eq(0);
 
@@ -20,7 +22,8 @@ noUiSlider.create(slider, {
     'max': 15000
   },
   format: wNumb({
-    decimals: 0
+    decimals: 0,
+    thousand: ' '
   })
 });
 
@@ -34,7 +37,10 @@ $(function() {
     $('select').niceSelect();
 });
 
-$(function(){
+$(function() {
     $('#masked').inputmask("99.99.9999", { "placeholder": "ДД.ММ.ГГГГ" });
 });
 
+$(function() {
+  $('.iqdropdown').iqDropdown();
+});
