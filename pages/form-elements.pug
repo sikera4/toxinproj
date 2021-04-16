@@ -12,6 +12,7 @@ include ../common.blocks/range-slider/range-slider.pug
 include ../common.blocks/buttons/buttons.pug
 include ../common.blocks/pagination/pagination.pug
 include ../common.blocks/quantity-dropdown/quantity-dropdown.pug
+include ../common.blocks/expandable-checkbox-list/expandable-checkbox.pug
 .elements1
     .col1 
         .tfdefault
@@ -90,6 +91,20 @@ include ../common.blocks/quantity-dropdown/quantity-dropdown.pug
             +pagination
 .elements2 
     .col1
-        +iqdropdown
+        .quantity-dropdown 
+            h3 dropdown
+            +iqdropdown('default')
+            span.type DEFAULT
+        .quantity-dropdown-expanded 
+            h3 dropdown 
+            +iqdropdown('expanded')
+            span.type EXPANDED
+        .expandable-checkbox 
+            - const expData = {header: 'expandable checkbox list', type: 'closed'}
+            +expandableCheckbox(expData)
+        .expandable-checkbox-expanded 
+            - const expData2 = {header: 'expandable checkbox list'}
+            +expandableCheckbox(expData2)
+            
 
             

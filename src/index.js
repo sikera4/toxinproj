@@ -1,3 +1,4 @@
+import '../node_modules/item-quantity-dropdown/lib/item-quantity-dropdown.min.css';
 import '../pages/colors_type/colors_type.scss';
 import '../pages/cards/cards.scss';
 import '../pages/form_elements/form_elements.scss'
@@ -41,6 +42,60 @@ $(function() {
     $('#masked').inputmask("99.99.9999", { "placeholder": "ДД.ММ.ГГГГ" });
 });
 
+for (let i = 0; i < $('.expchecklist').length; i++) {
+  $('.expchecklist').eq(i).children('h3').eq(0).on('click', (e) => {
+    let checkboxes = $('.expchecklist').eq(i).children('.checkboxes').eq(0);
+    checkboxes.toggleClass('closed');
+    let icon = $('.expchecklist').eq(i).find('.material-icons').eq(0);
+    if (checkboxes.hasClass('closed')) {
+      icon.text('expand_more');
+    } else {
+      icon.text('expand_less');
+    }
+  });
+}
+
+
 $(function() {
-  $('.iqdropdown').iqDropdown();
+  $('.iqdropdown').iqDropdown({
+    controls: {
+      controlsCls: 'new-controls',
+    },
+    setSelectionText: (itemCount, totalItems) => {
+      let res = [];
+      let entrs = Object.entries(itemCount);
+      for (let i in entrs) {
+        if (entrs[i][1] > 0) {
+          if (entrs[i][1] > 1) {
+            switch (entrs[i][0]) {
+              case "спальня":
+                res.push(`${entrs[i][1]} спальни`);
+                break;
+              case "кровать":
+                res.push(`${entrs[i][1]} кровати`);
+                break;
+              case "ванная комната":
+                res.push(`${entrs[i][1]} ванных комнат`);
+                break;
+            }
+          } else {
+            res.push(`${entrs[i][1]} ${entrs[i][0]}`);
+          }
+        }
+      }
+      let drdcount = $('.counter');
+      for (let c = 0; c < drdcount.length; c++) {
+        if (drdcount.eq(c).text() === '0') {
+          drdcount.eq(c).siblings('.button-decrement').addClass('disabled');
+        } else {
+          drdcount.eq(c).siblings('.button-decrement').removeClass('disabled');
+        }
+      }
+      if (res.length > 1) {
+        return res.slice(0, 2).join(', ') + '...';
+      } else {
+        return res;
+      }
+    },
+  });
 });

@@ -65,3 +65,23 @@
         }
     }
 }
+.expchecklist {
+    position: relative;
+    .icon {
+        @include icon;
+        top: -15px;
+    }
+    h3 {
+        cursor: pointer;
+    }
+    .closed {
+        display: none;
+    }
+    @for $i from 2 through 4 {
+        .box-#{$i} {margin-top: 13px;}
+    }
+    @for $i from 5 through 6 {
+        .box-#{$i} {margin-top: 12px;}
+    }
+    
+}
