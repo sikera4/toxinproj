@@ -126,3 +126,13 @@
         color: #1F2041;
     }
 }
+.guests {
+    .iqdropdown {
+        width: 320px;
+        .icon {
+            @include icon;
+            top:0;
+            left: 276px;
+        }
+    }
+}

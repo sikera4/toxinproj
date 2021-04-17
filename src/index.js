@@ -1,4 +1,5 @@
 import '../node_modules/item-quantity-dropdown/lib/item-quantity-dropdown.min.css';
+import '../node_modules/item-quantity-dropdown/lib/item-quantity-dropdown.min.js';
 import '../pages/colors_type/colors_type.scss';
 import '../pages/cards/cards.scss';
 import '../pages/form_elements/form_elements.scss'
@@ -10,7 +11,8 @@ import '../node_modules/inputmask/dist/jquery.inputmask.js';
 import * as noUiSlider from 'nouislider/distribute/nouislider.js';
 import '../node_modules/nouislider/distribute/nouislider.css';
 import * as wNumb from '../node_modules/wnumb/wNumb.js';
-import '../node_modules/item-quantity-dropdown/lib/item-quantity-dropdown.min.js';
+
+
 
 let slider = document.getElementById('rangeslider');
 let sliderOutput = $('.output').eq(0);
@@ -57,7 +59,7 @@ for (let i = 0; i < $('.expchecklist').length; i++) {
 
 
 $(function() {
-  $('.iqdropdown').iqDropdown({
+  $('.col1 .iqdropdown').iqDropdown({
     controls: {
       controlsCls: 'new-controls',
     },
@@ -77,9 +79,20 @@ $(function() {
               case "ванная комната":
                 res.push(`${entrs[i][1]} ванных комнат`);
                 break;
+              case ("взрослые" || "дети" || "младенцы"):
+                if (totalItems < 5) {
+                  res.push(`${totalItems} гостя`);
+                } else {
+                  res.push(`${totalItems} гостей`);
+                }
+                break;
             }
           } else {
-            res.push(`${entrs[i][1]} ${entrs[i][0]}`);
+            if (entrs[i][0] === ("взрослые" || "дети" || "младенцы")) {
+              res.push(`${totalItems} гость`);
+            } else {
+              res.push(`${entrs[i][1]} ${entrs[i][0]}`);
+            }
           }
         }
       }
@@ -96,6 +109,35 @@ $(function() {
       } else {
         return res;
       }
+    },
+  });
+});
+
+$(function() {
+  $('.col2 .iqdropdown').iqDropdown({
+    controls: {
+      controlsCls: 'new-controls',
+    },
+    setSelectionText: (itemCount, totalItems) => {
+      let res = [];
+      if (totalItems === 0) {
+        res.push(`Сколько гостей`);
+      } else if (totalItems === 1) {
+        res.push(`1 гость`);
+      } else if (totalItems > 1 && totalItems < 5) {
+        res.push(`${totalItems} гостя`);
+      } else if (totalItems >= 5) {
+        res.push(`${totalItems} гостей`);
+      }
+      let drdcount = $('.counter');
+      for (let c = 0; c < drdcount.length; c++) {
+        if (drdcount.eq(c).text() === '0') {
+          drdcount.eq(c).siblings('.button-decrement').addClass('disabled');
+        } else {
+          drdcount.eq(c).siblings('.button-decrement').removeClass('disabled');
+        }
+      }
+      return res;
     },
   });
 });

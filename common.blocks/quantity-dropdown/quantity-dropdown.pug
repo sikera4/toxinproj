@@ -29,5 +29,19 @@ mixin iqdropdown(type)
                 .iqdropdown-menu-option(data-id='ванная комната' data-maxcount="4")
                     div 
                         h3.iqdropdown-item ванные комнаты
-
+    else if (type === 'guests')
+        .iqdropdown
+            .icon
+                span.material-icons expand_more
+            p.iqdropdown-selection
+            .iqdropdown-menu
+                .iqdropdown-menu-option(data-id='взрослые' data-maxcount="4" data-defaultcount="2")
+                    div 
+                        h3.iqdropdown-item взрослые
+                .iqdropdown-menu-option(data-id='дети' data-maxcount="4" data-defaultcount="2")
+                    div 
+                        h3.iqdropdown-item дети
+                .iqdropdown-menu-option(data-id='младенцы' data-maxcount="4")
+                    div 
+                        h3.iqdropdown-item младенцы
 
