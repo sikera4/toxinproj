@@ -1,0 +1,20 @@
+mixin richCheckbox
+    .rich-check
+        .checkboxes
+            .inputs
+                .wide-corridor
+                    input(type='checkbox' id='corrid').corrid
+                    span.tick
+                    label(for='corrid') 
+                        .text Широкий коридор
+                    .info. 
+                        Ширина коридоров в номере <br> 
+                        не менее 91 см.
+                .aid-for-disabled
+                    input(type='checkbox' id='disaid').disaid
+                    span.tick
+                    label(for='disaid') 
+                        .text Помощник для инвалидов
+                    .info. 
+                        На 1 этаже вас встретит специалист
+                        <br> и проводит до номера.

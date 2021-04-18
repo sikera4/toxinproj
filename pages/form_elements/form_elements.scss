@@ -11,8 +11,9 @@
 @import '../../common.blocks/buttons/buttons';
 @import '../../common.blocks/pagination/pagination';
 @import '../../common.blocks/quantity-dropdown/quantity-dropdown';
-
-
+@import '../../common.blocks/bullet-list/bullet-list';
+@import '../../common.blocks/facility/facility';
+@import '../../common.blocks/commentary/commentary';
 body {
     background: #FFFFFF;
 }
@@ -159,7 +160,7 @@ body {
 }
 .elements2 {
     display: flex;
-    padding: 0px 141px 131px 140px;
+    padding: 0px 141px 0px 140px;
     .col1 {
         .type {
             position: absolute;
@@ -196,9 +197,45 @@ body {
     }
     .col2 {
         width: 320px;
-        margin-left: 181px;
+        margin-left: 180px;
+        .dropdown-guests-expanded {
+            h3 {
+                margin-bottom: 5px;
+            }
+            margin-left: 1px;
+        }
+        .rich-checkbox-buttons {
+            margin-left: 1px;
+            margin-top: 256px;
+            .rich-check {
+                margin-top: -0.5px;
+            }
+        }
+    }
+    .col3 {
+        width: 320px;
+        margin-left: 73px;
         h3 {
             margin-bottom: 5px;
         }
+        .bullet-list {
+            margin-top: 256px;
+            .bulletlist {
+                margin-top: 14px;
+            }
+        }
+    }
+}
+.elements3 {
+    display: flex;
+    padding: 102px 142px 131px 140px;
+    .facilities {
+        .fac2 {
+            margin-top: 20px;
+        }
+    }
+    .commentary {
+        margin-left: 167px;
+        margin-top: 10px;
     }
 }

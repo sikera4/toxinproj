@@ -1,47 +1,55 @@
 mixin iqdropdown(type)
-    if (type === 'default')
-        .iqdropdown 
-            .icon
-                span.material-icons expand_more
-            p.iqdropdown-selection
-            .iqdropdown-menu
-                .iqdropdown-menu-option(data-id='спальня' data-maxcount="4" data-defaultcount="2")
-                    div 
-                        h3.iqdropdown-item спальни
-                .iqdropdown-menu-option(data-id='кровать' data-maxcount="4" data-defaultcount="2")
-                    div 
-                        h3.iqdropdown-item кровати
-                .iqdropdown-menu-option(data-id='ванная комната' data-maxcount="4")
-                    div 
-                        h3.iqdropdown-item ванные комнаты
-    else if (type === 'expanded')
-        .iqdropdown.menu-open
-            .icon
-                span.material-icons expand_more
-            p.iqdropdown-selection
-            .iqdropdown-menu
-                .iqdropdown-menu-option(data-id='спальня' data-maxcount="4" data-defaultcount="2")
-                    div 
-                        h3.iqdropdown-item спальни
-                .iqdropdown-menu-option(data-id='кровать' data-maxcount="4" data-defaultcount="2")
-                    div 
-                        h3.iqdropdown-item кровати
-                .iqdropdown-menu-option(data-id='ванная комната' data-maxcount="4")
-                    div 
-                        h3.iqdropdown-item ванные комнаты
-    else if (type === 'guests')
-        .iqdropdown
-            .icon
-                span.material-icons expand_more
-            p.iqdropdown-selection
-            .iqdropdown-menu
-                .iqdropdown-menu-option(data-id='взрослые' data-maxcount="4" data-defaultcount="2")
-                    div 
-                        h3.iqdropdown-item взрослые
-                .iqdropdown-menu-option(data-id='дети' data-maxcount="4" data-defaultcount="2")
-                    div 
-                        h3.iqdropdown-item дети
-                .iqdropdown-menu-option(data-id='младенцы' data-maxcount="4")
-                    div 
-                        h3.iqdropdown-item младенцы
+    if (type.type === 'default')
+        .room-type
+            .iqdropdown 
+                .icon
+                    span.material-icons expand_more
+                p.iqdropdown-selection
+                .iqdropdown-menu
+                    .iqdropdown-menu-option(data-id='спальня' data-maxcount="4" data-defaultcount=type.def1)
+                        div 
+                            h3.iqdropdown-item спальни
+                    .iqdropdown-menu-option(data-id='кровать' data-maxcount="4" data-defaultcount=type.def2)
+                        div 
+                            h3.iqdropdown-item кровати
+                    .iqdropdown-menu-option(data-id='ванная комната' data-maxcount="4" data-defaultcount=type.def3)
+                        div 
+                            h3.iqdropdown-item ванные комнаты
+    else if (type.type === 'expanded')
+        .room-type
+            .iqdropdown.menu-open
+                .icon
+                    span.material-icons expand_more
+                p.iqdropdown-selection
+                .iqdropdown-menu
+                    .iqdropdown-menu-option(data-id='спальня' data-maxcount="4" data-defaultcount=type.def1)
+                        div 
+                            h3.iqdropdown-item спальни
+                    .iqdropdown-menu-option(data-id='кровать' data-maxcount="4" data-defaultcount=type.def2)
+                        div 
+                            h3.iqdropdown-item кровати
+                    .iqdropdown-menu-option(data-id='ванная комната' data-maxcount="4" data-defaultcount=type.def3)
+                        div 
+                            h3.iqdropdown-item ванные комнаты
+    else if (type.type === 'guests')
+        .guests-info
+            .iqdropdown.menu-open
+                .icon
+                    span.material-icons expand_more
+                p.iqdropdown-selection
+                .iqdropdown-menu
+                    .iqdropdown-menu-option(data-id='взрослые' data-maxcount="4" data-defaultcount=type.def1)
+                        div 
+                            h3.iqdropdown-item взрослые
+                    .iqdropdown-menu-option(data-id='дети' data-maxcount="4" data-defaultcount=type.def2)
+                        div 
+                            h3.iqdropdown-item дети
+                    .iqdropdown-menu-option(data-id='младенцы' data-maxcount="4" data-defaultcount=type.def3)
+                        div 
+                            h3.iqdropdown-item младенцы
+                    .buttons 
+                        - const btndt = {type: 'noborder clear not-visible', header: 'очистить'}
+                        +button(btndt)
+                        - const btndt2 = {type: 'noborder', header: 'применить'}
+                        +button(btndt2)
 

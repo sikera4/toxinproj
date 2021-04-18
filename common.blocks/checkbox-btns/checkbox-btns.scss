@@ -77,11 +77,28 @@
     .closed {
         display: none;
     }
-    @for $i from 2 through 4 {
-        .box-#{$i} {margin-top: 13px;}
+    .box-2 {
+        margin-top: 14px;
     }
-    @for $i from 5 through 6 {
-        .box-#{$i} {margin-top: 12px;}
+    @for $i from 3 through 6 {
+        .box-#{$i} {margin-top: 12.5px;}
     }
-    
+}
+.rich-check {
+    .text {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 18px;
+        color: rgba(31, 32, 65, 0.75);
+    }
+    .info {
+        color: rgba(31, 32, 65, 0.5);
+        font-size: 12px;
+        line-height: 14px;
+        padding-left: 30px;
+        margin-top: 5.5px;
+    }
+    .aid-for-disabled {
+        margin-top: 12px;
+    }
 }

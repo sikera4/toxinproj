@@ -5,6 +5,8 @@
     border: 1px solid rgba(31, 32, 65, 0.25);
     position: relative;
     padding-left: 14px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
     .icon {
         @include icon;
         top:0;
@@ -126,13 +128,41 @@
         color: #1F2041;
     }
 }
-.guests {
+.guests-info {
     .iqdropdown {
+        height: 45px;
         width: 320px;
+        border-bottom-left-radius: 2px;
+        border-bottom-right-radius: 2px;
         .icon {
             @include icon;
             top:0;
             left: 276px;
         }
+        .iqdropdown-menu {
+            top: 43px;
+        }
+        .new-controls {
+            margin-top: 2.5px;
+        }
+        .buttons {
+            margin-top: 20px;
+            margin-bottom: 8px;
+            display: flex;
+            padding-left: 14px;
+            padding-right: 6px;
+            justify-content: space-between;
+            h3 {
+                color: #BC9CFF;
+                cursor: pointer;
+            }
+            .not-visible {
+                opacity: 0;
+                h3 {
+                    cursor: default;
+                }
+            }
+        }
     }
+    
 }

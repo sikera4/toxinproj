@@ -13,6 +13,10 @@ include ../common.blocks/buttons/buttons.pug
 include ../common.blocks/pagination/pagination.pug
 include ../common.blocks/quantity-dropdown/quantity-dropdown.pug
 include ../common.blocks/expandable-checkbox-list/expandable-checkbox.pug
+include ../common.blocks/rich-checkbox/rich-checkbox.pug
+include ../common.blocks/bullet-list/bullet-list.pug
+include ../common.blocks/facility/facility.pug
+include ../common.blocks/commentary/commentary.pug
 .elements1
     .col1 
         .tfdefault
@@ -93,11 +97,11 @@ include ../common.blocks/expandable-checkbox-list/expandable-checkbox.pug
     .col1
         .quantity-dropdown 
             h3 dropdown
-            +iqdropdown('default')
+            +iqdropdown({type: 'default', def1: '2', def2: '2'})
             span.type DEFAULT
         .quantity-dropdown-expanded 
             h3 dropdown 
-            +iqdropdown('expanded')
+            +iqdropdown({type: 'expanded', def1: '2', def2: '2'})
             span.type EXPANDED
         .expandable-checkbox 
             - const expData = {header: 'expandable checkbox list', type: 'closed'}
@@ -107,11 +111,29 @@ include ../common.blocks/expandable-checkbox-list/expandable-checkbox.pug
             +expandableCheckbox(expData2)
     .col2 
         .dropdown-guests-expanded 
-            .guests
-                h3 dropdown 
-                +iqdropdown('guests')
-
-        
+            h3 dropdown 
+            +iqdropdown({type: 'guests', def1: '0', def2: '0'})
+        .rich-checkbox-buttons 
+            h3 rich checkbox buttons
+            +richCheckbox
+    .col3 
+        .dropdown-guests-expanded2 
+            h3 dropdown 
+            +iqdropdown({type: 'guests', def1: '2', def2: '1'})
+        .bullet-list 
+            h3 bullet list
+            +bulletList
+.elements3 
+    .facilities 
+        .fac1
+            - const facdt = {icon: 'sentiment_very_satisfied', name: 'Комфорт', description: 'Шумопоглощающие стены'}
+            +facility(facdt)
+        .fac2 
+            - const facdt2 = {icon: 'location_city', name: 'Удобство', description: 'Окно в каждой из спален'}
+            +facility(facdt2)
+    .typicalcomment 
+        - const cmtdta = {name: 'Мурад Сарафанов', when: '5 дней назад', liked: 'focused', likesnum: '12', text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'}
+        +commentary(cmtdta)
             
 
             

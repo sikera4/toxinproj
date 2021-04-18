@@ -1,0 +1,12 @@
+mixin commentary(data)
+    .commentary 
+        .person 
+            .person__img
+            - let lkdt = {id: data.liked, count: data.likesnum}
+            +likebtn(lkdt)
+        .commentary__body 
+            .person-name 
+                .name=data.name
+                .when=data.when 
+            .commenttext= data.text
+

@@ -59,7 +59,7 @@ for (let i = 0; i < $('.expchecklist').length; i++) {
 
 
 $(function() {
-  $('.col1 .iqdropdown').iqDropdown({
+  $('.room-type .iqdropdown').iqDropdown({
     controls: {
       controlsCls: 'new-controls',
     },
@@ -114,12 +114,16 @@ $(function() {
 });
 
 $(function() {
-  $('.col2 .iqdropdown').iqDropdown({
+  $('.guests-info .iqdropdown').iqDropdown({
     controls: {
       controlsCls: 'new-controls',
     },
     setSelectionText: (itemCount, totalItems) => {
       let res = [];
+      let clearbl = $('.guests-info .clear').eq(1);
+      clearbl.on('click', (e) => {
+        return totalItems = 0;
+      })
       if (totalItems === 0) {
         res.push(`Сколько гостей`);
       } else if (totalItems === 1) {
@@ -128,6 +132,13 @@ $(function() {
         res.push(`${totalItems} гостя`);
       } else if (totalItems >= 5) {
         res.push(`${totalItems} гостей`);
+      }
+      if (totalItems > 0) { 
+        clearbl.removeClass('not-visible');
+      } else {
+        if (!clearbl.hasClass('not-visible')) {
+          clearbl.addClass('not-visible');
+        }
       }
       let drdcount = $('.counter');
       for (let c = 0; c < drdcount.length; c++) {
