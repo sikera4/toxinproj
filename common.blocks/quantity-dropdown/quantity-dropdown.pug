@@ -33,7 +33,7 @@ mixin iqdropdown(type)
                             h3.iqdropdown-item ванные комнаты
     else if (type.type === 'guests')
         .guests-info
-            .iqdropdown.menu-open
+            .iqdropdown(class=type.class)
                 .icon
                     span.material-icons expand_more
                 p.iqdropdown-selection

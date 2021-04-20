@@ -12,29 +12,46 @@ import * as noUiSlider from 'nouislider/distribute/nouislider.js';
 import '../node_modules/nouislider/distribute/nouislider.css';
 import * as wNumb from '../node_modules/wnumb/wNumb.js';
 
-
-
-let slider = document.getElementById('rangeslider');
-let sliderOutput = $('.output').eq(0);
-
-noUiSlider.create(slider, {
-  start: [5000, 10000],
-  connect: true,
-  range: {
-    'min': 0,
-    'max': 15000
-  },
-  format: wNumb({
-    decimals: 0,
-    thousand: ' '
-  })
+$(function() {
+  $('.guests-info .iqdropdown').iqDropdown({
+    controls: {
+      controlsCls: 'new-controls',
+    },
+    setSelectionText: (itemCount, totalItems) => {
+      console.log('lol');
+      let res = [];
+      let clearbl = $('.guests-info .clear').eq(1);
+      clearbl.on('click', (e) => {
+        return totalItems = 0;
+      })
+      if (totalItems === 0) {
+        res.push(`Сколько гостей`);
+      } else if (totalItems === 1) {
+        res.push(`1 гость`);
+      } else if (totalItems > 1 && totalItems < 5) {
+        res.push(`${totalItems} гостя`);
+      } else if (totalItems >= 5) {
+        res.push(`${totalItems} гостей`);
+      }
+      if (totalItems > 0) { 
+        clearbl.removeClass('not-visible');
+      } else {
+        if (!clearbl.hasClass('not-visible')) {
+          clearbl.addClass('not-visible');
+        }
+      }
+      let drdcount = $('.counter');
+      for (let c = 0; c < drdcount.length; c++) {
+        if (drdcount.eq(c).text() === '0') {
+          drdcount.eq(c).siblings('.button-decrement').addClass('disabled');
+        } else {
+          drdcount.eq(c).siblings('.button-decrement').removeClass('disabled');
+        }
+      }
+      return res;
+    },
+  });
 });
-
-sliderOutput.text(`5000₽ - 10000₽`);
-
-slider.noUiSlider.on('update', function(values) {
-  sliderOutput.text(`${values[0]}₽ - ${values[1]}₽`);
-})
 
 $(function() {
     $('select').niceSelect();
@@ -113,42 +130,24 @@ $(function() {
   });
 });
 
-$(function() {
-  $('.guests-info .iqdropdown').iqDropdown({
-    controls: {
-      controlsCls: 'new-controls',
-    },
-    setSelectionText: (itemCount, totalItems) => {
-      let res = [];
-      let clearbl = $('.guests-info .clear').eq(1);
-      clearbl.on('click', (e) => {
-        return totalItems = 0;
-      })
-      if (totalItems === 0) {
-        res.push(`Сколько гостей`);
-      } else if (totalItems === 1) {
-        res.push(`1 гость`);
-      } else if (totalItems > 1 && totalItems < 5) {
-        res.push(`${totalItems} гостя`);
-      } else if (totalItems >= 5) {
-        res.push(`${totalItems} гостей`);
-      }
-      if (totalItems > 0) { 
-        clearbl.removeClass('not-visible');
-      } else {
-        if (!clearbl.hasClass('not-visible')) {
-          clearbl.addClass('not-visible');
-        }
-      }
-      let drdcount = $('.counter');
-      for (let c = 0; c < drdcount.length; c++) {
-        if (drdcount.eq(c).text() === '0') {
-          drdcount.eq(c).siblings('.button-decrement').addClass('disabled');
-        } else {
-          drdcount.eq(c).siblings('.button-decrement').removeClass('disabled');
-        }
-      }
-      return res;
-    },
-  });
+let slider = document.getElementById('rangeslider');
+let sliderOutput = $('.output').eq(0);
+
+noUiSlider.create(slider, {
+  start: [5000, 10000],
+  connect: true,
+  range: {
+    'min': 0,
+    'max': 15000
+  },
+  format: wNumb({
+    decimals: 0,
+    thousand: ' '
+  })
 });
+
+sliderOutput.text(`5000₽ - 10000₽`);
+
+slider.noUiSlider.on('update', function(values) {
+  sliderOutput.text(`${values[0]}₽ - ${values[1]}₽`);
+})

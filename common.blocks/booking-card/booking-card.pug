@@ -1,31 +1,17 @@
+include ../date-dropdown/date-dropdown.pug
+include ../quantity-dropdown/quantity-dropdown.pug 
+include ../buttons/buttons.pug
 .booking-card 
     .booking-card__header 
         h1 Найдём номера под ваши пожелания
     .booking-card__date-pickers
         .booking-card__date-picker-arrival
-            h3 Прибытие
-            .input-container
-                input(type='text' placeholder='ДД.ММ.ГГГГ').datepicker-here
-                .icon
-                    span.material-icons expand_more
+            +dateDropdown({header: 'прибытие', placeholder: 'ДД.ММ.ГГГГ'})
         .booking-card__date-picker-departure
-            h3 Выезд
-            .input-container
-                input(type='text' placeholder='ДД.ММ.ГГГГ').datepicker-here
-                .icon
-                    span.material-icons expand_more
+            +dateDropdown({header: 'выезд', placeholder: 'ДД.ММ.ГГГГ'})
     .booking-card__guests-num
         h3 Гости
-        .select-container
-            select(size='1').nice-select
-                option(disabled selected) Сколько гостей
-                option(value='1') 1 гость
-                option(value='2') 2 гостя
-                option(value="3") 3 гостя
-            .icon
-                span.material-icons expand_more
+        +iqdropdown({type:'guests',def1: '0', def2: '0'})
     .booking-card__button 
-        h3 подобрать номер 
-        .icon
-            span.material-icons &#xe5c8
+        +button({type: 'long', header: 'подобрать номер'})
 
