@@ -21,17 +21,20 @@ include ../common.blocks/commentary/commentary.pug
     .col1 
         .tfdefault
             span.type DEFAULT
-            - const c = {header: 'text field', placeholder: 'Email'} 
+            h3 text field
+            - const c = {placeholder: 'Email'} 
             +textField(c)
         .tffocus 
             span.type Hover / Focus
-            - const d = {header: 'text field', placeholder: 'This is pretty awesome'} 
+            h3 text field
+            - const d = {placeholder: 'This is pretty awesome'} 
             +textField(d)
         .dropdown 
             - const dd = {header: 'dropdown', defOpt: 'Сколько гостей', opt1: '1 гость', opt2: '2 гостя', opt3: '3 гостя'}
             +dropdown(dd)
         .tfmasked 
-            - const masked = {header: 'masked text field', placeholder: 'ДД.ММ.ГГГГ', modif: 'masked'}
+            h3 masked text field
+            - const masked = {placeholder: 'ДД.ММ.ГГГГ', modif: 'masked'}
             +textField(masked)
         .datepickers 
             - const dtpckr1 = {header: 'date dropdown', placeholder: 'ДД.ММ.ГГГГ'}
@@ -42,7 +45,8 @@ include ../common.blocks/commentary/commentary.pug
             - const dt = {header: 'filter date dropdown', placeholder: '19 авг - 23 авг', modif: 'filter'}
             +dateDropdown(dt)
         .tfsub 
-            - const sub = {header:'subscription text field', placeholder: 'Email', modif: 'sub'}
+            h3 subscription text field
+            - const sub = { placeholder: 'Email', modif: 'text-field_subscription'}
             +textField(sub)
     .col2 
         .checkboxbtns
@@ -53,9 +57,9 @@ include ../common.blocks/commentary/commentary.pug
             +radio
         .toggle
             h3 toggle
-            - const tgl = {checked: true, label: 'Получать спецпредложения'}
+            - const tgl = {checked: true, label: 'Получать спецпредложения', id: 'sw1'}
             +toggle(tgl)
-            - const tgl2 = {label: 'Получать спецпредложения'}
+            - const tgl2 = {label: 'Получать спецпредложения', id: 'sw2'}
             +toggle(tgl2)
         .likebtns 
             h3 like button
@@ -74,21 +78,21 @@ include ../common.blocks/commentary/commentary.pug
         .buttons 
             h3 buttons 
             .btn-filled
-                - const btn1 = {type: 'filled', header: 'click me'};
+                - const btn1 = {type: 'button_filled', header: 'click me'};
                 +button(btn1)
-                - const btn2 = {type: 'filled filled_disabled', header: 'click me'};
+                - const btn2 = {type: 'button_filled button_filled-disabled', header: 'click me'};
                 +button(btn2)
             .btn-empty 
-                - const btn3 = {type: 'empty', header: 'click me'};
+                - const btn3 = {type: 'button_empty', header: 'click me'};
                 +button(btn3)
-                - const btn4 = {type: 'empty empty_disabled', header: 'click me'};
+                - const btn4 = {type: 'button_empty button_empty-disabled', header: 'click me'};
                 +button(btn4)
             .btn-noborder 
-                - const btn5 = {type: 'noborder', header: 'click me'};
+                - const btn5 = {type: 'button_noborder', header: 'click me'};
                 +button(btn5)
-                - const btn6 = {type: 'noborder noborder_disabled', header: 'click me'};
+                - const btn6 = {type: 'button_noborder button_noborder-disabled', header: 'click me'};
                 +button(btn6)
-            - const btn7 = {type: 'long', header: 'перейти к оплате'}
+            - const btn7 = {type: 'button_long', header: 'перейти к оплате'}
             +button(btn7)
         .pagination-cont 
             h3 pagination

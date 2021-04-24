@@ -30,12 +30,18 @@ body {
         width: 320px;
         .tfdefault {
             position: relative;
+            h3 {
+                margin-bottom: 0.3125rem;
+            }
             .type {
                 top: -3px;
                 left: 264px;
             }
         }
         .tffocus {
+            h3 {
+                margin-bottom: 0.3125rem;
+            }
             margin-top: 21px;
             position: relative;
                 input[type='text'] {
@@ -58,7 +64,10 @@ body {
             margin-top: 21px;
         }
         .tfmasked {
-            margin-top: 72px;
+            h3 {
+                margin-bottom: 0.3125rem;
+            }
+            margin-top: 1.4375rem;
         }
         .datepickers {
             display: flex;
@@ -69,6 +78,9 @@ body {
             margin-top: 41px;
         }
         .tfsub {
+            h3 {
+                margin-bottom: 0.3125rem;
+            }
             margin-top: 41.5px;
         }
     }
@@ -121,11 +133,11 @@ body {
             margin-top: 44px;
             .btn-filled {
                 display: flex;
-                .filled {
+                .button_filled {
                     margin-top: 16px;
                     margin-left: 0.1px;
                 }
-                .filled_disabled {
+                .button_filled-disabled {
                     margin-left: 19px;
                 }
             }
@@ -133,7 +145,7 @@ body {
                 display: flex;
                 margin-top: 30px;
                 margin-left: 0.5px;
-                .empty_disabled {
+                .button_empty-disabled {
                     margin-left: 20px;
                 }
             }
@@ -141,11 +153,11 @@ body {
                 display: flex;
                 margin-top: 31px;
                 margin-left: 2px;
-                .noborder_disabled {
+                .button_noborder-disabled {
                     margin-left: 20px;
                 }
             }
-            .long {
+            .button_long {
                 margin-top: 30px;
             }
         }

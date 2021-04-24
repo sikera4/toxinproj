@@ -1,6 +1,6 @@
 mixin button(type)
-    div(class=type.type)
-        if (type.type === 'long')
+    .button(class=type.type)
+        if (type.type === 'button_long')
             h3= type.header 
             .icon
                 span.material-icons &#xe5c8

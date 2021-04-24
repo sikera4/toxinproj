@@ -13,14 +13,19 @@ files.forEach(file => {
         templates.push(
             new HtmlWebpackPlugin({
                 template: dir + '/' + filename + '.pug',
-                filename: filename + '.html'
+                filename: filename + '.html',
+                chunks: [filename]
             })
         )
     };
 });
 
 module.exports = {
-    entry:  "./src/index.js",
+    entry:  {
+        'colors-type': './js/colors-type.js',
+        'form-elements': './js/form-elements.js',
+        'cards': './js/cards.js'
+    },
     plugins: [
         ...templates,
         new webpack.ProvidePlugin({

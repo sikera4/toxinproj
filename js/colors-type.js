@@ -1,0 +1,1 @@
+import '../pages/colors_type/colors_type.scss';

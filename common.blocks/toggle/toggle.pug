@@ -1,9 +1,9 @@
 mixin toggle(swdt)
     .toggle-switch
-        label.switch(id='switch1')
+        label.toggle-switch__label(id=swdt.id)
             if (swdt.checked)
                 input(type='checkbox' checked)
             else 
                 input(type='checkbox')
-            span.round
-        label.spec(for='switch1')= swdt.label
+            span.toggle-switch__styling
+        label.toggle-switch__caption(for=swdt.id)= swdt.label

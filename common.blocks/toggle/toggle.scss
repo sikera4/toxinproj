@@ -1,6 +1,6 @@
 .toggle-switch {
     position: relative;
-    .switch {
+    &__label {
         position: relative;
         width: 40px;
         height: 20px;
@@ -14,33 +14,33 @@
             &:checked {
                 border: 1px solid #BC9CFF;
             }
-            &:checked + .round::before {
+            &:checked + .toggle-switch__styling::before {
                 background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
                 transform: translateX(20px);
             }
         }
-        .round {
+    }
+    &__styling {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: .4s;
+        &::before {
             position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            content: "";
+            height: 12px;
+            width: 12px;
             transition: .4s;
-            &::before {
-                position: absolute;
-                content: "";
-                height: 12px;
-                width: 12px;
-                transition: .4s;
-                background: rgba(31, 32, 65, 0.25);
-                border-radius: 50%;
-                top: 2.5px;
-                left: 2.5px;
-            }
+            background: rgba(31, 32, 65, 0.25);
+            border-radius: 50%;
+            top: 2.5px;
+            left: 2.5px;
         }
     }
-    .spec {
+    &__caption {
         position: absolute;
         bottom: 3.5px;
         left: 50px;

@@ -1,16 +1,15 @@
 import '../node_modules/item-quantity-dropdown/lib/item-quantity-dropdown.min.css';
-import '../node_modules/item-quantity-dropdown/lib/item-quantity-dropdown.min.js';
-import '../pages/colors_type/colors_type.scss';
+import 'item-quantity-dropdown/lib/item-quantity-dropdown.min';
 import '../pages/cards/cards.scss';
-import '../pages/form_elements/form_elements.scss'
+import '../pages/form_elements/form_elements.scss';
 import '../node_modules/air-datepicker/dist/css/datepicker.min.css';
-import '../node_modules/air-datepicker/dist/js/datepicker.min.js';
-import '../node_modules/jquery-nice-select/js/jquery.nice-select.js';
+import 'air-datepicker/dist/js/datepicker.min';
+import 'jquery-nice-select/js/jquery.nice-select';
 import '../node_modules/jquery-nice-select/css/nice-select.css';
-import '../node_modules/inputmask/dist/jquery.inputmask.js';
+import 'inputmask/dist/jquery.inputmask';
 import * as noUiSlider from 'nouislider/distribute/nouislider.js';
 import '../node_modules/nouislider/distribute/nouislider.css';
-import * as wNumb from '../node_modules/wnumb/wNumb.js';
+import * as wNumb from 'wnumb';
 
 $(function() {
   $('.guests-info .iqdropdown').iqDropdown({

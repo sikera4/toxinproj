@@ -1,7 +1,8 @@
 mixin textField(tfData)
     .text-field 
-        h3= tfData.header
-        input(type='text' placeholder=tfData.placeholder id=tfData.modif)
-        if tfData.modif === 'sub'
-            .icon
-                span.material-icons &#xe5c8
+        .text-field__input(class=tfData.modif)
+            input(type='text' placeholder=tfData.placeholder)
+        .text-field__icon
+            if tfData.modif === 'text-field_subscription'
+                .icon
+                    span.material-icons &#xe5c8
