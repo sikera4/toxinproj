@@ -1,8 +1,11 @@
 - let pageTitle = 'Cards';
 include ../common.blocks/ui-kit-layout/layout.pug
 .cards 
-    .booking
-        include ../common.blocks/booking-card/booking-card.pug 
-    .registration 
-        include ../common.blocks/registration-card/registration-card.pug
-    
+    .col1 
+        .booking
+            include ../common.blocks/booking-card/booking-card.pug 
+        .registration 
+            include ../common.blocks/registration-card/registration-card.pug
+    .col2 
+        .final-counter 
+            include ../common.blocks/final-counter-card/final-counter-card.pug

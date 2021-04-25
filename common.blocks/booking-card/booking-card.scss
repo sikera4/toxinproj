@@ -1,6 +1,6 @@
-@import '../date-dropdown/date-dropdown';
-@import '../buttons/buttons';
-@import '../quantity-dropdown/quantity-dropdown.scss';
+@use '../date-dropdown/date-dropdown';
+@use '../buttons/buttons';
+@use '../quantity-dropdown/quantity-dropdown.scss';
 .booking-card {
     border: 1px solid rgba(0, 0, 0, 0.12);
     box-sizing: border-box;

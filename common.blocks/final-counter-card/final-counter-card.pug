@@ -1,0 +1,44 @@
+include ../buttons/buttons.pug
+include ../date-dropdown/date-dropdown.pug
+include ../quantity-dropdown/quantity-dropdown.pug 
+.final-counter-card 
+    .final-counter-card__top-bar 
+        .final-counter-card__room-type 
+            .final-counter-card__header 
+                span №
+                span.final-counter-card__room-number 
+                    h1 888
+            h3 люкс
+        .final-counter-card__room-price
+            span.sum 9 990₽ 
+            span.period в сутки
+    .final-counter-card__date-pickers
+        .final-counter-card__date-picker-arrival
+            +dateDropdown({header: 'прибытие', placeholder: '19.08.2019'})
+        .final-counter-card__date-picker-departure
+            +dateDropdown({header: 'выезд', placeholder: '23.08.2019'})
+    .final-counter-card__guests-num 
+        h3 Гости
+        +iqdropdown({type:'guests', def1: '2', def2: '1'})
+    .final-counter-card__services-list 
+        .service 
+            span.name 9 990₽ х 4 суток
+            span.sum 39 960₽
+        .service.scnd
+            .name 
+                span Сбор за услуги: скидка 2 179₽
+                .info-sign i
+            span.sum 0₽
+        .service.thrd
+            .name 
+                span Сбор за дополнительные <br>услуги
+                .info-sign i
+            span.sum 300₽
+    .final-counter-card__final-sum 
+        h2 Итого
+        .line 
+        h2 38 081₽
+    .final-counter-card__submit-button 
+        +button({type: 'button_long', header: 'забронировать'})
+
+        

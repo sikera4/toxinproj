@@ -1,17 +1,18 @@
+@use '../ui-kit-layout/layout';
 .input-container {
     position: relative;
     input[type="text"] {
         font-family: Montserrat;
-        font-size: 14px;
-        line-height: 18px;
+        font-size: 0.875rem;
+        line-height: 1.125rem;
         color: rgba(31, 32, 65, 0.75);
-        margin-top: 5px;
-        width: 150px;
-        height: 44px;
+        margin-top: 0.3125rem;
+        width: 9.375rem;
+        height: 2.75rem;
         border: 1px solid rgba(31, 32, 65, 0.25);
         box-sizing: border-box;
         border-radius: 4px;
-        padding-left: 14px;
+        padding-left: .875rem;
         position: relative;
         z-index: 3;
         background: none;
@@ -22,17 +23,17 @@
         }
     }
     .icon {
-        @include icon;
-        left: 106px;
+        @include layout.icon;
+        left: 6.625rem;
         }
 }
 #filter {
     input[type="text"] {
-        margin-top: 5.5px;
-        width: 266px;
-        height: 44px;
+        margin-top: 0.34375rem;
+        width: 16.625rem;
+        height: 2.75rem;
     }
     .icon {
-        left: 222px;
+        left: 13.875rem;
         }
 }
