@@ -1,0 +1,50 @@
+.datepicker-here {
+    .datepicker {
+        box-sizing: border-box;
+        width: 20rem;
+        height: 23.0625rem;
+        font-family: 'Montserrat', sans-serif;
+        padding: 1.125rem 1.1875rem 1.25rem 1.25rem;
+        box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        .datepicker--nav {
+            align-items: flex-start;
+            color: #1F2041;
+            font-size: 1.1875rem;
+            line-height: 1.4375rem;
+            font-weight: bold;
+            height: 2rem;
+            padding: 0;
+            border: none;
+            i {
+                color: inherit;
+                font-weight: inherit;
+            }
+            &-action {
+                color: #BC9CFF;
+                width: 1.5rem;
+            }
+        }
+        &--content {
+            padding: 0;
+            margin-top: 1.375rem;
+        }
+        &--days-names {
+            margin: 0;
+            height: 2.5rem;
+        }
+        &--day-name {
+            text-transform: none;
+            color: #BC9CFF;
+            font-weight: bold;
+        }
+        &--cells {
+            font-size: 0.75rem;
+            line-height: 0.9375rem;
+            color: rgba(31, 32, 65, 0.5);
+        }
+        &--cell {
+            height: 2.5rem;
+        }
+    }
+}

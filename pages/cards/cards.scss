@@ -1,4 +1,6 @@
 @use '../../common.blocks/final-counter-card/final-counter-card';
+@use '../../common.blocks/entry-card/entry-card';
+@use '../../common.blocks/datepicker-layout/datepicker-layout';
 @import '../../common.blocks/ui-kit-layout/layout';
 @import '../../common.blocks/booking-card/booking-card';
 @import '../../common.blocks/registration-card/registration-card';
@@ -9,10 +11,18 @@ body {
 .cards {
     margin: 4.125rem 8.75rem 8.75rem 8.75rem;
     display: flex;
+    .col1 {
+        .registration {
+            margin: 2.5rem 0 0 0;
+        }
+    }
     .col2 {
         margin-left: 2.5rem;
+        .entry {
+            margin-top: 2.4375rem;
+        }
     }
-}
-.registration {
-    margin: 2.5rem 0 0 0;
+    .col3 {
+        margin-left: 2.5rem;
+    }
 }

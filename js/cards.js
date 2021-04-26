@@ -5,6 +5,7 @@ import 'air-datepicker/dist/js/datepicker.min';
 import 'inputmask/dist/jquery.inputmask';
 import '../pages/cards/cards.scss';
 
+
 $(function() {
     $('.masked input').inputmask("99.99.9999", { "placeholder": "ДД.ММ.ГГГГ" });
 });
