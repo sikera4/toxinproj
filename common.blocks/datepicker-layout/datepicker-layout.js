@@ -15,4 +15,21 @@ function final() {
     datepicker();
     changer();
 }
-export {datepicker, changer, final};
+function datepickerData() {
+    let startDate = new Date(2019, 7, 8);
+    $('.calendar-layout .datepicker-here').datepicker({
+        prevHtml: '<span class="material-icons">arrow_back</span>',
+        nextHtml: '<span class="material-icons">arrow_forward</span>',
+        clearButton: true,
+        navTitles: {
+            days: 'MM yyyy'
+        },
+        startDate: startDate,
+        range: true
+    }).data('datepicker').selectDate(startDate);
+    let applyBtn = $('<span class="datepicker--button" data-action="apply">применить</span>');
+    $('.datepicker-here .datepicker--buttons').append(applyBtn);
+    console.log($('.datepicker-here .datepicker--buttons').length)
+}
+
+export {datepickerData};

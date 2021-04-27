@@ -4,6 +4,12 @@ import '../node_modules/air-datepicker/dist/css/datepicker.min.css';
 import 'air-datepicker/dist/js/datepicker.min';
 import 'inputmask/dist/jquery.inputmask';
 import '../pages/cards/cards.scss';
+import '../common.blocks/datepicker-layout/datepicker-layout';
+import { datepickerData } from '../common.blocks/datepicker-layout/datepicker-layout';
+
+$(function() {
+  datepickerData();
+});
 
 
 $(function() {
