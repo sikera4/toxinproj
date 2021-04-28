@@ -1,23 +1,25 @@
-mixin rating 
-    .rating
-        .star 
-            span.material-icons star 
-        .star 
-            span.material-icons star
-        .star 
-            span.material-icons star
-        .star 
-            span.material-icons star
-        .star 
-            span.material-icons star_border
-    .rating
-        .star 
-            span.material-icons star 
-        .star 
-            span.material-icons star
-        .star 
-            span.material-icons star
-        .star 
-            span.material-icons star
-        .star 
-            span.material-icons star
+mixin rating(data)
+    if (data.grade==='4')
+        .rating
+            .star 
+                span.material-icons star 
+            .star 
+                span.material-icons star
+            .star 
+                span.material-icons star
+            .star 
+                span.material-icons star
+            .star 
+                span.material-icons star_border
+    else if (data.grade==='5')
+        .rating
+            .star 
+                span.material-icons star 
+            .star 
+                span.material-icons star
+            .star 
+                span.material-icons star
+            .star 
+                span.material-icons star
+            .star 
+                span.material-icons star

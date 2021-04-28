@@ -71,7 +71,8 @@ include ../common.blocks/commentary/commentary.pug
         .ratebtns 
             h3 rate button
             .ratingexs 
-                +rating
+                +rating({grade: '4'})
+                +rating({grade: '5'})
     .col3 
         .range
             +rangeslider('range slider')

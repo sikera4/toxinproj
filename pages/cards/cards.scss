@@ -1,6 +1,7 @@
 @use '../../common.blocks/final-counter-card/final-counter-card';
 @use '../../common.blocks/entry-card/entry-card';
 @use '../../common.blocks/datepicker-layout/datepicker-layout';
+@use '../../common.blocks/room-card/room-card';
 @import '../../common.blocks/ui-kit-layout/layout';
 @import '../../common.blocks/booking-card/booking-card';
 @import '../../common.blocks/registration-card/registration-card';
@@ -24,5 +25,8 @@ body {
     }
     .col3 {
         margin-left: 2.5rem;
+        .room-card1 {
+            margin-top: 2.5rem;
+        }
     }
 }

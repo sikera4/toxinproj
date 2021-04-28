@@ -5,31 +5,31 @@ body {
 }
 .display-1 {
     @include colorDisplay;
-    background: #1F2041;
+    background: $dark100;
 }
 .display-2 {
     @include colorDisplay;
-    background: rgba(31, 32, 65, 0.75);
+    background: $dark75;
 }
 .display-3 {
     @include colorDisplay;
-    background: rgba(31, 32, 65, 0.5);
+    background: $dark50;
 }
 .display-4 {
     @include colorDisplay;
-    background: rgba(31, 32, 65, 0.25);
+    background: $dark25;
 }
 .display-5 {
     @include colorDisplay;
-    background: rgba(31, 32, 65, 0.05);
+    background: $dark05;
 }
 .display-6 {
     @include colorDisplay;
-    background: rgba(188, 156, 255, 1);
+    background: $primary;
 }
 .display-7 {
     @include colorDisplay;
-    background: rgba(111, 207, 151, 1);
+    background: $secondary;
 }
 .content {
     height: 100%;

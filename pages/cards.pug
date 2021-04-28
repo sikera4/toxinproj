@@ -14,3 +14,6 @@ include ../common.blocks/ui-kit-layout/layout.pug
     .col3 
         .calendar-layout 
             include ../common.blocks/datepicker-layout/datepicker-layout.pug
+        .room-card1 
+            include ../common.blocks/room-card/room-card.pug
+            +roomCard({id: '1', num: '888', type: 'люкс', sum: '9 990₽ ', reviewNum: '145'})

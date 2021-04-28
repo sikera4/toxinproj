@@ -1,0 +1,30 @@
+include ../rating/rating.pug
+mixin roomCard(data)
+    .room-card 
+        .room-card__view(id=data.id)
+            .room-card__arrows 
+                .arrow-left 
+                    span.material-icons chevron_left
+                .arrow-right
+                    span.material-icons chevron_left
+            .room-card__pic-switch 
+                .sw1 
+                .sw2 
+                .sw3 
+                .sw4
+        .room-card__room-info 
+            .room-card__info-top-part 
+                .room-card__room-type 
+                    .room-card__header 
+                        span №
+                        span.room-card__room-number 
+                            h1= data.num
+                    h3=data.type
+                .room-card__room-price
+                    span.sum=data.sum 
+                    span.period в сутки
+            .room-card__info-bottom-part 
+                +rating({grade: '5'})
+                .room-card__reviews
+                    .num= `${data.reviewNum} `
+                    .revs= ' Отзывов'

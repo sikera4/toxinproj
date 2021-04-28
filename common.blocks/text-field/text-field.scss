@@ -1,15 +1,16 @@
+@use '../ui-kit-layout/layout';
 @mixin input-text {
     padding-left: 0.875rem;
     height: 2.75rem;
     width: 20rem;
-    border: 1px solid rgba(31, 32, 65, 0.25);
+    border: 1px solid layout.$dark25;
     border-radius: 4px;
     font-family: Montserrat;
     font-size: 0.875rem;
     line-height: 1.125rem;
-    color: rgba(31, 32, 65, 0.75);
+    color: layout.$dark75;
     &::placeholder {
-        color: rgba(31, 32, 65, 0.25);
+        color: layout.$dark25;
     }
 }
 
@@ -19,10 +20,10 @@
         input[type='text'] {
             @include input-text;
             &:hover {
-                border: 1px solid rgba(31, 32, 65, 0.5);
+                border: 1px solid layout.$dark50;
             }
             &:focus {
-                border: 1px solid rgba(31, 32, 65, 0.5);
+                border: 1px solid layout.$dark50;
             }
         }
     }
@@ -35,7 +36,7 @@
             justify-content: center;
             align-items: center;
             top: 0;
-            color: rgba(31, 32, 65, 0.5);
+            color: layout.$dark50;
             cursor: pointer;
             z-index: 1;
             left: 13.875rem;
