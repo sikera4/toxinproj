@@ -1,0 +1,8 @@
+- let pageTitle = 'Headers & Footers';
+include ../common.blocks/ui-kit-layout/layout.pug
+include ../common.blocks/header/header.pug
+.headers-footers 
+    .headers-footers__header-unlogged
+        +header({})
+    .headers-footers__header-loggedin 
+        +header({loggedIn: true, name: 'Юлий Цезарь'})

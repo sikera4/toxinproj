@@ -88,3 +88,14 @@
         top: 0;
     }
 }
+.button_header {
+    height: 2.125rem;
+    width: 5.4375rem;
+}
+.button_long.button_header {
+    height: 2.125rem;
+    width: 12.25rem;
+    .icon {
+        display: none;
+    }
+}

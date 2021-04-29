@@ -1,0 +1,13 @@
+@use '../../common.blocks/ui-kit-layout/layout';
+@use '../../common.blocks/header/header';
+body {
+    background: #F4F4F6;;
+}
+.headers-footers {
+    &__header-unlogged {
+        margin-top: 3.375rem;
+    }
+    &__header-loggedin {
+        margin-top: 2.5625rem;
+    }
+}

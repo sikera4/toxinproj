@@ -65,10 +65,12 @@ h3 {
     color: $dark100;
 }
 
-img {
-    margin: 1.875rem 0 0 1.875rem;
-    height: 3rem;
-    width: 3rem;
+.ui-kit-logo {
+    img {
+        margin: 1.875rem 0 0 1.875rem;
+        height: 3rem;
+        width: 3rem;
+    }
 }
 input:focus,
 select:focus,

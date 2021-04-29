@@ -24,7 +24,7 @@ mixin roomCard(data)
                     span.sum=data.sum 
                     span.period в сутки
             .room-card__info-bottom-part 
-                +rating({grade: '5'})
+                +rating({grade: data.grade})
                 .room-card__reviews
                     .num= `${data.reviewNum} `
                     .revs= ' Отзывов'

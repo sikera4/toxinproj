@@ -1,19 +1,21 @@
 - let pageTitle = 'Cards';
 include ../common.blocks/ui-kit-layout/layout.pug
 .cards 
-    .col1 
+    .cards__col1 
         .booking
             include ../common.blocks/booking-card/booking-card.pug 
         .registration 
             include ../common.blocks/registration-card/registration-card.pug
-    .col2 
+    .cards__col2 
         .final-counter 
             include ../common.blocks/final-counter-card/final-counter-card.pug
         .entry 
             include ../common.blocks/entry-card/entry-card.pug
-    .col3 
+    .cards__col3 
         .calendar-layout 
             include ../common.blocks/datepicker-layout/datepicker-layout.pug
         .room-card1 
             include ../common.blocks/room-card/room-card.pug
-            +roomCard({id: '1', num: '888', type: 'люкс', sum: '9 990₽ ', reviewNum: '145'})
+            +roomCard({id: '1', num: '888', type: 'люкс', sum: '9 990₽ ', reviewNum: '145', grade: '5'})
+        .room-card2 
+            +roomCard({id: '2', num: '840', sum: '9 900₽ ', reviewNum: '65', grade: '4'})

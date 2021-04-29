@@ -1,0 +1,65 @@
+@use '../ui-kit-layout/layout';
+@use '../buttons/buttons';
+.header {
+    height: 4.375rem;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    &__content {
+        padding: 0 8.75rem;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 0;
+        justify-content: space-between;
+        width: 100%;
+    }
+    &__rightside-content {
+        display: flex;
+    }
+    &__logo {
+        height: 2.5rem;
+    }
+    &__nav {
+        color: layout.$dark50;
+        display: flex;
+        align-items: center;
+        .about {
+            color: layout.$dark75;
+            font-weight: bold;
+        }
+        .services {
+            display: flex;
+            align-items: center;
+            span {
+                vertical-align: middle;
+                margin-left: 0.0625rem;
+            }
+        }
+        .agreements {
+            display: flex;
+            align-items: center;
+            span {
+                vertical-align: middle;
+                margin-left: 0.0625rem;
+            }
+        }
+        @each $navItem in about, services, vacancies, news, agreements {
+            .#{$navItem} {
+                margin-right: 1.25rem;
+            }
+        }
+    }
+    &__buttons {
+        display: flex;
+        .entry-button {
+            margin-right: 1.25rem;
+        }
+    }
+    &__name {
+        color: layout.$dark50;
+        border-left: 1px solid rgba(31, 32, 65, 0.1);
+        padding-left: 1.25rem;
+    }
+}

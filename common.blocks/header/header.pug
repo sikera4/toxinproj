@@ -1,0 +1,30 @@
+include ../buttons/buttons.pug
+mixin header(data)
+    .header 
+        .header__content
+            .header__logo 
+                img(src=require('../assets/Logo.svg'))
+            .header__rightside-content
+                nav.header__nav 
+                    .about О нас
+                    .services 
+                        .services__text Услуги
+                        .services__icon 
+                            span.material-icons expand_more
+                    .vacancies Вакансии
+                    .news Новости
+                    .agreements 
+                        .agreements__text Соглашения
+                        .agreements__icon 
+                            span.material-icons expand_more
+                .header__dependant 
+                    if !data.loggedIn
+                        .header__buttons
+                            .entry-button 
+                                +button({type: 'button_empty button_header', header: 'войти'})
+                            .registration-button 
+                                +button({type: 'button_long button_header', header: 'зарегистрироваться'})
+                    else if data.loggedIn
+                        .header__name= data.name 
+
+
