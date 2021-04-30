@@ -1,5 +1,7 @@
 @use '../../common.blocks/ui-kit-layout/layout';
 @use '../../common.blocks/header/header';
+@use '../../common.blocks/footer/footer';
+@use '../../common.blocks/copyright/copyright';
 body {
     background: #F4F4F6;;
 }
@@ -9,5 +11,14 @@ body {
     }
     &__header-loggedin {
         margin-top: 2.5625rem;
+    }
+    &__footer {
+        margin-top: 2.5rem;
+    }
+    &__copyright-block {
+        .copyright {
+            margin: 2.5rem auto 8.75rem auto;
+        }
+       
     }
 }

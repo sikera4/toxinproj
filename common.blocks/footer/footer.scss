@@ -1,0 +1,92 @@
+@use '../ui-kit-layout/layout';
+@use '../text-field/text-field';
+.footer {
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    
+    &__content {
+        display: flex;
+        padding: 6.25rem 8.625rem 6rem 8.75rem;
+        border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+    }
+    &__logo {
+        height: 2.5rem;
+    }
+    &__company-description {
+        width: 16.25rem;
+    }
+    &__description-text {
+        margin-top: 1.125rem;
+    }
+    &__navigation {
+        margin-top: 0.3125rem;
+        margin-left: 2.5rem;
+        color: layout.$dark50;
+        width: 9rem;
+    }
+    &__text-aboutus {
+        margin-top: 1.125rem;
+    }
+    @each $entry in news, support, services, team, vacancies, investors, communities, contacts {
+        .footer__text-#{$entry} {
+            margin-top: 0.875rem;
+        }
+    }
+    &__about-us {
+        margin-top: 0.3125rem;
+        margin-left: 3.5rem;
+        color: layout.$dark50;
+    }
+    &__text-aboutservices {
+        margin-top: 1.125rem;
+    }
+    &__support {
+        width: 9.3125rem;
+        margin-top: 0.3125rem;
+        margin-left: 5.8125rem;
+        color: layout.$dark50;
+    }
+    &__text-agreements {
+        margin-top: 1.0625rem;
+    }
+    &__subscription {
+        margin-top: 0.3125rem;
+        margin-left: 3.1875rem;
+        width: 16.25rem;
+    }
+    &__text-subscription {
+        margin-top: 1.0625rem;
+        margin-bottom: 1.4375rem;
+    }
+    &__text-field {
+        input[type='text'] {
+            width: 16.25rem;
+            padding-left: 0.9375rem;
+        }
+        .icon {
+            left: 13.5rem;
+        }
+    }
+    &__copyright-block {
+        display: flex;
+        height: 4.375rem;
+        padding: 1.4375rem 8.75rem;
+        justify-content: space-between;
+    }
+    &__icons {
+        font-size: 1.5rem;
+        margin-right: 0.0625rem;
+        .fa-facebook-square {
+            margin-right: 1.5rem;
+        }
+        .fa-twitter {
+            margin-right: 1.3125rem;
+        }
+        i {
+            background: -webkit-gradient(linear, left top, left bottom, from(rgba(188, 156, 255, 1)), to(rgba(139, 164, 249, 1)));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}

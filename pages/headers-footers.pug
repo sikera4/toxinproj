@@ -1,8 +1,14 @@
 - let pageTitle = 'Headers & Footers';
 include ../common.blocks/ui-kit-layout/layout.pug
 include ../common.blocks/header/header.pug
+include ../common.blocks/footer/footer.pug
+include ../common.blocks/copyright/copyright.pug
 .headers-footers 
     .headers-footers__header-unlogged
         +header({})
     .headers-footers__header-loggedin 
         +header({loggedIn: true, name: 'Юлий Цезарь'})
+    .headers-footers__footer 
+        +footer
+    .headers-footers__copyright-block 
+        +copyright

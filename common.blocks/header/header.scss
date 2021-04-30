@@ -45,7 +45,10 @@
                 margin-left: 0.0625rem;
             }
         }
-        @each $navItem in about, services, vacancies, news, agreements {
+        .about {
+            margin-right: 1.3125rem;
+        }
+        @each $navItem in services, vacancies, news, agreements {
             .#{$navItem} {
                 margin-right: 1.25rem;
             }
