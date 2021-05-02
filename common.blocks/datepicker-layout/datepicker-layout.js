@@ -1,3 +1,6 @@
+import '../../node_modules/air-datepicker/dist/css/datepicker.min.css';
+import 'air-datepicker/dist/js/datepicker.min';
+
 function datepicker() {
     let arrows = $('.datepicker .datepicker--nav-action');
     for (let i in arrows) {
@@ -32,7 +35,12 @@ function datepickerData() {
     $('.datepicker-here .datepicker--buttons').append(applyBtn);
     console.log($('.datepicker-here .datepicker--buttons').length)
     $('.datepicker-here .-range-from-').addClass('nobefore');
-    $('.datepicker-here .datepicker--cell-day').on('mouseleave', function() {
+    $('.datepicker-here .datepicker--cells-days').on('mouseover', function() {
+        if ($('.datepicker-here .-range-to-').length > 0) {
+            $('.datepicker-here .-range-from-').addClass('before');
+        }
+    })
+    $('.datepicker-here .datepicker--cells-days').on('mouseleave', function() {
         if ($('.datepicker-here .-range-to-').length === 0) {
             $('.datepicker-here .-range-from-').addClass('nobefore');
         }

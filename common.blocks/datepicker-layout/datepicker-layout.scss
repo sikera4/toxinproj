@@ -58,6 +58,8 @@
                 border-radius: 0;
                 background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
                 color: layout.$dark50;
+                position: relative;
+                z-index: 4;
             }
             .-range-from- {
                 border-radius: 50%;
@@ -72,9 +74,14 @@
                     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
                     opacity: 0.25;
                     height: 2.5rem;
-                    width: 1.25rem;
-                    z-index: -1;
+                    width: 50%;
+                    z-index: -2;
                     right: 0;
+                }
+            }
+            .-range-from-.-selected-:hover {
+                &::before {
+                    display: none;
                 }
             }
             .-range-to- {
@@ -83,7 +90,7 @@
                 color: #FFF;
                 border: none;
                 position: relative;
-                z-index: 5;
+                z-index: 2;
                 &::before {
                     position: absolute;
                     content: '';
@@ -91,7 +98,7 @@
                     opacity: 0.25;
                     height: 2.5rem;
                     width: 1.25rem;
-                    z-index: -1;
+                    z-index: -2;
                     left: 0;
                 }
             }
@@ -100,7 +107,7 @@
                 background: linear-gradient(180deg, layout.$primary 0%, #8BA4F9 100%);
                 color: #FFF;
                 border: none;
-                
+                position: relative; 
             }
             .-current- {
                 background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
@@ -111,11 +118,6 @@
             .-in-range-.-focus- {
                 border-radius: 0;
                 background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
-            }
-            .-selected-.-focus- {
-                &:before {
-                    display: none;
-                }
             }
         }
         &--cell {
@@ -142,5 +144,17 @@
 .nobefore {
     &::before {
         display: none;
+    }
+}
+.before.-focus- {
+    &::after {
+        position: absolute;
+        content: '';
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        opacity: 0.25;
+        height: 2.5rem;
+        width: 50%;
+        z-index: -2;
+        right: 0;
     }
 }

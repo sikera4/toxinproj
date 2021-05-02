@@ -69,6 +69,7 @@
     position: relative;
     .icon {
         @include icon;
+        left: 14rem;
         top: -15px;
     }
     h3 {
