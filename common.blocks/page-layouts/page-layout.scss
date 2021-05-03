@@ -1,0 +1,26 @@
+@use '../ui-kit-layout/layout';
+@use '../header/header';
+
+body {
+    position: relative;
+    margin-top: 4.375rem;
+    min-width: 20rem;
+    max-width: 120rem;
+    width: 100%;
+}
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    max-width: 120rem;
+    min-width: 20rem;
+    width: 100%;
+}
+
+$dark100: #1F2041;
+$dark75: rgba(31, 32, 65, 0.75);
+$dark50: rgba(31, 32, 65, 0.5);
+$dark25: rgba(31, 32, 65, 0.25);
+$dark05: rgba(31, 32, 65, 0.05);
+$primary: rgba(188, 156, 255, 1);
+$secondary: rgba(111, 207, 151, 1);

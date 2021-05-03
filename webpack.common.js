@@ -25,7 +25,9 @@ module.exports = {
         'colors-type': './js/colors-type.js',
         'form-elements': './js/form-elements.js',
         'cards': './js/cards.js',
-        'headers-footers': './js/headers-footers.js'
+        'headers-footers': './js/headers-footers.js',
+        'landing-page': './js/landing-page.js',
+        'landing-page-guestsdd': './js/landing-page.js'
     },
     plugins: [
         ...templates,

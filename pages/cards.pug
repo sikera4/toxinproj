@@ -4,6 +4,7 @@ include ../common.blocks/ui-kit-layout/layout.pug
     .cards__col1 
         .booking
             include ../common.blocks/booking-card/booking-card.pug 
+            +bookingCard({phArrival: 'ДД.ММ.ГГГГ', phDeparture: 'ДД.ММ.ГГГГ', def1: '0', def2: '0'})
         .registration 
             include ../common.blocks/registration-card/registration-card.pug
     .cards__col2 

@@ -28,6 +28,8 @@
         .about {
             color: layout.$dark75;
             font-weight: bold;
+            cursor: pointer;
+            margin-right: 1.3125rem;
         }
         .services {
             display: flex;
@@ -45,12 +47,10 @@
                 margin-left: 0.0625rem;
             }
         }
-        .about {
-            margin-right: 1.3125rem;
-        }
         @each $navItem in services, vacancies, news, agreements {
             .#{$navItem} {
                 margin-right: 1.25rem;
+                cursor: pointer;
             }
         }
     }
