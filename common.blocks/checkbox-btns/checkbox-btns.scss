@@ -1,3 +1,4 @@
+@use '../ui-kit-layout/layout';
 .checkboxes {
     .inputs {
         margin-top: 18px;
@@ -68,8 +69,8 @@
 .expchecklist {
     position: relative;
     .icon {
-        @include icon;
-        left: 14rem;
+        @include layout.icon;
+        left: 13.875rem;
         top: -15px;
     }
     h3 {

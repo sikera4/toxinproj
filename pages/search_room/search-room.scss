@@ -1,0 +1,55 @@
+@use '../../common.blocks/page-layouts/page-layout';
+@use '../../common.blocks/date-dropdown/date-dropdown';
+@use '../../common.blocks/quantity-dropdown/quantity-dropdown';
+@use '../../common.blocks/checkbox-btns/checkbox-btns';
+.search-room {
+    &__content {
+        padding: 1.875rem 8.4375rem 1.25rem 8.75rem;
+    }
+    &__filter {
+        width: 16.625rem;
+    }
+    &__guestsdd {
+        margin-top: 1.375rem;
+        h3 {
+            margin-bottom: 0.25rem;
+        }
+        .iqdropdown_filter {
+            width: 100%;
+            height: 2.75rem;
+            .icon {
+                left: 13.875rem;
+            }
+        }
+    }
+    &__slider {
+        margin-top: 1.875rem;
+        p {
+            font-size: 0.75rem;
+            line-height: 0.875rem;
+            color: page-layout.$dark50;
+            margin-top: 0.875rem;
+        }
+    }
+    &__rules {
+        margin-top: 2rem;
+    }
+    &__availability {
+        margin-top: 2rem;
+        h3 {
+            margin-bottom: 0.125rem;
+        }
+        .inputs {
+            margin-top: 1.0625rem;
+        }
+    }
+    &__facilities {
+        h3 {
+            margin-bottom: 0.3125rem;
+        }
+        margin-top: 1.9375rem;
+    }
+    &__additional-facilities {
+        margin-top: 1.875rem;
+    }
+}

@@ -27,7 +27,8 @@ module.exports = {
         'cards': './js/cards.js',
         'headers-footers': './js/headers-footers.js',
         'landing-page': './js/landing-page.js',
-        'landing-page-guestsdd': './js/landing-page.js'
+        'landing-page-guestsdd': './js/landing-page.js',
+        'search-room': './js/search-room.js'
     },
     plugins: [
         ...templates,

@@ -7,9 +7,9 @@ mixin bookingCard(data)
             h1 Найдём номера под ваши пожелания
         .booking-card__date-pickers
             .booking-card__date-picker-arrival
-                +dateDropdown({header: 'прибытие', placeholder: data.phArrival})
+                +dateDropdown({header: 'прибытие', placeholder: data.phArrival, id: 'start'})
             .booking-card__date-picker-departure
-                +dateDropdown({header: 'выезд', placeholder: data.phDeparture})
+                +dateDropdown({header: 'выезд', placeholder: data.phDeparture, id: 'end'})
         .booking-card__guests-num
             h3 Гости
             +iqdropdown({type:'guests',def1: data.def1, def2: data.def2, class: data.drdclass})

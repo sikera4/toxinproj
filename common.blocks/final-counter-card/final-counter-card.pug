@@ -14,9 +14,9 @@ include ../quantity-dropdown/quantity-dropdown.pug
             span.period в сутки
     .final-counter-card__date-pickers
         .final-counter-card__date-picker-arrival
-            +dateDropdown({header: 'прибытие', placeholder: '19.08.2019'})
+            +dateDropdown({header: 'прибытие', placeholder: '19.08.2019', id: 'start'})
         .final-counter-card__date-picker-departure
-            +dateDropdown({header: 'выезд', placeholder: '23.08.2019'})
+            +dateDropdown({header: 'выезд', placeholder: '23.08.2019', id: 'end'})
     .final-counter-card__guests-num 
         h3 Гости
         +iqdropdown({type:'guests', def1: '2', def2: '1'})

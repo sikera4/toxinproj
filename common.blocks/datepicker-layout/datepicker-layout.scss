@@ -1,11 +1,9 @@
 @use '../ui-kit-layout/layout';
-.datepicker-here {
-    .datepicker {
+.datepicker {
         box-sizing: border-box;
         width: 20rem;
-        height: 23.0625rem;
         font-family: 'Montserrat', sans-serif;
-        padding: 1.125rem 1.1875rem 1.125rem 1.1875rem;
+        padding: 1.25rem 1.1875rem 1.125rem 1.1875rem;
         box-shadow: 0px 10px 20px layout.$dark05;
         border: 1px solid layout.$dark25;
         .datepicker--nav {
@@ -133,14 +131,20 @@
             justify-content: space-between;
             padding: 0;
         }
-        &--button {
+        &--button, .apply-button {
+            cursor: pointer;
+            display: flex;
             color: layout.$primary;
             align-items: flex-end;
             flex: 0;
             margin-top: 0.1875rem;
+            &:hover {
+                background: none;
+                color: inherit;
+            }
         }
-    }
 }
+
 .nobefore {
     &::before {
         display: none;
