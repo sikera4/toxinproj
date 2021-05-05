@@ -3,7 +3,7 @@ import { maskedInput } from '../common.blocks/text-field/text-field';
 import { datepickerData } from '../common.blocks/datepicker-layout/datepicker-layout';
 import { sliderActivation } from '../common.blocks/range-slider/range-slider';
 import { checkList } from '../common.blocks/expandable-checkbox-list/expandable-checkbox-list';
-console.log('lol');
+
 $(function() {
   checkList();
   sliderActivation();
@@ -12,4 +12,5 @@ $(function() {
   maskedInput();
   datepickerData();
 })
- import '../pages/form_elements/form_elements.scss';
+
+import '../pages/form_elements/form_elements.scss';

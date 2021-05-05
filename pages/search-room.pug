@@ -4,6 +4,9 @@ include ../common.blocks/range-slider/range-slider.pug
 include ../common.blocks/checkbox-btns/checkbox-btns.pug
 include ../common.blocks/rich-checkbox/rich-checkbox.pug
 include ../common.blocks/expandable-checkbox-list/expandable-checkbox.pug
+include ../common.blocks/room-card/room-card.pug
+include ../common.blocks/pagination/pagination.pug
+include ../common.blocks/footer/footer.pug
 .search-room 
     .search-room__header
         - let pageTitle = 'Search room';
@@ -29,3 +32,39 @@ include ../common.blocks/expandable-checkbox-list/expandable-checkbox.pug
                 +iqdropdown({type: 'default', def1: '2', def2: '2'})
             .search-room__additional-facilities 
                 +expandableCheckbox({header: 'дополнительные удобства', type: 'closed'})
+        .search-room__rooms
+            .search-room__header 
+                h1 Номера, которые мы для вас подобрали
+            .search-room__rooms-found 
+                .row1
+                    .room1
+                        +roomCard({id: 'room1', num: '888', sum: '9 990₽ ', grade: '5', reviewNum: '145', type: 'люкс'})
+                    .room2 
+                        +roomCard({id: 'room2', num: '840', sum: '9 900₽ ', grade: '4', reviewNum: '65'})
+                    .room3
+                        +roomCard({id: 'room3', num: '980', sum: '8 500₽ ', grade: '3', reviewNum: '35', type: 'люкс'})
+                .row2 
+                    .room4 
+                        +roomCard({id: 'room4', num: '856', sum: '7 300₽ ', grade: '5', reviewNum: '19'})
+                    .room5 
+                        +roomCard({id: 'room5', num: '740', sum: '6 000₽ ', grade: '4', reviewNum: '44'})
+                    .room6 
+                        +roomCard({id: 'room6', num: '982', sum: '5 800₽ ', grade: '3', reviewNum: '56'})
+                .row3 
+                    .room7 
+                        +roomCard({id: 'room7', num: '678', sum: '5 500₽ ', grade: '5', reviewNum: '45'})
+                    .room8 
+                        +roomCard({id: 'room8', num: '450', sum: '5 300₽ ', grade: '4', reviewNum: '39'})
+                    .room9 
+                        +roomCard({id: 'room9', num: '350', sum: '5 800₽ ', grade: '3', reviewNum: '56'})
+                .row4 
+                    .room10 
+                        +roomCard({id: 'room10', num: '666', sum: '5 000₽ ', grade: '5', reviewNum: '25'})
+                    .room11 
+                        +roomCard({id: 'room11', num: '444', sum: '5 000₽ ', grade: '3', reviewNum: '15'})
+                    .room12 
+                        +roomCard({id: 'room12', num: '352', sum: '5 000₽ ', grade: '3', reviewNum: '55'})
+                .search-room__pagination 
+                    +pagination
+    .search-room__footer 
+        +footer

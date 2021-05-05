@@ -2,9 +2,58 @@
 @use '../../common.blocks/date-dropdown/date-dropdown';
 @use '../../common.blocks/quantity-dropdown/quantity-dropdown';
 @use '../../common.blocks/checkbox-btns/checkbox-btns';
+@use '../../common.blocks/room-card/room-card';
+@use '../../common.blocks/pagination/pagination';
+@use '../../common.blocks/footer/footer';
 .search-room {
     &__content {
         padding: 1.875rem 8.4375rem 1.25rem 8.75rem;
+        display: flex;
+        border-bottom: 1px solid rgba(31, 32, 65, 0.25);
+    }
+    &__rooms {
+        margin-left: 3.75rem;
+    }
+    &__rooms-found{
+        .room1 {
+            .arrow-left, .arrow-right {
+                display: flex;
+            }
+        }
+        .row1, .row2, .row3, .row4 {
+            display: flex;
+        }
+        .row2 {
+            margin-top: 1.25rem;
+        }
+        .row3 {
+            margin-top: 1.375rem;
+        }
+        .row4 {
+            margin-top: 1.3125rem;
+        }
+        .room-card {
+            &__view {
+                height: 59%;
+            }
+            &__room-type {
+                h3 {
+                    margin-left: 0.5rem;
+                }
+            }
+            &__room-info {
+                padding-top: 1.125rem;
+            }
+        }
+        margin-top: 1.3125rem;
+        @for $i from 1 through 12 {
+            .room#{$i} {
+                margin-right: 0.75rem;
+                #room#{$i} {
+                    background: url('../../assets/room#{$i}.svg');
+                }
+            }
+        }
     }
     &__filter {
         width: 16.625rem;
@@ -18,7 +67,7 @@
             width: 100%;
             height: 2.75rem;
             .icon {
-                left: 13.875rem;
+                left: 13.8125rem;
             }
         }
     }
@@ -51,5 +100,12 @@
     }
     &__additional-facilities {
         margin-top: 1.875rem;
+    }
+    &__pagination {
+        margin-top: 2.5625rem;
+        display: flex;
+        justify-content: center;
+        margin-right: 1.5rem;
+        margin-bottom: 3.1875rem;
     }
 }
