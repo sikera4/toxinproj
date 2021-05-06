@@ -1,0 +1,44 @@
+@use '../../common.blocks/page-layouts/page-layout';
+@use '../../common.blocks/facility/facility';
+@use '../../common.blocks/final-counter-card/final-counter-card';
+.room-details {
+    &__photos {
+        height: 30.3125rem;
+        display: flex;
+    }
+    &__primary-photo {
+        background: url('../../assets/primary-photo.svg');
+        background-size: cover;
+        height: 100%;
+        width: 68.125vw;
+    }
+    &__photo-col {
+        height: 100%;
+        width: 31.875vw;
+        .secondary-photo1 {
+            background: url('../../assets/secondary-photo1.svg');
+            height: 50%;
+        }
+        .secondary-photo2 {
+            background: url('../../assets/secondary-photo2.svg');
+            height: 50%;
+        }
+    }
+    &__content {
+        padding: 4.375rem 8.75rem;
+        display: flex;
+    }
+    &__info-blocks {
+        display: flex;
+    }
+    &__facilities {
+        .facility {
+            margin-top: 1.25rem;
+        }
+    }
+    &__chart {
+        margin-left: 5.0625rem;
+        .chart {
+        }
+    }
+}

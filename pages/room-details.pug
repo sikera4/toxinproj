@@ -1,0 +1,23 @@
+- let pageTitle = 'Room details';
+include ../common.blocks/facility/facility.pug
+include ../common.blocks/page-layouts/page-layout.pug
+include ../common.blocks/final-counter-card/final-counter-card.pug
+.room-details 
+    .room-details__photos 
+        .room-details__primary-photo 
+        .room-details__photo-col 
+            .secondary-photo1 
+            .secondary-photo2
+    .room-details__content 
+        .room-details__room-info 
+            .room-details__info-blocks
+                .room-details__facilities
+                    h2 Сведения о номере
+                    +facility({icon: 'sentiment_very_satisfied', name: 'Комфорт', description: 'Шумопоглощающие стены'})
+                    +facility({icon: 'location_city', name: 'Удобство', description: 'Окно в каждой из спален'})
+                    +facility({icon: 'whatshot', name: 'Уют', description: 'Номер оснащён камином', modif: 'facility_last'})
+                .room-details__chart 
+                    h2 Впечатления от номера
+                    
+        .room-details__final-counter-card
+            +finalCounterCard

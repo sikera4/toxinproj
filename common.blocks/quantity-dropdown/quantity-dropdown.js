@@ -9,18 +9,32 @@ function iqDropdown(data) {
             },
             setSelectionText: (itemCount, totalItems) => {
               let res = [];
+              let entrs = Object.entries(itemCount);
+              let guestsNum = entrs[0][1] + entrs[1][1];
+              let babiesNum = entrs[2][1];
               let clearbl = $('.guests-info .clear').eq(0);
               clearbl.on('click', (e) => {
-                return totalItems = 0;
+                console.log('lol');
+                guestsNum = 0;
+                babiesNum = 0;
               })
               if (totalItems === 0) {
                 res.push(`Сколько гостей`);
-              } else if (totalItems === 1) {
+              } else if (guestsNum === 1) {
                 res.push(`1 гость`);
-              } else if (totalItems > 1 && totalItems < 5) {
-                res.push(`${totalItems} гостя`);
-              } else if (totalItems >= 5) {
-                res.push(`${totalItems} гостей`);
+              } else if (guestsNum > 1 && guestsNum < 5) {
+                res.push(`${guestsNum} гостя`);
+              } else if (guestsNum >= 5) {
+                res.push(`${guestsNum} гостей`);
+              }
+              if (guestsNum > 0) {
+                if (babiesNum === 1) {
+                  res.push(`, ${babiesNum} младенец`);
+                } else if (babiesNum > 1 && babiesNum < 5) {
+                  res.push(`, ${babiesNum} младенца`);
+                } else if (babiesNum >= 5) {
+                  res.push(`, ${babiesNum} младенцев`);
+                }
               }
               if (totalItems > 0) { 
                 clearbl.removeClass('not-visible');
