@@ -249,5 +249,8 @@ body {
     .commentary {
         margin-left: 167px;
         margin-top: 10px;
+        #comment1 {
+            @include iconBackground('../../assets/murad.svg')
+        }
     }
 }

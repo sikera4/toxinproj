@@ -1,7 +1,8 @@
+include ../like-btn/like-btn.pug
 mixin commentary(data)
     .commentary 
         .person 
-            .person__img
+            .person__img(id=data.imgId)
             - let lkdt = {id: data.liked, count: data.likesnum}
             +likebtn(lkdt)
         .commentary__body 

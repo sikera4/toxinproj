@@ -2,6 +2,9 @@
 include ../common.blocks/facility/facility.pug
 include ../common.blocks/page-layouts/page-layout.pug
 include ../common.blocks/final-counter-card/final-counter-card.pug
+include ../common.blocks/commentary/commentary.pug
+include ../common.blocks/bullet-list/bullet-list.pug
+include ../common.blocks/footer/footer.pug
 .room-details 
     .room-details__photos 
         .room-details__primary-photo 
@@ -18,6 +21,31 @@ include ../common.blocks/final-counter-card/final-counter-card.pug
                     +facility({icon: 'whatshot', name: 'Уют', description: 'Номер оснащён камином', modif: 'facility_last'})
                 .room-details__chart 
                     h2 Впечатления от номера
-                    
+                    .chart-container
+                        .chart 
+                            canvas.js-reviews-chart
+                            .chart__text-info 
+                                h1 260
+                                p голосов
+                        ul.legend
+                            li.awesome Великолепно
+                            li.good Хорошо
+                            li.satisfactorily Удовлетворительно
+                            li.disappointed Разочарован
+            .room-details__reviews
+                h2 Отзывы посетителей номера
+                - const cmtdta = {name: 'Мурад Сарафанов', when: '5 дней назад', liked: 'focused', likesnum: '12', text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.', imgId:'comment1'}
+                +commentary(cmtdta)
+                - const cmtdta2 = {name: 'Патрисия Стеклышкова', when: 'Неделю назад', liked: 'unfocused', likesnum: '2', text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент', imgId: 'comment2'}
+                +commentary(cmtdta2)
+            .room-details__rules 
+                .room-details__living-rules 
+                    h2 Правила
+                    +bulletList
+                .room-details__cancellation 
+                    h2 Отмена
+                    p Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
         .room-details__final-counter-card
             +finalCounterCard
+    .room-details__footer 
+        +footer
