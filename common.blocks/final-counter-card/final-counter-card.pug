@@ -1,7 +1,7 @@
 include ../buttons/buttons.pug
 include ../date-dropdown/date-dropdown.pug
 include ../quantity-dropdown/quantity-dropdown.pug 
-mixin finalCounterCard
+mixin finalCounterCard(data)
     .final-counter-card 
         .final-counter-card__top-bar 
             .final-counter-card__room-type 
@@ -9,7 +9,10 @@ mixin finalCounterCard
                     span №
                     span.final-counter-card__room-number 
                         h1 888
-                h3 люкс
+                if data.luxspaced != true
+                    h3 люкс
+                else 
+                    h3.luxspaced люкс
             .final-counter-card__room-price
                 span.sum 9 990₽ 
                 span.period в сутки
@@ -33,13 +36,23 @@ mixin finalCounterCard
                     span.sum 0₽
                 .service.thrd
                     .name 
-                        span Сбор за дополнительные <br>услуги
-                        .info-sign i
+                        if data.shortenedService != true
+                            p Сбор за дополнительные услуги
+                            .info-sign i
+                        else 
+                            p Сбор за доп. услуги
+                            .info-sign.shortened-service i
                     span.sum 300₽
-            .final-counter-card__final-sum 
-                h2 Итого
-                .line 
-                h2 38 081₽
+            if data.properPaddingSum != true
+                .final-counter-card__final-sum 
+                    h2 Итого
+                    .line 
+                    h2 38 081₽
+            else 
+                .final-counter-card__final-sum.final-counter-card__final-sum-proper-padding
+                    h2 Итого
+                    .line 
+                    h2 38 081₽
             .final-counter-card__submit-button 
                 +button({type: 'button_long', header: 'забронировать'})
 

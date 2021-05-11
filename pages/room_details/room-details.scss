@@ -119,6 +119,13 @@
         #comment2 {
             @include commentary.iconBackground('../../assets/patrice.svg');
         }
+        &-header {
+            display: flex;
+            justify-content: space-between;
+            p {
+                color: page-layout.$dark50;
+            }
+        }
     }
     &__rules {
         display: flex;

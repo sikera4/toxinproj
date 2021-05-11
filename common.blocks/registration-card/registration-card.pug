@@ -2,27 +2,31 @@ include ../text-field/text-field.pug
 include ../radio-btns/radio-btns.pug
 include ../toggle/toggle.pug
 include ../buttons/buttons.pug
-.registration-card 
-    .registration-card__header 
-        h1 Регистрация аккаунта
-    form
-        .registration-card__name-inputs 
-            +textField({placeholder: 'Имя'})
-            .input2
-                +textField({placeholder: 'Фамилия'})
-            +radio
-        .registration-card__date-of-birth 
-            h3 дата рождения
-            +textField({placeholder: 'ДД.ММ.ГГГГ', modif: 'masked'})
-        .registration-card__entry-data 
-            h3 данные для входа в сервис
-            +textField({placeholder: 'Email'})
-            .password
-                +textField({placeholder: 'Пароль'})
-            +toggle({id: 'sw1', label: 'Получать спецпредложения'})
-        .registration-card__submit-button 
-            +button({type: 'button_long', header: 'перейти к оплате'})
-        .registration-card__entry-section 
-            .text Уже есть аккаунт на Toxin
-            +button({type: 'button_empty', header: 'войти'})
+mixin registrationCard(data)
+    .registration-card 
+        .registration-card__header 
+            h1 Регистрация аккаунта
+        form
+            .registration-card__name-inputs 
+                +textField({placeholder: 'Имя'})
+                .input2
+                    +textField({placeholder: 'Фамилия'})
+                +radio
+            .registration-card__date-of-birth 
+                h3 дата рождения
+                +textField({placeholder: 'ДД.ММ.ГГГГ', modif: 'masked'})
+            .registration-card__entry-data 
+                h3 данные для входа в сервис
+                +textField({placeholder: 'Email'})
+                .password
+                    +textField({placeholder: 'Пароль'})
+                +toggle({id: 'sw1', label: 'Получать спецпредложения'})
+            .registration-card__submit-button 
+                if data.registerBtn != true
+                    +button({type: 'button_long', header: 'перейти к оплате'})
+                else 
+                    +button({type: 'button_long', header: 'зарегистрироваться'})
+            .registration-card__entry-section 
+                .text Уже есть аккаунт на Toxin
+                +button({type: 'button_empty', header: 'войти'})
 

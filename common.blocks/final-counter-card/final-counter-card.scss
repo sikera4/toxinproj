@@ -4,8 +4,9 @@
     width: 23.75rem;
     height: 31.9375rem;
     border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 0.25rem;
     box-shadow: 0px 0px 1.5625rem rgba(0, 0, 0, 0.2);
-    padding: 2.5rem 1.8125rem 1.8125rem 1.8125rem;
+    padding: 2.5rem 1.875rem 1.8125rem 1.8125rem;
     background: #FFFFFF;
     &__top-bar {
         display: flex;
@@ -18,6 +19,9 @@
         h3 {
             color: #BC9CFF;
             margin-bottom: 0.2rem;
+        }
+        .luxspaced {
+            margin-left: 0.5rem;
         }
     }
     &__header {
@@ -63,7 +67,10 @@
             line-height: 1.125rem;
             margin-top: 0.8125rem;
             .info-sign {
-                margin-left: 2.125rem;
+                margin-right: 2.7rem;
+            }
+            .shortened-service {
+                margin-left: 0.5rem;
             }
         }
         .service {
@@ -100,6 +107,11 @@
             border-bottom: 1px dashed rgba(31, 32, 65, 0.25);;
         }
         margin-left: 0.0625rem;
+    }
+    &__final-sum-proper-padding {
+        margin-top: 2.75rem;
+        width: 100%;
+        margin-left: 0;
     }
     &__submit-button {
         margin-top: 1.25rem;

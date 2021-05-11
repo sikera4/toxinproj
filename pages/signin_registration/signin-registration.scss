@@ -1,0 +1,25 @@
+@use '../../common.blocks/page-layouts/page-layout';
+@use '../../common.blocks/registration-card/registration-card';
+@use '../../common.blocks/entry-card/entry-card';
+@use '../../common.blocks/footer/footer';
+.entry-page {
+    &__content {
+        background: url('../../assets/entry-page-background.svg') no-repeat;
+        background-size: cover;
+        background-position: center bottom;
+        background-attachment: fixed;
+    }
+    &__registration-card {
+        margin: 0 auto;
+        max-width: 23.4rem;
+        padding: 1.1875rem 0;
+    }
+    &__entry-card {
+        margin: 0 auto;
+        max-width: 23.6rem;
+        padding: 10.75rem 0;
+    }
+    .display-none {
+        display: none;
+    }
+}

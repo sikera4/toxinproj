@@ -7,12 +7,14 @@ include ../common.blocks/ui-kit-layout/layout.pug
             +bookingCard({phArrival: 'ДД.ММ.ГГГГ', phDeparture: 'ДД.ММ.ГГГГ', def1: '0', def2: '0'})
         .registration 
             include ../common.blocks/registration-card/registration-card.pug
+            +registrationCard({registerBtn: false})
     .cards__col2 
         .final-counter 
             include ../common.blocks/final-counter-card/final-counter-card.pug
-            +finalCounterCard
+            +finalCounterCard({luxspaced: false})
         .entry 
             include ../common.blocks/entry-card/entry-card.pug
+            +entryCard
     .cards__col3 
         .calendar-layout 
             include ../common.blocks/datepicker-layout/datepicker-layout.pug
