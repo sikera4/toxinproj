@@ -1,6 +1,6 @@
 include ../text-field/text-field.pug
 mixin footer 
-    .footer 
+    footer.footer 
         .footer__content 
             .footer__company-description 
                 .footer__logo 
@@ -33,7 +33,7 @@ mixin footer
                 .footer__text-subscription 
                     p Получайте специальные предложения и новости сервиса
                 .footer__text-field 
-                    +textField({modif: 'text-field_subscription', placeholder: 'Email'})
+                    +textField({modif: 'text-field_subscription-footer', placeholder: 'Email', type: 'email'})
         .footer__copyright-block 
             .footer__copyright-text Copyright © 2018 Toxin отель. Все права защищены.
             .footer__icons 

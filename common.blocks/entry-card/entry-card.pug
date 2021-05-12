@@ -7,9 +7,9 @@ mixin entryCard
         form
             .entry-card__text-inputs
                 .entry-card__email-input 
-                    +textField({placeholder: 'Email'})
+                    +textField({placeholder: 'Email', type: 'email'})
                 .entry-card__password-input
-                    +textField({placeholder: 'Пароль'})
+                    +textField({placeholder: 'Пароль', type: 'password'})
             .entry-card__enter-button 
                 +button({type: 'button_long', header: 'войти'})
         .entry-card__registration-section 

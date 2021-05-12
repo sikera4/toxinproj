@@ -17,7 +17,7 @@
 .text-field {
     position: relative;
     &__input {
-        input[type='text'] {
+        input[type='text'], input[type='email'], input[type='password'] {
             @include input-text;
             &:hover {
                 border: 1px solid layout.$dark50;
@@ -40,15 +40,23 @@
             cursor: pointer;
             z-index: 1;
             left: 13.875rem;
+            background: -webkit-gradient(linear, left top, left bottom, from(rgba(188, 156, 255, 1)), to(rgba(139, 164, 249, 1)));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     }
-    &_subscription {
-        input[type='text'] {
+    &_subscription-form-elements, &__subscription-footer {
+        input[type='email'] {
             position: relative;
             z-index: 2;
             width: 16.625rem;
             background: none;
             padding-left: 0.8125rem;
+        }
+    }
+    &_subscription-footer {
+        input[type='email'] {
+            width: 16.25rem;
         }
     }
 }

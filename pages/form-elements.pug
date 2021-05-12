@@ -22,19 +22,19 @@ include ../common.blocks/commentary/commentary.pug
         .tfdefault
             span.type DEFAULT
             h3 text field
-            - const c = {placeholder: 'Email'} 
+            - const c = {placeholder: 'Email', type: 'email'} 
             +textField(c)
         .tffocus 
             span.type Hover / Focus
             h3 text field
-            - const d = {placeholder: 'This is pretty awesome'} 
+            - const d = {placeholder: 'This is pretty awesome', type: 'text'} 
             +textField(d)
         .dropdown 
             - const dd = {header: 'dropdown', defOpt: 'Сколько гостей', opt1: '1 гость', opt2: '2 гостя', opt3: '3 гостя'}
             +dropdown(dd)
         .tfmasked 
             h3 masked text field
-            - const masked = {placeholder: 'ДД.ММ.ГГГГ', modif: 'masked'}
+            - const masked = {placeholder: 'ДД.ММ.ГГГГ', modif: 'masked', type: 'text'}
             +textField(masked)
         .datepickers 
             - const dtpckr1 = {header: 'date dropdown', placeholder: 'ДД.ММ.ГГГГ'}
@@ -46,7 +46,7 @@ include ../common.blocks/commentary/commentary.pug
             +dateDropdown(dt)
         .tfsub 
             h3 subscription text field
-            - const sub = { placeholder: 'Email', modif: 'text-field_subscription'}
+            - const sub = {placeholder: 'Email', modif: 'text-field_subscription-form-elements', type: 'email'}
             +textField(sub)
     .col2 
         .checkboxbtns
