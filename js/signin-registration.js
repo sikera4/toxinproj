@@ -1,4 +1,4 @@
-import '../pages/signin_registration/signin-registration.scss';
+import '../pages/scss/signin-registration.scss';
 import {registrationCard} from '../common.blocks/registration-card/registration-card';
 
 function cardChange() {

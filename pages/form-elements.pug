@@ -1,7 +1,5 @@
-- let pageTitle = 'Form Elements';
 include ../common.blocks/ui-kit-layout/layout.pug
 include ../common.blocks/text-field/text-field.pug 
-include ../common.blocks/dropdown/dropdown.pug
 include ../common.blocks/date-dropdown/date-dropdown.pug
 include ../common.blocks/checkbox-btns/checkbox-btns.pug
 include ../common.blocks/radio-btns/radio-btns.pug
@@ -17,6 +15,7 @@ include ../common.blocks/rich-checkbox/rich-checkbox.pug
 include ../common.blocks/bullet-list/bullet-list.pug
 include ../common.blocks/facility/facility.pug
 include ../common.blocks/commentary/commentary.pug
++uiKitLayout('Form Elements')
 .elements1
     .col1 
         .tfdefault
@@ -30,8 +29,8 @@ include ../common.blocks/commentary/commentary.pug
             - const d = {placeholder: 'This is pretty awesome', type: 'text'} 
             +textField(d)
         .dropdown 
-            - const dd = {header: 'dropdown', defOpt: 'Сколько гостей', opt1: '1 гость', opt2: '2 гостя', opt3: '3 гостя'}
-            +dropdown(dd)
+            h3 dropdown
+            +iqdropdown({type: 'guests'})
         .tfmasked 
             h3 masked text field
             - const masked = {placeholder: 'ДД.ММ.ГГГГ', modif: 'masked', type: 'text'}

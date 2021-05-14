@@ -8,4 +8,4 @@ $(function() {
   iqDropdown('guests-info');
 });
 
-import '../pages/cards/cards.scss';
+import '../pages/scss/cards.scss';

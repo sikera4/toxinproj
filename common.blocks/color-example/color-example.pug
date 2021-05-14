@@ -1,0 +1,6 @@
+mixin colorExample(data)
+    .color-example 
+        .color-example__color-display(class=`color-example__color-display_${data.colorVariable}`)
+        .color-example__color-caption 
+            h2.color-example__color-name= data.colorName 
+            .color-example__hex-name= data.colorHexName

@@ -1,60 +1,40 @@
-- let pageTitle = 'Colors & Type';
 include ../common.blocks/ui-kit-layout/layout.pug
-.content 
-    .content__colors 
-        .color 
-            .display-1
-            .text 
-                h2 Dark Shade 100%
-                .text-light #1F2041
-        .color 
-            .display-2
-            .text 
-                h2 Dark Shade 75%
-                .text-light #1F2041
-        .color 
-            .display-3
-            .text 
-                h2 Dark Shade 50%
-                .text-light #1F2041
-        .color 
-            .display-4
-            .text 
-                h2 Dark Shade 25%
-                .text-light #1F2041
-        .color 
-            .display-5
-            .text 
-                h2 Dark Shade 5%
-                .text-light #1F2041
-        .color 
-            .display-6
-            .text 
-                h2 Purple
-                .text-light #BC9CFF
-        .color 
-            .display-7
-            .text 
-                h2 Green
-                .text-light #6FCF97
-    .content__type
-        .type 
-            .name.h1 H1
++uiKitLayout('Colors & Type')
+include ../common.blocks/color-example/color-example.pug
+.colors-type 
+    .colors-type__colors 
+        .colors-type__dark100
+            +colorExample({colorName: 'Dark Shade 100%', colorHexName: '#1F2041', colorVariable: 'dark100'})
+        .colors-type__dark75 
+            +colorExample({colorName: 'Dark Shade 75%', colorHexName: '#1F2041', colorVariable: 'dark75'})
+        .colors-type__dark50 
+            +colorExample({colorName: 'Dark Shade 50%', colorHexName: '#1F2041', colorVariable: 'dark50'})
+        .colors-type__dark25 
+            +colorExample({colorName: 'Dark Shade 25%', colorHexName: '#1F2041', colorVariable: 'dark25'})
+        .colors-type__dark05
+            +colorExample({colorName: 'Dark Shade 5%', colorHexName: '#1F2041', colorVariable: 'dark05'})
+        .colors-type__primary
+            +colorExample({colorName: 'Purple', colorHexName: '#BC9CFF', colorVariable: 'primary'})
+        .colors-type__secondary
+            +colorExample({colorName: 'Green', colorHexName: '#6FCF97', colorVariable: 'secondary'})
+    .colors-type__type 
+        .colors-type__h1
+            .colors-type__name.colors-type__name_h1 H1
             h1. 
                 This one is the sub-section or
                 widget title
-        .type.two
-            .name.h2 H2
+        .colors-type__h2
+            .colors-type__name.colors-type__name_h2 H2
             h2. 
                 Next one is the item title inside
                 widgets
-        .type.three
-            .name.h3 H3
+        .colors-type__h3
+            .colors-type__name.colors-type__name_h3 H3
             h3. 
                 This is a label or CTA text
-        .type 
-            .name.body Body
-            .text. 
-                This is the body text which is used for most <br />
+        .colors-type__body
+            .colors-type__name.colors-type__name_body Body
+            p. 
+                This is the body text which is used for most
                 of the design, like paragraphs, lists, etc.
 

@@ -12,7 +12,7 @@ function iqDropdown(data) {
               let entrs = Object.entries(itemCount);
               let guestsNum = entrs[0][1] + entrs[1][1];
               let babiesNum = entrs[2][1];
-              let clearbl = $('.guests-info .clear').eq(0);
+              let clearbl = $('.guests-info .clear').eq(2);
               clearbl.on('click', (e) => {
                 console.log('lol');
                 guestsNum = 0;

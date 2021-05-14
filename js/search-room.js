@@ -10,4 +10,4 @@ $(function() {
 })
 
 
-import '../pages/search_room/search-room.scss';
+import '../pages/scss/search-room.scss';

@@ -6,4 +6,4 @@ $(function () {
     datepickerData();
 })
 
-import '../pages/landing_page/landing-page.scss';
+import '../pages/scss/landing-page.scss';

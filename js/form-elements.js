@@ -10,7 +10,7 @@ $(function() {
   iqDropdown('room-type');
   iqDropdown('guests-info');
   maskedInput();
-  datepickerData();
+  
 })
 
-import '../pages/form_elements/form_elements.scss';
+import '../pages/scss/form_elements.scss';

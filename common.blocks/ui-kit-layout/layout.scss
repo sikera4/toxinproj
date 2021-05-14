@@ -10,12 +10,6 @@ $dark05: rgba(31, 32, 65, 0.05);
 $primary: rgba(188, 156, 255, 1);
 $secondary: rgba(111, 207, 151, 1);
 
-@mixin colorDisplay {
-    height: 70px;
-    width: 70px;
-    border-radius: 6px;
-}
-
 @mixin icon {
     position: absolute;
     height: 44px;
@@ -33,7 +27,10 @@ $secondary: rgba(111, 207, 151, 1);
     margin: 0;
     padding: 0;
 }
-
+html {
+    font-family: 'Montserrat', sans-serif;
+    color: $dark75;
+}
 html *::after, html *::before {
     box-sizing: content-box;
 }
@@ -43,7 +40,6 @@ body {
     font-size: 0.875rem;
     font-weight: normal;
     line-height: 1.5rem;
-    color: $dark75;
     width: 90rem;
     margin: 0 auto;
 }

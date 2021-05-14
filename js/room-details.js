@@ -59,4 +59,4 @@ $(function() {
     chartConstruct();
 })
 
-import '../pages/room_details/room-details.scss';
+import '../pages/scss/room-details.scss';

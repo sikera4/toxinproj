@@ -1,4 +1,3 @@
-import '../../pages/form_elements/form_elements.scss';
 import * as noUiSlider from 'nouislider/distribute/nouislider.js';
 import '../../node_modules/nouislider/distribute/nouislider.css';
 import * as wNumb from 'wnumb';
