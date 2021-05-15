@@ -1,39 +1,42 @@
 @use '../ui-kit-layout/layout';
-.input-container {
-    position: relative;
-    input[type="text"] {
-        font-family: Montserrat;
-        font-size: 0.875rem;
-        line-height: 1.125rem;
-        color: rgba(31, 32, 65, 0.75);
-        margin-top: 0.3125rem;
-        width: 9.375rem;
-        height: 2.75rem;
-        border: 1px solid rgba(31, 32, 65, 0.25);
-        box-sizing: border-box;
-        border-radius: 4px;
-        padding-left: .875rem;
+.date-dd {
+    &__input-container {
         position: relative;
-        z-index: 3;
-        background: none;
-        &::placeholder {
-            position:absolute;
-            top: 11px;
+        input[type="text"] {
+            font-family: Montserrat;
+            font-size: 0.875rem;
+            line-height: 1.125rem;
             color: rgba(31, 32, 65, 0.75);
+            margin-top: 0.3125rem;
+            width: 9.375rem;
+            height: 2.75rem;
+            border: 1px solid rgba(31, 32, 65, 0.25);
+            box-sizing: border-box;
+            border-radius: 4px;
+            padding-left: .875rem;
+            position: relative;
+            z-index: 3;
+            background: none;
+            &::placeholder {
+                position:absolute;
+                top: 11px;
+                color: rgba(31, 32, 65, 0.75);
+            }
         }
     }
-    .icon {
+    &__icon {
         @include layout.icon;
         left: 6.625rem;
-        }
+    }
 }
+
 #filter {
     input[type="text"] {
         margin-top: 0.34375rem;
         width: 16.625rem;
         height: 2.75rem;
     }
-    .icon {
+    .date-dd__icon {
         left: 13.875rem;
-        }
+    }
 }

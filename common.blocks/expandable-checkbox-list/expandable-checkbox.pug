@@ -1,35 +1,35 @@
 mixin expandableCheckbox(data)
     .expchecklist
         h3=data.header 
-            .icon
+            .expchecklist__icon
                 if (data.type === 'closed')
                     span.material-icons expand_more
                 else
                     span.material-icons expand_less
-        .checkboxes(class=data.type)
-            .inputs
-                .box-1
+        .expchecklist__checkboxes(class=data.type)
+            .expchecklist__inputs
+                .expchecklist__box-1
                     input(type='checkbox' id='breakfast').breakfast
-                    span.tick
+                    span.expchecklist__tick
                     label(for='breakfast') Завтрак
-                .box-2
+                .expchecklist__box-2
                     input(type='checkbox' id='table' checked).table
-                    span.tick
+                    span.expchecklist__tick
                     label(for='table') Письменный стол
-                .box-3
+                .expchecklist__box-3
                     input(type='checkbox' id='stool' checked).stool
-                    span.tick
+                    span.expchecklist__tick
                     label(for='stool') Стул для кормления
-                .box-4
+                .expchecklist__box-4
                     input(type='checkbox' id='bed' checked).bed
-                    span.tick
+                    span.expchecklist__tick
                     label(for='bed') Кроватка
-                .box-5
+                .expchecklist__box-5
                     input(type='checkbox' id='tv').tv
-                    span.tick
+                    span.expchecklist__tick
                     label(for='tv') Телевизор
-                .box-6
+                .expchecklist__box-6
                     input(type='checkbox' id='shampoo').shampoo
-                    span.tick
+                    span.expchecklist__tick
                     label(for='shampoo') Шампунь
                 

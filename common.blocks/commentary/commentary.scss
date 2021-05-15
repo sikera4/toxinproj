@@ -1,17 +1,9 @@
 @use '../like-btn/like-btn';
 .commentary {
-    width: 711px;
+    max-width: 711px;
     height: 133px;
     display: flex;
-    .person {
-        &__img {
-            height: 48px;
-            width: 48px;
-            padding-top: 25px;
-            border: 2px solid #FFFFFF;
-            filter: drop-shadow(0px 10px 20px rgba(31, 32, 65, 0.1));
-            border-radius: 32px;
-        }
+    &__person {
         display: flex;
         flex-direction: column;
         .likebutton {
@@ -19,20 +11,28 @@
             margin-left: 4px;
         }
     }
+    &__img {
+        height: 48px;
+        width: 48px;
+        padding-top: 25px;
+        border: 2px solid #FFFFFF;
+        filter: drop-shadow(0px 10px 20px rgba(31, 32, 65, 0.1));
+        border-radius: 32px;
+    }
     &__body {
         display: flex;
         flex-direction: column;
-        .person-name {
-            margin-left: 10px;
-        }
-        .name {
-            font-weight: bold;
-            color: rgba(31, 32, 65, 0.75);
-        }
-        .commenttext {
-            margin-left: 10px;
-            margin-top: 10px;
-        }
+    }
+    &__person-name {
+        margin-left: 10px;
+    }
+    &__name {
+        font-weight: bold;
+        color: rgba(31, 32, 65, 0.75);
+    }
+    &__commenttext {
+        margin-left: 10px;
+        margin-top: 10px;
     }
 }
 @mixin iconBackground($url) {

@@ -28,7 +28,6 @@
         }
     }
     &__icon {
-        .icon {
             position: absolute;
             height: 2.75rem;
             width: 2.75rem;
@@ -43,7 +42,6 @@
             background: -webkit-gradient(linear, left top, left bottom, from(rgba(188, 156, 255, 1)), to(rgba(139, 164, 249, 1)));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-        }
     }
     &_subscription-form-elements, &__subscription-footer {
         input[type='email'] {

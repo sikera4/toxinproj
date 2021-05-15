@@ -1,9 +1,9 @@
 .rangeslider {
     position: relative;
-    .slider {
-        width: 266px;
+    &__slider {
+        max-width: 266px;
     }
-    .output {
+    &__output {
         position: absolute;
         top: 0;
         left: 164px;

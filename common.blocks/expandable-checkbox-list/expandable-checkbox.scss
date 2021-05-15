@@ -1,6 +1,14 @@
 @use '../ui-kit-layout/layout';
-.checkboxes {
-    max-width: 222px;
+.expchecklist {
+    position: relative;
+    &__icon {
+        @include layout.icon;
+        left: 13.875rem;
+        top: -15px;
+    }
+    h3 {
+        cursor: pointer;
+    }
     &__inputs {
         margin-top: 18px;
         display: flex;
@@ -13,21 +21,25 @@
             &:checked ~ label::before {
                 border: 1px solid #BC9CFF;
             }
-            &:checked + span.checkboxes__tick {
+            &:checked + span.expchecklist__tick {
                 opacity: 1;
             }
         }
         label {
             @include layout.checkboxLabel;
-        }  
+        }
     }
     &__tick {
         @include layout.tick;
     }
-    &__box-pets {
-        margin-top: 13px;
+    .closed {
+        display: none;
     }
-    &__box-guests {
-        margin-top: 12px; 
+    &__box-2 {
+        margin-top: 14px;
     }
+    @for $i from 3 through 6 {
+        .expchecklist__box-#{$i} {margin-top: 12.5px;}
+    }
+
 }

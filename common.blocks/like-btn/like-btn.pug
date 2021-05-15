@@ -1,8 +1,9 @@
 mixin likebtn(likedta)
-    .likebutton(id=likedta.id)
-        .likebutton__heart
-            if (likedta.id == 'focused')
-                span.material-icons favorite
-            else 
-                span.material-icons favorite_border
-        .likebutton__count= likedta.count
+    .likebutton
+        .likebutton__container(class=likedta.type)
+            .likebutton__heart
+                if (likedta.type == 'focused')
+                    span.material-icons favorite
+                else 
+                    span.material-icons favorite_border
+            .likebutton__count= likedta.count

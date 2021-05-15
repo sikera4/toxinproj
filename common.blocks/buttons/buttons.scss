@@ -81,7 +81,7 @@
         margin-right: 0.175rem;
         color: #FFFFFF;
     }
-    .icon {
+    .button__icon {
         @include layout.icon;
         color: #FFFFFF;
         left: 276px;
@@ -95,7 +95,7 @@
 .button_long.button_header {
     height: 2.125rem;
     width: 12.25rem;
-    .icon {
+    .button__icon {
         display: none;
     }
 }

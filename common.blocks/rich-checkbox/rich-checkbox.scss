@@ -1,6 +1,5 @@
-@use '../ui-kit-layout/layout';
-.checkboxes {
-    max-width: 222px;
+@use '../../common.blocks/ui-kit-layout/layout';
+.rich-check {
     &__inputs {
         margin-top: 18px;
         display: flex;
@@ -13,21 +12,31 @@
             &:checked ~ label::before {
                 border: 1px solid #BC9CFF;
             }
-            &:checked + span.checkboxes__tick {
+            &:checked + span.rich-check__tick {
                 opacity: 1;
             }
         }
         label {
             @include layout.checkboxLabel;
-        }  
+        }
     }
     &__tick {
         @include layout.tick;
     }
-    &__box-pets {
-        margin-top: 13px;
+    &__facility-name {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 18px;
+        color: rgba(31, 32, 65, 0.75);
     }
-    &__box-guests {
-        margin-top: 12px; 
+    &__info {
+        color: rgba(31, 32, 65, 0.5);
+        font-size: 12px;
+        line-height: 14px;
+        padding-left: 30px;
+        margin-top: 5.5px;
+    }
+    &__aid-for-disabled {
+        margin-top: 12px;
     }
 }

@@ -1,10 +1,12 @@
 .likebutton {
-    display: flex;
-    width: 40px;
-    height: 20px;
-    border-radius: 10px;
     cursor: pointer;
     padding-top: 0;
+    &__container {
+        width: 40px;
+        height: 20px;
+        border-radius: 10px;
+        display: flex;
+    }
     &__heart {
         position: relative;
         height: 20px;
@@ -29,12 +31,13 @@
         border: 1px solid #BC9CFF;
         color: #BC9CFF;
     }
+    .unfocused {
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        color: rgba(31, 32, 65, 0.25);
+    }
+    .focused {
+        border: 1px solid #BC9CFF;
+        color: #BC9CFF;
+    }
 }
-#unfocused {
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    color: rgba(31, 32, 65, 0.25);
-}
-#focused {
-    border: 1px solid #BC9CFF;
-    color: #BC9CFF;
-}
+

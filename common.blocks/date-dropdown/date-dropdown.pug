@@ -1,7 +1,7 @@
 mixin dateDropdown(ddrData)
     .date-dd
         h3= ddrData.header
-        .input-container(id=ddrData.modif)
+        .date-dd__input-container(id=ddrData.modif)
             input(type='text' placeholder=ddrData.placeholder id=ddrData.id).datepicker-here
-            .icon
+            .date-dd__icon
                 span.material-icons expand_more

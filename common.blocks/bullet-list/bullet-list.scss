@@ -1,6 +1,6 @@
 .bulletlist {
     list-style: none;
-    li {
+    &__listitem {
         position: relative;
         z-index: 1;
         padding-left: 20.86px;

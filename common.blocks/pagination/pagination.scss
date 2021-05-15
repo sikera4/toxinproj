@@ -1,6 +1,6 @@
 @use '../ui-kit-layout/layout';
-.pages {
-    .pagination {
+.pagination {
+    &__pages {
         display: flex;
         list-style: none;
         width: 241px;
@@ -24,9 +24,8 @@
                     color: #FFFFFF;
                 }
             }
-            
         }
-        .activelink {
+        .pagination__activelink {
             background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
             a {
                 color: #FFFFFF;
@@ -34,18 +33,19 @@
                 margin-right: 2px;
             }
         }
-        .nextpage {
-            background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-            position: relative;
-            .icon {
-                @include layout.icon;
-                color: #FFFFFF;
-                left: -2px;
-                top: -1px;
-            }
-        }
     }
-    .comment {
+    
+    &__nextpage {
+        background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+        position: relative;
+    }
+    &__icon {
+        @include layout.icon;
+        color: #FFFFFF;
+        left: -2px;
+        top: -1px;
+    }
+    &__comment {
         margin-top: 9px;
         margin-left: 5px;
     }

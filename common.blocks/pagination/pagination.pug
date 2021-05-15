@@ -1,7 +1,7 @@
 mixin pagination
-    nav.pages
-        ul.pagination
-            li.activelink
+    nav.pagination
+        ul.pagination__pages
+            li.pagination__activelink
                 a(href='#') 1
             li
                 a(href='#') 2
@@ -11,10 +11,10 @@ mixin pagination
                 a(href='#') ...
             li
                 a(href='#') 15
-            li.nextpage
+            li.pagination__nextpage
                 a(href='#') 
-                    .icon
+                    .pagination__icon
                         span.material-icons &#xe5c8
-        .comment 1 – 12 из 100+ вариантов аренды
+        .pagination__comment 1 – 12 из 100+ вариантов аренды
 
             

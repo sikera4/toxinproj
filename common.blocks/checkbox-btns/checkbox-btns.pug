@@ -1,16 +1,16 @@
 mixin checkbox
     .checkboxes
-        .inputs
-            .box-smoking
+        .checkboxes__inputs
+            .checkboxes__box-smoking
                 input(type='checkbox' id='smoking').smoking
-                span.tick
+                span.checkboxes__tick
                 label(for='smoking') Можно курить
-            .box-pets
+            .checkboxes__box-pets
                 input(type='checkbox' id='pets' checked).pets
-                span.tick
+                span.checkboxes__tick
                 label(for='pets') Можно с питомцами
-            .box-guests
+            .checkboxes__box-guests
                 input(type='checkbox' id='guests' checked).guests
-                span.tick
-                label(for='guests') Можно пригласить гостей <br> (до 10 человек)
+                span.checkboxes__tick
+                label(for='guests') Можно пригласить гостей (до 10 человек)
 

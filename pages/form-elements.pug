@@ -16,128 +16,129 @@ include ../common.blocks/bullet-list/bullet-list.pug
 include ../common.blocks/facility/facility.pug
 include ../common.blocks/commentary/commentary.pug
 +uiKitLayout('Form Elements')
-.elements1
-    .col1 
-        .tfdefault
-            span.type DEFAULT
-            h3 text field
-            - const c = {placeholder: 'Email', type: 'email'} 
-            +textField(c)
-        .tffocus 
-            span.type Hover / Focus
-            h3 text field
-            - const d = {placeholder: 'This is pretty awesome', type: 'text'} 
-            +textField(d)
-        .dropdown 
-            h3 dropdown
-            +iqdropdown({type: 'guests'})
-        .tfmasked 
-            h3 masked text field
-            - const masked = {placeholder: 'ДД.ММ.ГГГГ', modif: 'masked', type: 'text'}
-            +textField(masked)
-        .datepickers 
-            - const dtpckr1 = {header: 'date dropdown', placeholder: 'ДД.ММ.ГГГГ'}
-            +dateDropdown(dtpckr1)
-            - const dtpckr2 = {header: 'date dropdown', placeholder: '19.08.2019'}
-            +dateDropdown(dtpckr2)
-        .filterdatedrop 
-            - const dt = {header: 'filter date dropdown', placeholder: '19 авг - 23 авг', modif: 'filter'}
-            +dateDropdown(dt)
-        .tfsub 
-            h3 subscription text field
-            - const sub = {placeholder: 'Email', modif: 'text-field_subscription-form-elements', type: 'email'}
-            +textField(sub)
-    .col2 
-        .checkboxbtns
-            h3 checkbox buttons
-            +checkbox
-        .radiobtns
-            h3 radio buttons
-            +radio
-        .toggle
-            h3 toggle
-            - const tgl = {checked: true, label: 'Получать спецпредложения', id: 'sw1'}
-            +toggle(tgl)
-            - const tgl2 = {label: 'Получать спецпредложения', id: 'sw2'}
-            +toggle(tgl2)
-        .likebtns 
-            h3 like button
-            .lbtns 
-                - const likedta = {count: 2, id: 'unfocused'}
-                +likebtn(likedta)
-                - const lkdta = {count: 12, id: 'focused'}
-                +likebtn(lkdta)
-        .ratebtns 
-            h3 rate button
-            .ratingexs 
-                +rating({grade: '4'})
-                +rating({grade: '5'})
-    .col3 
-        .range
-            +rangeslider('range slider')
-        .buttons 
-            h3 buttons 
-            .btn-filled
-                - const btn1 = {type: 'button_filled', header: 'click me'};
-                +button(btn1)
-                - const btn2 = {type: 'button_filled button_filled-disabled', header: 'click me'};
-                +button(btn2)
-            .btn-empty 
-                - const btn3 = {type: 'button_empty', header: 'click me'};
-                +button(btn3)
-                - const btn4 = {type: 'button_empty button_empty-disabled', header: 'click me'};
-                +button(btn4)
-            .btn-noborder 
-                - const btn5 = {type: 'button_noborder', header: 'click me'};
-                +button(btn5)
-                - const btn6 = {type: 'button_noborder button_noborder-disabled', header: 'click me'};
-                +button(btn6)
-            - const btn7 = {type: 'button_long', header: 'перейти к оплате'}
-            +button(btn7)
-        .pagination-cont 
-            h3 pagination
-            +pagination
-.elements2 
-    .col1
-        .quantity-dropdown 
-            h3 dropdown
-            +iqdropdown({type: 'default', def1: '2', def2: '2'})
-            span.type DEFAULT
-        .quantity-dropdown-expanded 
-            h3 dropdown 
-            +iqdropdown({type: 'expanded', def1: '2', def2: '2'})
-            span.type EXPANDED
-        .expandable-checkbox 
-            - const expData = {header: 'expandable checkbox list', type: 'closed'}
-            +expandableCheckbox(expData)
-        .expandable-checkbox-expanded 
-            - const expData2 = {header: 'expandable checkbox list'}
-            +expandableCheckbox(expData2)
-    .col2 
-        .dropdown-guests-expanded 
-            h3 dropdown 
-            +iqdropdown({type: 'guests', class: 'menu-open', def1: '0', def2: '0'})
-        .rich-checkbox-buttons 
-            h3 rich checkbox buttons
-            +richCheckbox
-    .col3 
-        .dropdown-guests-expanded2 
-            h3 dropdown 
-            +iqdropdown({type: 'guests', class: 'menu-open', def1: '2', def2: '1'})
-        .bullet-list 
-            h3 bullet list
-            +bulletList
-.elements3 
-    .facilities 
-        .fac1
-            - const facdt = {icon: 'sentiment_very_satisfied', name: 'Комфорт', description: 'Шумопоглощающие стены'}
-            +facility(facdt)
-        .fac2 
-            - const facdt2 = {icon: 'location_city', name: 'Удобство', description: 'Окно в каждой из спален'}
-            +facility(facdt2)
-    .typicalcomment 
-        - const cmtdta = {name: 'Мурад Сарафанов', when: '5 дней назад', liked: 'focused', likesnum: '12', text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.', imgId:'comment1'}
-        +commentary(cmtdta)
+.form-elements
+    .form-elements__row1
+        .form-elements__row1-col1 
+            .form-elements__tfdefault
+                span.type DEFAULT
+                h3 text field
+                - const c = {placeholder: 'Email', type: 'email'} 
+                +textField(c)
+            .form-elements__tffocus 
+                span.type Hover / Focus
+                h3 text field
+                - const d = {placeholder: 'This is pretty awesome', type: 'text'} 
+                +textField(d)
+            .form-elements__dropdown 
+                h3 dropdown
+                +iqdropdown({type: 'guests'})
+            .form-elements__tfmasked 
+                h3 masked text field
+                - const masked = {placeholder: 'ДД.ММ.ГГГГ', modif: 'masked', type: 'text'}
+                +textField(masked)
+            .form-elements__datepickers 
+                - const dtpckr1 = {header: 'date dropdown', placeholder: 'ДД.ММ.ГГГГ'}
+                +dateDropdown(dtpckr1)
+                - const dtpckr2 = {header: 'date dropdown', placeholder: '19.08.2019'}
+                +dateDropdown(dtpckr2)
+            .form-elements__filterdatedrop 
+                - const dt = {header: 'filter date dropdown', placeholder: '19 авг - 23 авг', modif: 'filter'}
+                +dateDropdown(dt)
+            .form-elements__tfsub 
+                h3 subscription text field
+                - const sub = {placeholder: 'Email', modif: 'text-field_subscription-form-elements', type: 'email'}
+                +textField(sub)
+        .form-elements__row1-col2 
+            .form-elements__checkboxbtns
+                h3 checkbox buttons
+                +checkbox
+            .form-elements__radiobtns
+                h3 radio buttons
+                +radio
+            .form-elements__toggle
+                h3 toggle
+                - const tgl = {checked: true, label: 'Получать спецпредложения', id: 'sw1'}
+                +toggle(tgl)
+                - const tgl2 = {label: 'Получать спецпредложения', id: 'sw2'}
+                +toggle(tgl2)
+            .form-elements__likebtns 
+                h3 like button
+                .lbtns 
+                    - const likedta = {count: 2, type: 'unfocused'}
+                    +likebtn(likedta)
+                    - const lkdta = {count: 12, type: 'focused'}
+                    +likebtn(lkdta)
+            .form-elements__ratebtns 
+                h3 rate button
+                .ratingexs 
+                    +rating({grade: '4'})
+                    +rating({grade: '5'})
+        .form-elements__row1-col3 
+            .form-elements__range
+                +rangeslider('range slider')
+            .form-elements__buttons 
+                h3 buttons 
+                .form-elements__btn-filled
+                    - const btn1 = {type: 'button_filled', header: 'click me'};
+                    +button(btn1)
+                    - const btn2 = {type: 'button_filled button_filled-disabled', header: 'click me'};
+                    +button(btn2)
+                .form-elements__btn-empty 
+                    - const btn3 = {type: 'button_empty', header: 'click me'};
+                    +button(btn3)
+                    - const btn4 = {type: 'button_empty button_empty-disabled', header: 'click me'};
+                    +button(btn4)
+                .form-elements__btn-noborder 
+                    - const btn5 = {type: 'button_noborder', header: 'click me'};
+                    +button(btn5)
+                    - const btn6 = {type: 'button_noborder button_noborder-disabled', header: 'click me'};
+                    +button(btn6)
+                - const btn7 = {type: 'button_long', header: 'перейти к оплате'}
+                +button(btn7)
+            .form-elements__pagination 
+                h3 pagination
+                +pagination
+    .form-elements__row2
+        .form-elements__row2-col1
+            .form-elements__quantity-dropdown 
+                h3 dropdown
+                +iqdropdown({type: 'default', def1: '2', def2: '2'})
+                span.type DEFAULT
+            .form-elements__quantity-dropdown-expanded 
+                h3 dropdown 
+                +iqdropdown({type: 'expanded', def1: '2', def2: '2'})
+                span.type EXPANDED
+            .form-elements__expandable-checkbox 
+                - const expData = {header: 'expandable checkbox list', type: 'closed'}
+                +expandableCheckbox(expData)
+            .form-elements__expandable-checkbox-expanded 
+                - const expData2 = {header: 'expandable checkbox list'}
+                +expandableCheckbox(expData2)
+        .form-elements__row2-col2 
+            .form-elements__dropdown-guests-expanded 
+                h3 dropdown 
+                +iqdropdown({type: 'guests', class: 'menu-open', def1: '0', def2: '0'})
+            .form-elements__rich-checkbox-buttons 
+                h3 rich checkbox buttons
+                +richCheckbox
+        .form-elements__row2-col3 
+            .form-elements__dropdown-guests-expanded2 
+                h3 dropdown 
+                +iqdropdown({type: 'guests', class: 'menu-open', def1: '2', def2: '1'})
+            .form-elements__bullet-list 
+                h3 bullet list
+                +bulletList
+    .form-elements__row3 
+        .form-elements__facilities 
+            .form-elements__fac1
+                - const facdt = {icon: 'sentiment_very_satisfied', name: 'Комфорт', description: 'Шумопоглощающие стены'}
+                +facility(facdt)
+            .form-elements__fac2 
+                - const facdt2 = {icon: 'location_city', name: 'Удобство', description: 'Окно в каждой из спален'}
+                +facility(facdt2)
+        .form-elements__typicalcomment 
+            - const cmtdta = {name: 'Мурад Сарафанов', when: '5 дней назад', liked: 'focused', likesnum: '12', text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.', imgId:'comment1'}
+            +commentary(cmtdta)
             
 
             
