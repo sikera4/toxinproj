@@ -26,15 +26,15 @@ mixin finalCounterCard(data)
                 h3 Гости
                 +iqdropdown({type:'guests', def1: '2', def2: '1'})
             .final-counter-card__services-list 
-                .service 
+                .final-counter-card__service.final-counter-card__living
                     span.name 9 990₽ х 4 суток
                     span.sum 39 960₽
-                .service.scnd
+                .final-counter-card__service.final-counter-card__discount
                     .name 
                         span Сбор за услуги: скидка 2 179₽
                         .info-sign i
                     span.sum 0₽
-                .service.thrd
+                .final-counter-card__service.final-counter-card__additional-services
                     .name 
                         if data.shortenedService != true
                             p Сбор за дополнительные услуги
@@ -49,7 +49,7 @@ mixin finalCounterCard(data)
                     .line 
                     h2 38 081₽
             else 
-                .final-counter-card__final-sum.final-counter-card__final-sum-proper-padding
+                .final-counter-card__final-sum.final-counter-card_final-sum-proper-padding
                     h2 Итого
                     .line 
                     h2 38 081₽

@@ -20,6 +20,6 @@ include ../common.blocks/ui-kit-layout/layout.pug
             include ../common.blocks/datepicker-layout/datepicker-layout.pug
         .room-card1 
             include ../common.blocks/room-card/room-card.pug
-            +roomCard({id: '1', num: '888', type: 'люкс', sum: '9 990₽ ', reviewNum: '145', grade: '5'})
+            +roomCard({id: '1', num: '888', type: 'люкс', sum: '9 990₽ ', reviewNum: '145', grade: '5', imgAddress: require('../assets/view1.svg')})
         .room-card2 
-            +roomCard({id: '2', num: '840', sum: '9 900₽ ', reviewNum: '65', grade: '4'})
+            +roomCard({id: '2', num: '840', sum: '9 900₽ ', reviewNum: '65', grade: '4', imgAddress: require('../assets/view2.svg')})

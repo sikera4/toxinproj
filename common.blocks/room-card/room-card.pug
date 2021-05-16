@@ -2,6 +2,7 @@ include ../rating/rating.pug
 mixin roomCard(data)
     .room-card 
         .room-card__view(id=data.id)
+            img(src=data.imgAddress).room-card__view-img
             .room-card__arrows 
                 .arrow-left 
                     span.material-icons chevron_left

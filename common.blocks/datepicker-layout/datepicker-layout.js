@@ -38,7 +38,6 @@ function datepickerData() {
     $('.datepicker .datepicker--buttons').append(applyBtn);
     $("[data-action='apply']").on('click', function() {
         datepickers.datepicker().data('datepicker').hide();
-        console.log('lol');
     })
     // making date selection look gorgeous :P
     $('.datepicker .-range-from-').addClass('nobefore');

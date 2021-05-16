@@ -27,18 +27,12 @@ body {
         margin-left: 2.5rem;
         .room-card1 {
             margin-top: 2.5rem;
-            .room-card__view {
-                background: url('../../assets/view1.svg');
-            }
             .arrow-left, .arrow-right {
                 display: flex;
             }
         }
         .room-card2 {
             margin-top: 2.5rem;
-            .room-card__view {
-                background: url('../../assets/view2.svg');
-            }
         }
     }
 }

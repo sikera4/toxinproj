@@ -8,8 +8,9 @@ mixin registrationCard(data)
             h1 Регистрация аккаунта
         form
             .registration-card__name-inputs 
+                .registration-card__name-input
                 +textField({placeholder: 'Имя', type: 'text'})
-                .input2
+                .registration-card__family-name-input
                     +textField({placeholder: 'Фамилия', type: 'text'})
                 +radio
             .registration-card__date-of-birth 
@@ -17,8 +18,9 @@ mixin registrationCard(data)
                 +textField({placeholder: 'ДД.ММ.ГГГГ', modif: 'masked', type: 'text'})
             .registration-card__entry-data 
                 h3 данные для входа в сервис
-                +textField({placeholder: 'Email', type: 'email'})
-                .password
+                .registration-card__email-input
+                    +textField({placeholder: 'Email', type: 'email'})
+                .registration-card__password-input
                     +textField({placeholder: 'Пароль', type: 'password'})
                 +toggle({id: 'sw1', label: 'Получать спецпредложения'})
             .registration-card__submit-button 

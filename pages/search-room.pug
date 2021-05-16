@@ -35,35 +35,31 @@ include ../common.blocks/page-layouts/page-layout.pug
             .search-room__header 
                 h1 Номера, которые мы для вас подобрали
             .search-room__rooms-found 
-                .row1
                     .room1
-                        +roomCard({id: 'room1', num: '888', sum: '9 990₽ ', grade: '5', reviewNum: '145', type: 'люкс'})
+                        +roomCard({num: '888', sum: '9 990₽ ', grade: '5', reviewNum: '145', type: 'люкс', imgAddress: require('../assets/room1.svg')})
                     .room2 
-                        +roomCard({id: 'room2', num: '840', sum: '9 900₽ ', grade: '4', reviewNum: '65'})
+                        +roomCard({num: '840', sum: '9 900₽ ', grade: '4', reviewNum: '65', imgAddress: require('../assets/room2.svg')})
                     .room3
-                        +roomCard({id: 'room3', num: '980', sum: '8 500₽ ', grade: '3', reviewNum: '35', type: 'люкс'})
-                .row2 
+                        +roomCard({num: '980', sum: '8 500₽ ', grade: '3', reviewNum: '35', type: 'люкс', imgAddress: require('../assets/room3.svg')})
                     .room4 
-                        +roomCard({id: 'room4', num: '856', sum: '7 300₽ ', grade: '5', reviewNum: '19'})
+                        +roomCard({num: '856', sum: '7 300₽ ', grade: '5', reviewNum: '19', imgAddress: require('../assets/room4.svg')})
                     .room5 
-                        +roomCard({id: 'room5', num: '740', sum: '6 000₽ ', grade: '4', reviewNum: '44'})
+                        +roomCard({num: '740', sum: '6 000₽ ', grade: '4', reviewNum: '44', imgAddress: require('../assets/room5.svg')})
                     .room6 
-                        +roomCard({id: 'room6', num: '982', sum: '5 800₽ ', grade: '3', reviewNum: '56'})
-                .row3 
+                        +roomCard({num: '982', sum: '5 800₽ ', grade: '3', reviewNum: '56', imgAddress: require('../assets/room6.svg')})
                     .room7 
-                        +roomCard({id: 'room7', num: '678', sum: '5 500₽ ', grade: '5', reviewNum: '45'})
+                        +roomCard({num: '678', sum: '5 500₽ ', grade: '5', reviewNum: '45', imgAddress: require('../assets/room7.svg')})
                     .room8 
-                        +roomCard({id: 'room8', num: '450', sum: '5 300₽ ', grade: '4', reviewNum: '39'})
+                        +roomCard({num: '450', sum: '5 300₽ ', grade: '4', reviewNum: '39', imgAddress: require('../assets/room8.svg')})
                     .room9 
-                        +roomCard({id: 'room9', num: '350', sum: '5 800₽ ', grade: '3', reviewNum: '56'})
-                .row4 
+                        +roomCard({num: '350', sum: '5 800₽ ', grade: '3', reviewNum: '56', imgAddress: require('../assets/room9.svg')})
                     .room10 
-                        +roomCard({id: 'room10', num: '666', sum: '5 000₽ ', grade: '5', reviewNum: '25'})
+                        +roomCard({num: '666', sum: '5 000₽ ', grade: '5', reviewNum: '25', imgAddress: require('../assets/room10.svg')})
                     .room11 
-                        +roomCard({id: 'room11', num: '444', sum: '5 000₽ ', grade: '3', reviewNum: '15'})
+                        +roomCard({num: '444', sum: '5 000₽ ', grade: '3', reviewNum: '15', imgAddress: require('../assets/room11.svg')})
                     .room12 
-                        +roomCard({id: 'room12', num: '352', sum: '5 000₽ ', grade: '3', reviewNum: '55'})
-                .search-room__pagination 
-                    +pagination
+                        +roomCard({num: '352', sum: '5 000₽ ', grade: '3', reviewNum: '55', imgAddress: require('../assets/room12.svg')})
+            .search-room__pagination 
+                +pagination
     .search-room__footer 
         +footer

@@ -12,11 +12,19 @@
         border-top-right-radius: 4px;
         position: relative;
     }
+    &__view-img {
+        height: 100%;
+        width: 100%;
+    }
     &__arrows {
+        position: absolute;
+        top: 0;
+        z-index: 1;
         color: #FFF;
         display: flex;
         justify-content: space-between;
         height: 100%;
+        width: 100%;
         &:hover > .arrow-left {
             display: flex;
         }
