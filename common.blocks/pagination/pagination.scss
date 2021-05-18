@@ -1,4 +1,4 @@
-@use '../ui-kit-layout/layout';
+@use '../scss-mixins-variables/scss-mixins-variables';
 .pagination {
     &__pages {
         display: flex;
@@ -40,7 +40,7 @@
         position: relative;
     }
     &__icon {
-        @include layout.icon;
+        @include scss-mixins-variables.icon;
         color: #FFFFFF;
         left: -2px;
         top: -1px;

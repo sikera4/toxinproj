@@ -1,4 +1,4 @@
-@use '../ui-kit-layout/layout';
+@use '../scss-mixins-variables/scss-mixins-variables';
 .color-example {
     display: flex;
     &__color-caption {
@@ -20,25 +20,25 @@
         width: 70px;
         border-radius: 6px;
         &_dark100 {
-            background: layout.$dark100;
+            background: scss-mixins-variables.$dark100;
         }
         &_dark75 {
-            background: layout.$dark75;
+            background: scss-mixins-variables.$dark75;
         }
         &_dark50 {
-            background: layout.$dark50;
+            background: scss-mixins-variables.$dark50;
         }
         &_dark25 {
-            background: layout.$dark25;
+            background: scss-mixins-variables.$dark25;
         }
         &_dark05 {
-            background: layout.$dark05;
+            background: scss-mixins-variables.$dark05;
         }
         &_primary {
-            background: layout.$primary;
+            background: scss-mixins-variables.$primary;
         }
         &_secondary {
-            background: layout.$secondary;
+            background: scss-mixins-variables.$secondary;
         }
     }
 }

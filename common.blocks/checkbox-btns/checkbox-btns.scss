@@ -1,4 +1,4 @@
-@use '../ui-kit-layout/layout';
+@use '../scss-mixins-variables/scss-mixins-variables';
 .checkboxes {
     max-width: 222px;
     &__inputs {
@@ -18,11 +18,11 @@
             }
         }
         label {
-            @include layout.checkboxLabel;
+            @include scss-mixins-variables.checkboxLabel;
         }  
     }
     &__tick {
-        @include layout.tick;
+        @include scss-mixins-variables.tick;
     }
     &__box-pets {
         margin-top: 13px;

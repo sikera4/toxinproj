@@ -1,4 +1,4 @@
-@use '../ui-kit-layout/layout';
+@use '../scss-mixins-variables/scss-mixins-variables';
 .button_filled {
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     width: 6.1875rem;
@@ -82,7 +82,7 @@
         color: #FFFFFF;
     }
     .button__icon {
-        @include layout.icon;
+        @include scss-mixins-variables.icon;
         color: #FFFFFF;
         left: 276px;
         top: 0;

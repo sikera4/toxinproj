@@ -1,11 +1,65 @@
-@use '../ui-kit-layout/layout';
+@use '../scss-mixins-variables/scss-mixins-variables';
 @use '../buttons/buttons';
 .header {
-    height: 4.375rem;
+    padding: 15px 0;
     background: #FFFFFF;
     display: flex;
     align-items: center;
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    &__menu-btn {
+        visibility: hidden;
+        position: absolute;
+        z-index: 1;
+        right: 8.75rem;
+        top: 30%;
+        height: 20px;
+        width: 28px;
+        cursor: pointer;
+        @include scss-mixins-variables.transition-ease;
+    }
+    &__menu-btn-burger {
+        position: absolute;
+        right: 0;
+        top: 0.5rem;
+        width: 28px;
+        height: 3px;
+        background: scss-mixins-variables.$primary;
+        @include scss-mixins-variables.transition-ease;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            width: 28px;
+            height: 3px;
+            background: scss-mixins-variables.$primary;
+            @include scss-mixins-variables.transition-ease;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 8px;
+            width: 20px;
+            height: 3px;
+            background: scss-mixins-variables.$primary;
+            @include scss-mixins-variables.transition-ease;
+        }
+
+        &.open {
+            transform: rotate(720deg);
+            background: transparent;
+
+            &::before {
+                transform: rotate(45deg) translate(5px, 8px);
+            }
+
+            &::after {
+                width: 28px;
+                transform: rotate(-45deg) translate(3px, -7px);
+            }
+        }
+    }
     &__content {
         padding: 0 8.75rem;
         display: flex;
@@ -17,41 +71,44 @@
     }
     &__rightside-content {
         display: flex;
+        &.open {
+            visibility: visible;
+        }
     }
     &__logo {
         height: 2.5rem;
     }
     &__nav {
-        color: layout.$dark50;
+        color: scss-mixins-variables.$dark50;
         display: flex;
         align-items: center;
-        .about {
-            color: layout.$dark75;
-            font-weight: bold;
+    }
+    @each $navItem in services, vacancies, news, agreements {
+        &__#{$navItem} {
+            margin-right: 1.25rem;
             cursor: pointer;
-            margin-right: 1.3125rem;
         }
-        .services {
-            display: flex;
-            align-items: center;
-            span {
-                vertical-align: middle;
-                margin-left: 0.0625rem;
-            }
+    }
+    &__about {
+        color: scss-mixins-variables.$dark75;
+        font-weight: bold;
+        cursor: pointer;
+        margin-right: 1.3125rem;
+    }
+    &__services {
+        display: flex;
+        align-items: center;
+        .material-icons {
+            vertical-align: middle;
+            margin-left: 0.0625rem;
         }
-        .agreements {
-            display: flex;
-            align-items: center;
-            span {
-                vertical-align: middle;
-                margin-left: 0.0625rem;
-            }
-        }
-        @each $navItem in services, vacancies, news, agreements {
-            .#{$navItem} {
-                margin-right: 1.25rem;
-                cursor: pointer;
-            }
+    }
+    &__agreements {
+        display: flex;
+        align-items: center;
+        .material-icons {
+            vertical-align: middle;
+            margin-left: 0.0625rem;
         }
     }
     &__buttons {
@@ -61,8 +118,18 @@
         }
     }
     &__name {
-        color: layout.$dark50;
+        color: scss-mixins-variables.$dark50;
         border-left: 1px solid rgba(31, 32, 65, 0.1);
         padding-left: 1.25rem;
+    }
+}
+@include scss-mixins-variables.media-md {
+    .header {
+        &__nav {
+            visibility: hidden;
+        }
+        &__menu-btn {
+            visibility: visible;
+        }
     }
 }

@@ -1,6 +1,6 @@
 mixin textField(tfData)
-    .text-field 
-        .text-field__input(class=tfData.modif)
+    .text-field(class=tfData.modif)
+        .text-field__input
             input(type=tfData.type placeholder=tfData.placeholder)
         .text-field__icon
             if tfData.modif === 'text-field_subscription-form-elements' || tfData.modif === 'text-field_subscription-footer'

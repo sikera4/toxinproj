@@ -4,6 +4,7 @@
 @use '../../common.blocks/commentary/commentary';
 @use '../../common.blocks/bullet-list/bullet-list';
 @use '../../common.blocks/footer/footer';
+@use '../../common.blocks/scss-mixins-variables/scss-mixins-variables';
 .room-details {
     &__photos {
         height: 30.3125rem;
@@ -123,7 +124,7 @@
             display: flex;
             justify-content: space-between;
             p {
-                color: page-layout.$dark50;
+                color: scss-mixins-variables.$dark50;
             }
         }
     }

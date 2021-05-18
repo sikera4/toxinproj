@@ -4,20 +4,22 @@ mixin header(data)
         .header__content
             .header__logo 
                 img(src=require('../assets/Logo.svg'))
+            .header__menu-btn 
+                span.header__menu-btn-burger
             .header__rightside-content
                 nav.header__nav 
-                    .about О нас
-                    .services 
-                        .services__text Услуги
-                        .services__icon 
+                    .header__about О нас
+                    .header__services 
+                        .header__services-text Услуги
+                        .header__services-icon 
                             span.material-icons expand_more
-                    .vacancies Вакансии
-                    .news Новости
-                    .agreements 
-                        .agreements__text Соглашения
-                        .agreements__icon 
+                    .header__vacancies Вакансии
+                    .header__news Новости
+                    .header__agreements 
+                        .header__agreements-text Соглашения
+                        .header__agreements-icon 
                             span.material-icons expand_more
-                .header__dependant 
+                .header__dependent 
                     if !data.loggedIn
                         .header__buttons
                             .entry-button 

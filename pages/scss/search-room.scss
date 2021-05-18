@@ -1,4 +1,5 @@
 @use '../../common.blocks/page-layouts/page-layout';
+@use '../../common.blocks/scss-mixins-variables/scss-mixins-variables';
 @use '../../common.blocks/date-dropdown/date-dropdown';
 @use '../../common.blocks/quantity-dropdown/quantity-dropdown';
 @use '../../common.blocks/checkbox-btns/checkbox-btns';
@@ -13,6 +14,7 @@
     &__content {
         padding: 1.875rem 8.4375rem 1.25rem 8.75rem;
         display: flex;
+        justify-content: center;
         border-bottom: 1px solid rgba(31, 32, 65, 0.25);
     }
     &__rooms {
@@ -22,13 +24,12 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-gap: 1.267rem 0.75rem;
+        grid-gap: 1.3rem 0.75rem;
         .room1 {
             .arrow-left, .arrow-right {
                 display: flex;
             }
         }
-
         .room-card {
             &__view {
                 height: 59%;
@@ -65,7 +66,7 @@
         p {
             font-size: 0.75rem;
             line-height: 0.875rem;
-            color: page-layout.$dark50;
+            color: scss-mixins-variables.$dark50;
             margin-top: 0.875rem;
         }
     }

@@ -1,14 +1,14 @@
-@use '../ui-kit-layout/layout';
+@use '../scss-mixins-variables/scss-mixins-variables';
 .datepicker {
         box-sizing: border-box;
         width: 20rem;
         font-family: 'Montserrat', sans-serif;
         padding: 1.25rem 1.1875rem 1.125rem 1.1875rem;
-        box-shadow: 0px 10px 20px layout.$dark05;
-        border: 1px solid layout.$dark25;
+        box-shadow: 0px 10px 20px scss-mixins-variables.$dark05;
+        border: 1px solid scss-mixins-variables.$dark25;
         .datepicker--nav {
             align-items: flex-start;
-            color: layout.$dark100;
+            color: scss-mixins-variables.$dark100;
             font-size: 1.1875rem;
             line-height: 1.4375rem;
             font-weight: bold;
@@ -20,7 +20,7 @@
                 font-weight: inherit;
             }
             &-action {
-                color: layout.$primary;
+                color: scss-mixins-variables.$primary;
                 width: 1.5rem;
             }
         }
@@ -35,7 +35,7 @@
         }
         &--day-name {
             text-transform: none;
-            color: layout.$primary;
+            color: scss-mixins-variables.$primary;
             font-weight: bold;
         }
         &--cell-month {
@@ -46,22 +46,22 @@
         &--cells {
             font-size: 0.75rem;
             line-height: 0.9375rem;
-            color: layout.$dark50;
+            color: scss-mixins-variables.$dark50;
             .-selected- {
                 border-radius: 50%;
-                background: linear-gradient(180deg, layout.$primary 0%, #8BA4F9 100%);
+                background: linear-gradient(180deg, scss-mixins-variables.$primary 0%, #8BA4F9 100%);
                 font-weight: bold;
             }
             .-in-range- {
                 border-radius: 0;
                 background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
-                color: layout.$dark50;
+                color: scss-mixins-variables.$dark50;
                 position: relative;
                 z-index: 4;
             }
             .-range-from- {
                 border-radius: 50%;
-                background: linear-gradient(180deg, layout.$primary 0%, #8BA4F9 100%);
+                background: linear-gradient(180deg, scss-mixins-variables.$primary 0%, #8BA4F9 100%);
                 color: #FFF;
                 border: none;
                 position: relative;
@@ -84,7 +84,7 @@
             }
             .-range-to- {
                 border-radius: 50%;
-                background: linear-gradient(180deg, layout.$primary 0%, #8BA4F9 100%);
+                background: linear-gradient(180deg, scss-mixins-variables.$primary 0%, #8BA4F9 100%);
                 color: #FFF;
                 border: none;
                 position: relative;
@@ -102,7 +102,7 @@
             }
             .-focus- {
                 border-radius: 50%;
-                background: linear-gradient(180deg, layout.$primary 0%, #8BA4F9 100%);
+                background: linear-gradient(180deg, scss-mixins-variables.$primary 0%, #8BA4F9 100%);
                 color: #FFF;
                 border: none;
                 position: relative; 
@@ -134,7 +134,7 @@
         &--button, .apply-button {
             cursor: pointer;
             display: flex;
-            color: layout.$primary;
+            color: scss-mixins-variables.$primary;
             align-items: flex-end;
             flex: 0;
             margin-top: 0.1875rem;

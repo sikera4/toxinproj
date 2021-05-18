@@ -1,10 +1,10 @@
-@use '../ui-kit-layout/layout';
+@use '../scss-mixins-variables/scss-mixins-variables';
 @use '../rating/rating';
 .room-card {
     height: 16.0625rem;
     width: 16.875rem;
     background: #FFFFFF;
-    box-shadow: 0px 10px 20px layout.$dark05;
+    box-shadow: 0px 10px 20px scss-mixins-variables.$dark05;
     border-radius: 4px;
     &__view {
         height: 58%;
@@ -15,6 +15,8 @@
     &__view-img {
         height: 100%;
         width: 100%;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
     }
     &__arrows {
         position: absolute;
@@ -108,7 +110,7 @@
     &__room-price {
         margin-top: 0.1875rem;
         line-height: 1.2rem;
-        color: layout.$dark50;
+        color: scss-mixins-variables.$dark50;
         .sum {
             font-weight: bold;
         }
@@ -123,7 +125,7 @@
     }
     &__reviews {
         display: flex;
-        color: layout.$dark50;
+        color: scss-mixins-variables.$dark50;
         margin-right: 0.1875rem;
         .num {
             font-weight: bold;

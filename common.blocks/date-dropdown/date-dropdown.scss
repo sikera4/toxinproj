@@ -1,4 +1,4 @@
-@use '../ui-kit-layout/layout';
+@use '../scss-mixins-variables/scss-mixins-variables';
 .date-dd {
     &__input-container {
         position: relative;
@@ -25,7 +25,7 @@
         }
     }
     &__icon {
-        @include layout.icon;
+        @include scss-mixins-variables.icon;
         left: 6.625rem;
     }
 }

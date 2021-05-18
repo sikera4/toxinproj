@@ -1,4 +1,4 @@
-@use '../../common.blocks/ui-kit-layout/layout';
+@use '../scss-mixins-variables/scss-mixins-variables';
 .rich-check {
     &__inputs {
         margin-top: 18px;
@@ -17,11 +17,11 @@
             }
         }
         label {
-            @include layout.checkboxLabel;
+            @include scss-mixins-variables.checkboxLabel;
         }
     }
     &__tick {
-        @include layout.tick;
+        @include scss-mixins-variables.tick;
     }
     &__facility-name {
         font-weight: 700;
