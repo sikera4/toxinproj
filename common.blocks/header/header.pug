@@ -22,9 +22,9 @@ mixin header(data)
                 .header__dependent 
                     if !data.loggedIn
                         .header__buttons
-                            .entry-button 
+                            .header__entry-button 
                                 +button({type: 'button_empty button_header', header: 'войти'})
-                            .registration-button 
+                            .header__registration-button 
                                 +button({type: 'button_long button_header', header: 'зарегистрироваться'})
                     else if data.loggedIn
                         .header__name= data.name 

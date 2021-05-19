@@ -111,15 +111,6 @@
     }
     &__reviews {
         margin-top: 0.75rem;
-        .commentary {
-            margin-top: 1.25rem;
-        }
-        #comment1 {
-            @include commentary.iconBackground('../../assets/murad.svg');
-        }
-        #comment2 {
-            @include commentary.iconBackground('../../assets/patrice.svg');
-        }
         &-header {
             display: flex;
             justify-content: space-between;
@@ -127,6 +118,9 @@
                 color: scss-mixins-variables.$dark50;
             }
         }
+    }
+    &__commentary {
+        margin-top: 1.25rem;
     }
     &__rules {
         display: flex;

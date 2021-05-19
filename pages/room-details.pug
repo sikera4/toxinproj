@@ -36,10 +36,12 @@ include ../common.blocks/footer/footer.pug
                 .room-details__reviews-header
                     h2 Отзывы посетителей номера
                     p 2 отзыва
-                - const cmtdta = {name: 'Мурад Сарафанов', when: '5 дней назад', liked: 'focused', likesnum: '12', text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.', imgId:'comment1'}
-                +commentary(cmtdta)
-                - const cmtdta2 = {name: 'Патрисия Стеклышкова', when: 'Неделю назад', liked: 'unfocused', likesnum: '2', text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент', imgId: 'comment2'}
-                +commentary(cmtdta2)
+                - const cmtdta = {name: 'Мурад Сарафанов', personImg: require('../assets/murad.svg'), when: '5 дней назад', liked: 'focused', likesnum: '12', text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'}
+                .room-details__commentary
+                    +commentary(cmtdta)
+                - const cmtdta2 = {name: 'Патрисия Стеклышкова', personImg: require('../assets/patrice.svg'),when: 'Неделю назад', liked: 'unfocused', likesnum: '2', text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'}
+                .room-details__commentary
+                    +commentary(cmtdta2)
             .room-details__rules 
                 .room-details__living-rules 
                     h2 Правила

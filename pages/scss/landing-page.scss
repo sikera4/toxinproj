@@ -2,6 +2,7 @@
 @use '../../common.blocks/booking-card/booking-card';
 @use '../../common.blocks/footer/footer';
 @use '../../common.blocks/datepicker-layout/datepicker-layout';
+@use '../../common.blocks/scss-mixins-variables/scss-mixins-variables';
 .landing-page {
     &__content {
         height: 51.875rem;
@@ -16,5 +17,12 @@
         text-align: right;
         display: flex;
         align-self: flex-end;
+    }
+}
+@include scss-mixins-variables.media-md {
+    .landing-page {
+        &__content {
+            padding: 4.375rem 4rem 1.25rem 4rem;
+        }
     }
 }

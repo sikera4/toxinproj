@@ -10,7 +10,6 @@
         visibility: hidden;
         position: absolute;
         z-index: 1;
-        right: 8.75rem;
         top: 30%;
         height: 20px;
         width: 28px;
@@ -113,9 +112,9 @@
     }
     &__buttons {
         display: flex;
-        .entry-button {
-            margin-right: 1.25rem;
-        }
+    }
+    &__entry-button {
+        margin-right: 1.25rem;
     }
     &__name {
         color: scss-mixins-variables.$dark50;
@@ -123,13 +122,63 @@
         padding-left: 1.25rem;
     }
 }
-@include scss-mixins-variables.media-md {
+@include scss-mixins-variables.media-sm {
     .header {
-        &__nav {
+        &__rightside-content{
             visibility: hidden;
+            position: fixed;
+            top: 0;
+            left: 0;
+            opacity: 0.98;
+            width: 100vw;
+            height: 100vh;
+            flex-direction: column;
+            justify-content: center;
+            background: rgba(184, 252, 212, 0.92);
+        }
+        &__nav {
+            flex-flow: column wrap;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            transform: translateY(-100%);
+            color: scss-mixins-variables.$dark100;
+            @include scss-mixins-variables.transition-ease;
+            &.open {
+                transform: translateY(0);
+            }
+        }
+        @each $navItem in about, services, vacancies, news, agreements {
+            &__#{$navItem} {
+                font-size: 2rem;
+                margin-top: 2rem;
+                transform: translateX(100vw);
+                @include scss-mixins-variables.transition-ease;
+                &.open {
+                    transform: translateX(0);
+                }
+            }
+        }
+        &__buttons {
+            justify-content: center;
+            margin-top: 2rem;
+            transform: translateX(100vw);
+            @include scss-mixins-variables.transition-ease;
+            &.open {
+                visibility: visible;
+                transform: translateX(0);
+            }
         }
         &__menu-btn {
             visibility: visible;
+            right: 4rem;
+        }
+    }
+}
+@include scss-mixins-variables.media-md {
+    .header {
+        &__content {
+            padding: 0 4rem;
         }
     }
 }

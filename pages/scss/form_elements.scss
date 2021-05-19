@@ -1,5 +1,6 @@
 @use '../../common.blocks/expandable-checkbox-list/expandable-checkbox';
 @use '../../common.blocks/rich-checkbox/rich-checkbox';
+@use '../../common.blocks/scss-mixins-variables/scss-mixins-variables';
 @import '../../common.blocks/ui-kit-layout/layout';
 @import '../../common.blocks/text-field/text-field';
 @import '../../common.blocks/date-dropdown/date-dropdown';
@@ -249,8 +250,5 @@
     &__typicalcomment {
         margin-left: 167px;
         margin-top: 10px;
-        #comment1 {
-            @include iconBackground('../../assets/murad.svg')
-        }
     }
 }

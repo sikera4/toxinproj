@@ -65,8 +65,13 @@ $secondary: rgba(111, 207, 151, 1);
 @mixin transition-ease {
     transition: all 0.5s ease-in-out;
 }
-@mixin media-sm {
+@mixin media-xs {
     @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+@mixin media-sm {
+    @media screen and (max-width: 1000px) {
         @content;
     }
 }
