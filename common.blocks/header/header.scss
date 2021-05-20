@@ -122,6 +122,13 @@
         padding-left: 1.25rem;
     }
 }
+@include scss-mixins-variables.media-md {
+    .header {
+        &__content {
+            padding: 0 4rem;
+        }
+    }
+}
 @include scss-mixins-variables.media-sm {
     .header {
         &__rightside-content{
@@ -175,10 +182,13 @@
         }
     }
 }
-@include scss-mixins-variables.media-md {
+@include scss-mixins-variables.media-xs {
     .header {
-        &__content {
-            padding: 0 4rem;
+        @each $navItem in about, services, vacancies, news, agreements {
+            &__#{$navItem} {
+                font-size: 1.5rem;
+                margin-top: 1rem;
+            }
         }
     }
 }

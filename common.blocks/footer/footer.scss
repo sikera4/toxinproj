@@ -20,6 +20,9 @@
         margin-top: 1.125rem;
     }
     &__navigation {
+        & > div {
+            cursor: pointer;
+        }
         margin-top: 0.3125rem;
         margin-left: 2.5rem;
         color: scss-mixins-variables.$dark50;
@@ -37,6 +40,9 @@
         margin-top: 0.3125rem;
         margin-left: 3.5rem;
         color: scss-mixins-variables.$dark50;
+        & > div {
+            cursor: pointer;
+        }
     }
     &__text-aboutservices {
         margin-top: 1.125rem;
@@ -46,6 +52,9 @@
         margin-top: 0.3125rem;
         margin-left: 5.8125rem;
         color: scss-mixins-variables.$dark50;
+        & > div {
+            cursor: pointer;
+        }
     }
     &__text-agreements {
         margin-top: 1.0625rem;
@@ -59,18 +68,8 @@
         margin-top: 1.0625rem;
         margin-bottom: 1.4375rem;
     }
-    &__text-field {
-        input[type='text'] {
-            width: 16.25rem;
-            padding-left: 0.9375rem;
-        }
-        .icon {
-            left: 13.5rem;
-        }
-    }
     &__copyright-block {
         display: flex;
-        height: 4.375rem;
         padding: 1.4375rem 8.75rem;
         justify-content: space-between;
     }
@@ -87,6 +86,52 @@
             background: -webkit-gradient(linear, left top, left bottom, from(rgba(188, 156, 255, 1)), to(rgba(139, 164, 249, 1)));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+    }
+}
+
+@include scss-mixins-variables.media-sm {
+    .footer {
+        &__content {
+            justify-self: center;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-row-gap: 2.5rem;
+            grid-column-gap: 1.5rem;
+        }
+        @each $entry in company-description, navigation, about-us, support, subscription {
+            &__#{$entry} {
+                margin-left: 0;
+            }
+        }
+    }
+}
+@include scss-mixins-variables.media-xs {
+    .footer {
+        &__content {
+            grid-template-columns: 1fr 1fr;
+        }
+        &__copyright-block {
+            flex-direction: column;
+            padding: 0.55rem 8.75rem;
+        }
+        &__copyright-text {
+            align-self: center;
+        }
+        &__icons {
+            align-self: center;
+        }
+    }
+}
+@include scss-mixins-variables.media-xxs {
+    .footer {
+        &__content {
+            grid-template-columns: 1fr;
+        }
+        &__copyright-block {
+            flex-direction: column;
+            padding: 0.55rem 4rem;
         }
     }
 }
