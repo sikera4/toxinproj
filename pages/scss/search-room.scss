@@ -45,8 +45,11 @@
         }
         margin-top: 1.3125rem;
     }
-    &__filter {
+    &__filter-settings {
         width: 16.625rem;
+    }
+    &__filter-header {
+        display: none;
     }
     &__guestsdd {
         margin-top: 1.375rem;
@@ -94,5 +97,110 @@
         justify-content: center;
         margin-right: 1rem;
         margin-bottom: 3.1875rem;
+    }
+}
+
+@include scss-mixins-variables.media-md {
+    .search-room {
+        &__content {
+            padding: 1.875rem 6rem 1.25rem 5.75rem;
+            flex-direction: column;
+        }
+        &__filter {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        &__filter-header {
+            display: flex;
+            cursor: pointer;
+            .material-icons {
+                margin-left: 0.5rem;
+            }
+        }
+        &__filter-settings {
+            display: none;
+            margin-top: 1rem;
+            &.open {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+        &__filter-settings-col3 {
+            min-width: 266px;
+        }
+        &__rules {
+            margin-top: 0;
+        }
+        &__facilities {
+            margin-top: 0;
+        }
+        &__rooms {
+            margin: 0 auto;
+        }
+    }
+}
+
+@include scss-mixins-variables.media-sm {
+    .search-room {
+        &__content {
+            padding: 1.875rem 1.2rem 1.25rem 1.2rem;
+        }
+        &__rooms-found {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 1.5rem 1rem;
+        }
+    }
+}
+@include scss-mixins-variables.media-ssm {
+    .search-room {
+        &__rooms-found {
+            grid-template-columns: 1fr 1fr;
+        }
+        &__filter-settings {
+            &.open {
+                padding: 0 6rem;
+            }
+        }
+    }
+}
+@include scss-mixins-variables.media-xs {
+    .search-room {
+        &__content {
+            padding: 1.875rem 0.25rem 1.2rem 0.25rem;
+        }
+        &__filter-settings {
+            &.open {
+                align-items: center;
+                flex-direction: column;
+            }
+        }
+        &__rooms-found {
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 1rem 0.75rem;
+        }
+        &__rules {
+            margin-top: 1.9375rem;
+        }
+        &__facilities {
+            margin-top: 1.875rem;
+        }
+    }
+}
+@include scss-mixins-variables.media-xxs {
+    .search-room {
+        &__rooms-found {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+@include scss-mixins-variables.media-xxxs {
+    .search-room {
+        &__content {
+            padding: 1.5rem 0 1rem 0;
+        }
     }
 }

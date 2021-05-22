@@ -1,13 +1,13 @@
 - let pageTitle = 'Landing Page';
 include ../common.blocks/footer/footer.pug
 include ../common.blocks/page-layouts/page-layout.pug
-.landing-page
+include ../common.blocks/booking-card/booking-card.pug 
+main.landing-page
     .landing-page__content 
-        include ../common.blocks/booking-card/booking-card.pug 
         .landing-page__booking-card
             +bookingCard({phArrival: 'ДД.ММ.ГГГГ', phDeparture: 'ДД.ММ.ГГГГ', def1: '0', def2: '0'})
         .landing-page__text 
-            p Лучшие номера для вашей работы,<br> отдыха и просто вдохновения
-    .landing-page__footer 
-        +footer
+            p Лучшие номера для вашей работы, отдыха и просто вдохновения
+footer.footer 
+    +footer
     

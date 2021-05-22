@@ -9,57 +9,51 @@ include ../common.blocks/room-card/room-card.pug
 include ../common.blocks/pagination/pagination.pug
 include ../common.blocks/footer/footer.pug
 include ../common.blocks/page-layouts/page-layout.pug
-.search-room 
-    .search-room__content 
-        .search-room__filter 
-            .search-room__datedropdown 
-                +dateDropdown({header: 'даты пребывания в отеле', placeholder: '19 авг - 23 авг', modif: 'filter'})
-            .search-room__guestsdd 
-                h3 гости
-                +iqdropdown({type: 'guests', def1: '2', def2: '1', def3: '1', class: 'iqdropdown_filter'})
-            .search-room__slider 
-                +rangeslider('диапазон цены')
-                p Стоимость за сутки пребывания в номере
-            .search-room__rules
-                h3 правила дома
-                +checkbox
-            .search-room__availability 
-                h3 доступность
-                +richCheckbox
-            .search-room__facilities
-                h3 удобства номера
-                +iqdropdown({type: 'default', def1: '2', def2: '2'})
-            .search-room__additional-facilities 
-                +expandableCheckbox({header: 'дополнительные удобства', type: 'closed'})
+main.search-room 
+    .search-room__content
+        .search-room__filter
+            .search-room__filter-header
+                h2 Фильтр
+                span.material-icons sort
+            .search-room__filter-settings
+                .search-room__filter-settings-col1
+                    .search-room__datedropdown 
+                        +dateDropdown({header: 'даты пребывания в отеле', placeholder: '19 авг - 23 авг', modif: 'filter'})
+                    .search-room__guestsdd 
+                        h3 гости
+                        +iqdropdown({type: 'guests', def1: '2', def2: '1', def3: '1', class: 'iqdropdown_filter'})
+                    .search-room__slider 
+                        +rangeslider('диапазон цены')
+                        p Стоимость за сутки пребывания в номере
+                .search-room__filter-settings-col2
+                    .search-room__rules
+                        h3 правила дома
+                        +checkbox
+                    .search-room__availability 
+                        h3 доступность
+                        +richCheckbox
+                .search-room__filter-settings-col3
+                    .search-room__facilities
+                        h3 удобства номера
+                        +iqdropdown({type: 'default', def1: '2', def2: '2'})
+                    .search-room__additional-facilities 
+                        +expandableCheckbox({header: 'дополнительные удобства', type: 'closed'})
         .search-room__rooms
-            .search-room__header 
-                h1 Номера, которые мы для вас подобрали
+            h1.search-room__header Номера, которые мы для вас подобрали                
             .search-room__rooms-found 
-                    .room1
-                        +roomCard({num: '888', sum: '9 990₽ ', grade: '5', reviewNum: '145', type: 'люкс', imgAddress: require('../assets/room1.svg')})
-                    .room2 
-                        +roomCard({num: '840', sum: '9 900₽ ', grade: '4', reviewNum: '65', imgAddress: require('../assets/room2.svg')})
-                    .room3
-                        +roomCard({num: '980', sum: '8 500₽ ', grade: '3', reviewNum: '35', type: 'люкс', imgAddress: require('../assets/room3.svg')})
-                    .room4 
-                        +roomCard({num: '856', sum: '7 300₽ ', grade: '5', reviewNum: '19', imgAddress: require('../assets/room4.svg')})
-                    .room5 
-                        +roomCard({num: '740', sum: '6 000₽ ', grade: '4', reviewNum: '44', imgAddress: require('../assets/room5.svg')})
-                    .room6 
-                        +roomCard({num: '982', sum: '5 800₽ ', grade: '3', reviewNum: '56', imgAddress: require('../assets/room6.svg')})
-                    .room7 
-                        +roomCard({num: '678', sum: '5 500₽ ', grade: '5', reviewNum: '45', imgAddress: require('../assets/room7.svg')})
-                    .room8 
-                        +roomCard({num: '450', sum: '5 300₽ ', grade: '4', reviewNum: '39', imgAddress: require('../assets/room8.svg')})
-                    .room9 
-                        +roomCard({num: '350', sum: '5 800₽ ', grade: '3', reviewNum: '56', imgAddress: require('../assets/room9.svg')})
-                    .room10 
-                        +roomCard({num: '666', sum: '5 000₽ ', grade: '5', reviewNum: '25', imgAddress: require('../assets/room10.svg')})
-                    .room11 
-                        +roomCard({num: '444', sum: '5 000₽ ', grade: '3', reviewNum: '15', imgAddress: require('../assets/room11.svg')})
-                    .room12 
-                        +roomCard({num: '352', sum: '5 000₽ ', grade: '3', reviewNum: '55', imgAddress: require('../assets/room12.svg')})
+                    +roomCard({num: '888', sum: '9 990₽ ', grade: '5', reviewNum: '145', type: 'люкс', imgAddress: require('../assets/room1.svg')}) 
+                    +roomCard({num: '840', sum: '9 900₽ ', grade: '4', reviewNum: '65', imgAddress: require('../assets/room2.svg')})
+                    +roomCard({num: '980', sum: '8 500₽ ', grade: '3', reviewNum: '35', type: 'люкс', imgAddress: require('../assets/room3.svg')}) 
+                    +roomCard({num: '856', sum: '7 300₽ ', grade: '5', reviewNum: '19', imgAddress: require('../assets/room4.svg')})
+                    +roomCard({num: '740', sum: '6 000₽ ', grade: '4', reviewNum: '44', imgAddress: require('../assets/room5.svg')})
+                    +roomCard({num: '982', sum: '5 800₽ ', grade: '3', reviewNum: '56', imgAddress: require('../assets/room6.svg')})
+                    +roomCard({num: '678', sum: '5 500₽ ', grade: '5', reviewNum: '45', imgAddress: require('../assets/room7.svg')})
+                    +roomCard({num: '450', sum: '5 300₽ ', grade: '4', reviewNum: '39', imgAddress: require('../assets/room8.svg')}) 
+                    +roomCard({num: '350', sum: '5 800₽ ', grade: '3', reviewNum: '56', imgAddress: require('../assets/room9.svg')})
+                    +roomCard({num: '666', sum: '5 000₽ ', grade: '5', reviewNum: '25', imgAddress: require('../assets/room10.svg')})
+                    +roomCard({num: '444', sum: '5 000₽ ', grade: '3', reviewNum: '15', imgAddress: require('../assets/room11.svg')})
+                    +roomCard({num: '352', sum: '5 000₽ ', grade: '3', reviewNum: '55', imgAddress: require('../assets/room12.svg')})
             .search-room__pagination 
                 +pagination
-    .search-room__footer 
-        +footer
+footer.footer 
+    +footer

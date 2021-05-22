@@ -159,6 +159,7 @@
             &__#{$navItem} {
                 font-size: 2rem;
                 margin-top: 2rem;
+                margin-right: 0;
                 transform: translateX(100vw);
                 @include scss-mixins-variables.transition-ease;
                 &.open {

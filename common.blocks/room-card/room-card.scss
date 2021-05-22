@@ -133,3 +133,9 @@
         }
     }
 }
+
+@include scss-mixins-variables.media-xxs {
+    .room-card {
+        justify-self: center;
+    }
+}
