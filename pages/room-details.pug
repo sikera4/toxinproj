@@ -9,8 +9,8 @@ include ../common.blocks/footer/footer.pug
     .room-details__photos 
         .room-details__primary-photo 
         .room-details__photo-col 
-            .secondary-photo1 
-            .secondary-photo2
+            .room-details__secondary-photo1 
+            .room-details__secondary-photo2
     .room-details__content 
         .room-details__room-info 
             .room-details__info-blocks
@@ -51,5 +51,4 @@ include ../common.blocks/footer/footer.pug
                     p Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
         .room-details__final-counter-card
             +finalCounterCard({luxspaced: true, shortenedService: true, properPaddingSum: true})
-    .room-details__footer 
-        +footer
++footer

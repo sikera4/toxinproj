@@ -1,7 +1,9 @@
 @use '../date-dropdown/date-dropdown';
+@use '../datepicker-layout/datepicker-layout';
 @use '../quantity-dropdown/quantity-dropdown';
+@use '../scss-mixins-variables/scss-mixins-variables';
 .final-counter-card {
-    width: 23.75rem;
+    max-width: 23.75rem;
     border: 1px solid rgba(0, 0, 0, 0.12);
     border-radius: 0.25rem;
     box-shadow: 0px 0px 1.5625rem rgba(0, 0, 0, 0.2);
@@ -114,5 +116,11 @@
     }
     &__submit-button {
         margin-top: 1.25rem;
+    }
+}
+
+@include scss-mixins-variables.media-xxxs {
+    .final-counter-card {
+        padding: 1.5rem 0.5rem;
     }
 }

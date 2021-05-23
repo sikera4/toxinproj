@@ -1,4 +1,5 @@
 import {finalCounterCard} from '../common.blocks/final-counter-card/final-counter-card.js';
+import {menuBtn} from '../common.blocks/header/header';
 import Chart from 'chart.js/auto';
 
 function chartConstruct() {
@@ -57,6 +58,7 @@ function chartConstruct() {
 $(function() {
     finalCounterCard();
     chartConstruct();
+    menuBtn();
 })
 
 import '../pages/scss/room-details.scss';

@@ -96,7 +96,7 @@ $secondary: rgba(111, 207, 151, 1);
     }
 }
 @mixin media-lg {
-    @media screen and (max-width: 1600px) {
+    @media screen and (max-width: 1350px) {
         @content;
     }
 }

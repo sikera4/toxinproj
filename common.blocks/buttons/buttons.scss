@@ -68,7 +68,7 @@
 }
 .button_long {
     position: relative;
-    width: 20rem;
+    max-width: 20rem;
     height: 2.75rem;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     border-color: #BC9CFF;
@@ -84,7 +84,7 @@
     .button__icon {
         @include scss-mixins-variables.icon;
         color: #FFFFFF;
-        left: 276px;
+        right: 0;
         top: 0;
     }
 }
