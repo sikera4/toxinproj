@@ -18,7 +18,7 @@
 .text-field {
     position: relative;
     &__input {
-        input[type='text'], input[type='email'], input[type='password'] {
+        input[type='text'], input[type='email'], input[type='password'], input {
             @include input-text;
             &:hover {
                 border: 1px solid scss-mixins-variables.$dark50;
