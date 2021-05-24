@@ -9,4 +9,4 @@ function finalCall() {
   iqDropdown('guests-info');
   
 };
-finalCall();
+$(finalCall());
