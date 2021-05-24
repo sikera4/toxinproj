@@ -1,6 +1,7 @@
 import {finalCounterCard} from '../common.blocks/final-counter-card/final-counter-card.js';
 import {menuBtn} from '../common.blocks/header/header';
 import Chart from 'chart.js/auto';
+import '../pages/scss/room-details.scss';
 
 function chartConstruct() {
     let ctx = document.getElementsByClassName('js-reviews-chart')[0].getContext("2d");
@@ -61,4 +62,3 @@ $(function() {
     menuBtn();
 })
 
-import '../pages/scss/room-details.scss';
