@@ -1,7 +1,7 @@
 import '../../node_modules/item-quantity-dropdown/lib/item-quantity-dropdown.min.css';
 import '../../node_modules/item-quantity-dropdown/lib/item-quantity-dropdown.min.js';
 
-function iqDropdown(data) {
+function iqDropdown(data, clearBlockNum) {
     if (data === 'guests-info') {
         $(`.${data} .iqdropdown`).iqDropdown({
             controls: {
@@ -12,7 +12,7 @@ function iqDropdown(data) {
               let entrs = Object.entries(itemCount);
               let guestsNum = entrs[0][1] + entrs[1][1];
               let babiesNum = entrs[2][1];
-              let clearbl = $('.guests-info .clear').eq(2);
+              let clearbl = $('.guests-info .clear').eq(clearBlockNum);
               clearbl.on('click', (e) => {
                 console.log('lol');
                 guestsNum = 0;

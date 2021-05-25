@@ -2,7 +2,7 @@ include ../like-btn/like-btn.pug
 mixin commentary(data)
     .commentary 
         .commentary__person 
-            img.commentary__img(src=data.personImg)
+            img.commentary__img(src=data.personImg alt=data.imgAlt)
             - let lkdt = {type: data.liked, count: data.likesnum}
             +likebtn(lkdt)
         .commentary__body 

@@ -12,6 +12,12 @@
         border-top-right-radius: 4px;
         position: relative;
     }
+    &__view {
+        height: 59%;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        position: relative;
+    }
     &__view-img {
         height: 100%;
         width: 100%;
@@ -80,6 +86,9 @@
     &__room-info {
         padding: 1.1875rem 1.0625rem 1.1875rem 1.25rem;
     }
+    &__room-info-right-padding {
+        padding-top: 1.125rem;
+    }
     &__info-top-part {
         display: flex;
         align-items: center;
@@ -87,6 +96,7 @@
         border-bottom: 1px solid rgba(31, 32, 65, 0.1);
         padding-bottom: 0.5rem;
     }
+    
     &__room-type {
         display: flex;
         align-items: flex-end;
@@ -94,6 +104,11 @@
             color: #BC9CFF;
             margin-bottom: 0.2rem;
             margin-left: 0.0625rem;
+        }
+    }
+    &__luxspaced {
+        h3 {
+            margin-left: 0.5rem;
         }
     }
     &__header {
@@ -104,6 +119,7 @@
             font-size: 1.1875rem;
         }
     }
+    
     &__room-number {
         display: inline-block;
     }

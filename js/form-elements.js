@@ -8,7 +8,7 @@ $(function() {
   checkList();
   sliderActivation();
   iqDropdown('room-type');
-  iqDropdown('guests-info');
+  iqDropdown('guests-info', 2);
   maskedInput();
 })
 

@@ -72,7 +72,7 @@ module.exports = {
                               window._lastElementInsertedByStyleLoader;
             
                             if (!lastInsertedElement) {
-                              parent.insertBefore(element, parent.firstChild);
+                              parent.insertBefore(element, parent.lastChild);
                             } else if (lastInsertedElement.nextSibling) {
                               parent.insertBefore(element, lastInsertedElement.nextSibling);
                             } else {

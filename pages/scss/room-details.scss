@@ -11,7 +11,7 @@
         display: flex;
     }
     &__primary-photo {
-        background: url('../../assets/primary-photo.svg');
+        background: url('../../assets/primary-photo.jpg');
         background-size: cover;
         height: 100%;
         width: 68.125vw;
@@ -21,12 +21,12 @@
         width: 31.875vw;   
     }
     &__secondary-photo1 {
-        background: url('../../assets/secondary-photo1.svg');
+        background: url('../../assets/secondary-photo1.jpg');
         background-size: cover;
         height: 50%;
     }
     &__secondary-photo2 {
-        background: url('../../assets/secondary-photo2.svg');
+        background: url('../../assets/secondary-photo2.jpg');
         background-size: cover;
         height: 50%;
     }

@@ -25,22 +25,11 @@
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
         grid-gap: 1.3rem 0.75rem;
-        .room1 {
-            .arrow-left, .arrow-right {
-                display: flex;
-            }
-        }
         .room-card {
-            &__view {
-                height: 59%;
-            }
-            &__room-type {
-                h3 {
-                    margin-left: 0.5rem;
+            &:nth-child(1) {
+                .arrow-left, .arrow-right {
+                    display: flex;
                 }
-            }
-            &__room-info {
-                padding-top: 1.125rem;
             }
         }
         margin-top: 1.3125rem;
@@ -159,11 +148,6 @@
     .search-room {
         &__rooms-found {
             grid-template-columns: 1fr 1fr;
-        }
-        &__filter-settings {
-            &.open {
-                padding: 0 6rem;
-            }
         }
     }
 }
