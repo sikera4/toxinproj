@@ -61,6 +61,14 @@ module.exports = {
                   }
             },
             {
+                test: /\.(svg|png|ico|xml|json|webmanifest)$/i,
+                exclude: [/assets/, /fonts/],
+                type: 'asset/resource',
+                generator: {
+                    filename: 'favicons/[name][ext]'
+                }
+            },
+            {
                 test: /\.css$/,
                 use: [{
                     loader: "style-loader",
