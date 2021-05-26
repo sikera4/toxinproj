@@ -12,7 +12,7 @@
         border-top-right-radius: 4px;
         position: relative;
     }
-    &__view {
+    &_view-higher {
         height: 59%;
         border-top-left-radius: 4px;
         border-top-right-radius: 4px;
@@ -86,7 +86,7 @@
     &__room-info {
         padding: 1.1875rem 1.0625rem 1.1875rem 1.25rem;
     }
-    &__room-info-right-padding {
+    &_room-info-right-padding {
         padding-top: 1.125rem;
     }
     &__info-top-part {
@@ -106,7 +106,7 @@
             margin-left: 0.0625rem;
         }
     }
-    &__luxspaced {
+    &_luxspaced {
         h3 {
             margin-left: 0.5rem;
         }

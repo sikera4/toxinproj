@@ -11,7 +11,7 @@
     .icon {
         @include scss-mixins-variables.icon;
         top:0;
-        left: 221px;
+        right: 0;
     }
     .iqdropdown-selection {
         font-family: Montserrat;
@@ -139,7 +139,7 @@
         .icon {
             @include scss-mixins-variables.icon;
             top:0;
-            left: 276px;
+            right: 0;
         }
         .iqdropdown-menu {
             top: 43px;

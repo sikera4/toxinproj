@@ -31,7 +31,7 @@ mixin roomCard(data)
                         .num= `${data.reviewNum} `
                         .revs= ' Отзывов'
         else 
-            .room-card__view.room-card__view-higher
+            .room-card__view.room-card_view-higher
                 img(src=data.imgAddress alt=data.imgAlt).room-card__view-img
                 .room-card__arrows 
                     .arrow-left 
@@ -43,9 +43,9 @@ mixin roomCard(data)
                     .sw2 
                     .sw3 
                     .sw4
-            .room-card__room-info.room-card__room-info-rightpadding
+            .room-card__room-info.room-card_room-info-right-padding
                 .room-card__info-top-part 
-                    .room-card__room-type.room-card__luxspaced 
+                    .room-card__room-type.room-card_luxspaced 
                         .room-card__header 
                             span №
                             span.room-card__room-number 

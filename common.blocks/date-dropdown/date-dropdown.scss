@@ -2,13 +2,14 @@
 .date-dd {
     &__input-container {
         position: relative;
+        max-width: 16.625rem;
         input[type='text'], input {
             font-family: Montserrat;
             font-size: 0.875rem;
             line-height: 1.125rem;
             color: rgba(31, 32, 65, 0.75);
             margin-top: 0.3125rem;
-            width: 9.375rem;
+            max-width: 9.375rem;
             height: 2.75rem;
             border: 1px solid rgba(31, 32, 65, 0.25);
             box-sizing: border-box;
@@ -26,17 +27,16 @@
     }
     &__icon {
         @include scss-mixins-variables.icon;
-        left: 6.625rem;
+        right: 0;
     }
-}
-
-#filter {
-    input[type="text"], input {
-        margin-top: 0.34375rem;
-        width: 16.625rem;
-        height: 2.75rem;
-    }
-    .date-dd__icon {
-        left: 13.875rem;
+    &_filter {
+        input[type="text"], input {
+            margin-top: 0.34375rem;
+            min-width: 16.625rem;
+            height: 2.75rem;
+        }
+        .date-dd__icon {
+            right: 0;
+        }
     }
 }

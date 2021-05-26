@@ -71,7 +71,7 @@ $secondary: rgba(111, 207, 151, 1);
     padding: 0;
 }
 html {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', Arial, sans-serif;
     color: $dark75;
 }
 html *::after, html *::before {
@@ -79,7 +79,7 @@ html *::after, html *::before {
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', Arial, sans-serif;
     font-size: 0.875rem;
     font-weight: normal;
     line-height: 1.5rem;
