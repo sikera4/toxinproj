@@ -11,180 +11,183 @@
 @use '../../common.blocks/footer/footer';
 
 .search-room {
+  &__content {
+    padding: 1.875rem 8.4375rem 1.25rem 8.75rem;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid rgba(31, 32, 65, 0.25);
+  }
+  @include scss-mixins-variables.media-md {
     &__content {
-        padding: 1.875rem 8.4375rem 1.25rem 8.75rem;
-        display: flex;
-        justify-content: center;
-        border-bottom: 1px solid rgba(31, 32, 65, 0.25);
+      padding: 1.875rem 6rem 1.25rem 5.75rem;
+      flex-direction: column;
     }
+  }
+  @include scss-mixins-variables.media-sm {
+    &__content {
+      padding: 1.875rem 1.2rem 1.25rem 1.2rem;
+    }
+  }
+  @include scss-mixins-variables.media-xs {
+    &__content {
+      padding: 1.875rem 0.25rem 1.2rem 0.25rem;
+    }
+  }
+  @include scss-mixins-variables.media-xxxs {
+    &__content {
+      padding: 1.5rem 0 1rem 0;
+    }
+  }
+  &__rooms {
+    margin-left: 3.75rem;
+  }
+  @include scss-mixins-variables.media-md {
     &__rooms {
-        margin-left: 3.75rem;
+      margin: 0 auto;
     }
-    &__rooms-found{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-gap: 1.3rem 0.75rem;
-        .room-card {
-            &:nth-child(1) {
-                .arrow-left, .arrow-right {
-                    display: flex;
-                }
-            }
-        }
-        margin-top: 1.3125rem;
+  }
+  
+  &__rooms-found {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 1.3rem 0.75rem;
+
+    margin-top: 1.3125rem;
+  }
+  @include scss-mixins-variables.media-ssm {
+    &__rooms-found {
+      grid-template-columns: 1fr 1fr;
     }
+  }
+  @include scss-mixins-variables.media-sm {
+    &__rooms-found {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 1.5rem 1rem;
+    }
+  }
+  @include scss-mixins-variables.media-xs {
+    &__rooms-found {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1rem 0.75rem;
+    }
+  }
+  @include scss-mixins-variables.media-xxs {
+    &__rooms-found {
+      grid-template-columns: 1fr;
+    }
+  }
+  @include scss-mixins-variables.media-md {
+    &__filter {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+  }
+  &__filter-settings {
+    width: 16.625rem;
+  }
+  @include scss-mixins-variables.media-md {
     &__filter-settings {
-        width: 16.625rem;
-    }
-    &__filter-header {
-        display: none;
-    }
-    &__guestsdd {
-        margin-top: 1.375rem;
-        h3 {
-            margin-bottom: 0.25rem;
-        }
-        .iqdropdown_filter {
-            width: 100%;
-            height: 2.75rem;
-            .icon {
-                left: 13.8125rem;
-            }
-        }
-    }
-    &__slider {
-        margin-top: 1.875rem;
-        p {
-            font-size: 0.75rem;
-            line-height: 0.875rem;
-            color: scss-mixins-variables.$dark50;
-            margin-top: 0.875rem;
-        }
-    }
-    &__rules {
-        margin-top: 1.9375rem;
-    }
-    &__availability {
-        margin-top: 2rem;
-        .inputs {
-            margin-top: 1.125rem;
-        }
-    }
-    &__facilities {
-        h3 {
-            margin-bottom: 0.3125rem;
-        }
-        margin-top: 1.875rem;
-    }
-    &__additional-facilities {
-        margin-top: 1.875rem;
-    }
-    &__pagination {
-        margin-top: 2.75rem;
+      display: none;
+      margin-top: 1rem;
+      &.open {
         display: flex;
-        justify-content: center;
-        margin-right: 1rem;
-        margin-bottom: 3.1875rem;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-between;
+      }
     }
-}
-
-@include scss-mixins-variables.media-md {
-    .search-room {
-        &__content {
-            padding: 1.875rem 6rem 1.25rem 5.75rem;
-            flex-direction: column;
-        }
-        &__filter {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-        &__filter-header {
-            display: flex;
-            cursor: pointer;
-            .material-icons {
-                margin-left: 0.5rem;
-            }
-        }
-        &__filter-settings {
-            display: none;
-            margin-top: 1rem;
-            &.open {
-                display: flex;
-                flex-wrap: wrap;
-                width: 100%;
-                justify-content: space-between;
-            }
-        }
-        &__filter-settings-col3 {
-            min-width: 266px;
-        }
-        &__rules {
-            margin-top: 0;
-        }
-        &__facilities {
-            margin-top: 0;
-        }
-        &__rooms {
-            margin: 0 auto;
-        }
+    &__filter-settings-col3 {
+      min-width: 266px;
     }
-}
-
-@include scss-mixins-variables.media-sm {
-    .search-room {
-        &__content {
-            padding: 1.875rem 1.2rem 1.25rem 1.2rem;
-        }
-        &__rooms-found {
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-gap: 1.5rem 1rem;
-        }
+  }
+  @include scss-mixins-variables.media-xs {
+    &__filter-settings {
+      &.open {
+        align-items: center;
+        flex-direction: column;
+      }
     }
-}
-@include scss-mixins-variables.media-ssm {
-    .search-room {
-        &__rooms-found {
-            grid-template-columns: 1fr 1fr;
-        }
+  }
+  &__filter-header {
+    display: none;
+  }
+  @include scss-mixins-variables.media-md {
+    &__filter-header {
+      display: flex;
+      cursor: pointer;
+      .material-icons {
+        margin-left: 0.5rem;
+      }
     }
-}
-@include scss-mixins-variables.media-xs {
-    .search-room {
-        &__content {
-            padding: 1.875rem 0.25rem 1.2rem 0.25rem;
-        }
-        &__filter-settings {
-            &.open {
-                align-items: center;
-                flex-direction: column;
-            }
-        }
-        &__rooms-found {
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 1rem 0.75rem;
-        }
-        &__rules {
-            margin-top: 1.9375rem;
-        }
-        &__facilities {
-            margin-top: 1.875rem;
-        }
+  }
+  &__guestsdd {
+    margin-top: 1.375rem;
+    h3 {
+      margin-bottom: 0.25rem;
     }
-}
-@include scss-mixins-variables.media-xxs {
-    .search-room {
-        &__rooms-found {
-            grid-template-columns: 1fr;
-        }
+    .iqdropdown_filter {
+      width: 100%;
+      height: 2.75rem;
+      .icon {
+        left: 13.8125rem;
+      }
     }
-}
-@include scss-mixins-variables.media-xxxs {
-    .search-room {
-        &__content {
-            padding: 1.5rem 0 1rem 0;
-        }
+  }
+  &__slider {
+    margin-top: 1.875rem;
+    p {
+      font-size: 0.75rem;
+      line-height: 0.875rem;
+      color: scss-mixins-variables.$dark50;
+      margin-top: 0.875rem;
     }
+  }
+  &__rules {
+    margin-top: 1.9375rem;
+  }
+  @include scss-mixins-variables.media-md {
+    &__rules {
+      margin-top: 0;
+    }
+  }
+  @include scss-mixins-variables.media-xs {
+    &__rules {
+      margin-top: 1.9375rem;
+    }
+  }
+  &__availability {
+    margin-top: 2rem;
+    .inputs {
+      margin-top: 1.125rem;
+    }
+  }
+  &__facilities {
+    h3 {
+      margin-bottom: 0.3125rem;
+    }
+    margin-top: 1.875rem;
+  }
+  @include scss-mixins-variables.media-md {
+    &__facilities {
+      margin-top: 0;
+    }
+  }
+  @include scss-mixins-variables.media-xs {
+    &__facilities {
+      margin-top: 1.875rem;
+    }
+  }
+  &__additional-facilities {
+    margin-top: 1.875rem;
+  }
+  &__pagination {
+    margin-top: 2.75rem;
+    display: flex;
+    justify-content: center;
+    margin-right: 1rem;
+    margin-bottom: 3.1875rem;
+  }
 }

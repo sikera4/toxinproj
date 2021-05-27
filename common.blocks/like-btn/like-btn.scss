@@ -1,43 +1,43 @@
 .likebutton {
-    cursor: pointer;
-    padding-top: 0;
-    &__container {
-        width: 40px;
-        height: 20px;
-        border-radius: 10px;
-        display: flex;
+	cursor: pointer;
+	padding-top: 0;
+	&__container {
+		width: 40px;
+		height: 20px;
+		border-radius: 10px;
+		display: flex;
+	}
+	&__heart {
+		position: relative;
+		height: 20px;
+		width: 20px;
+		span {
+			position: absolute;
+			font-size: 10px;
+			line-height: 9px;
+			top: 4px;
+			left: 4px;
+		}
+	}
+	&__count {
+    margin-top: -2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    line-height: 12px;
+	}
+	.unfocused {
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    color: rgba(31, 32, 65, 0.25);
+    &:hover {
+      border: 1px solid #BC9CFF;
+      color: #BC9CFF;
     }
-    &__heart {
-        position: relative;
-        height: 20px;
-        width: 20px;
-        span {
-            position: absolute;
-            font-size: 10px;
-            line-height: 9px;
-            top: 4px;
-            left: 4px;
-        }
-    }
-    &__count {
-        margin-top: -2px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 10px;
-        line-height: 12px;
-    }
-    .unfocused {
-        border: 1px solid rgba(31, 32, 65, 0.25);
-        color: rgba(31, 32, 65, 0.25);
-        &:hover {
-            border: 1px solid #BC9CFF;
-            color: #BC9CFF;
-        }
-    }
-    .focused {
-        border: 1px solid #BC9CFF;
-        color: #BC9CFF;
-    }
+	}
+	.focused {
+    border: 1px solid #BC9CFF;
+    color: #BC9CFF;
+	}
 }
 

@@ -1,42 +1,42 @@
 @use '../scss-mixins-variables/scss-mixins-variables';
 .rich-check {
-    &__inputs {
-        margin-top: 18px;
-        display: flex;
-        flex-direction: column;
-        line-height: 18px;
-        input {
-            position: absolute;
-            z-index: -1;
-            opacity: 0;
-            &:checked ~ label::before {
-                border: 1px solid #BC9CFF;
-            }
-            &:checked + span.rich-check__tick {
-                opacity: 1;
-            }
-        }
-        label {
-            @include scss-mixins-variables.checkboxLabel;
-        }
+  &__inputs {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    line-height: 18px;
+    input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+      &:checked ~ label::before {
+        border: 1px solid #BC9CFF;
+      }
+      &:checked + span.rich-check__tick {
+        opacity: 1;
+      }
     }
-    &__tick {
-        @include scss-mixins-variables.tick;
+    label {
+      @include scss-mixins-variables.checkboxLabel;
     }
-    &__facility-name {
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 18px;
-        color: rgba(31, 32, 65, 0.75);
-    }
-    &__info {
-        color: rgba(31, 32, 65, 0.5);
-        font-size: 12px;
-        line-height: 14px;
-        padding-left: 30px;
-        margin-top: 5.5px;
-    }
-    &__aid-for-disabled {
-        margin-top: 12px;
-    }
+  }
+  &__tick {
+    @include scss-mixins-variables.tick;
+  }
+  &__facility-name {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(31, 32, 65, 0.75);
+  }
+  &__info {
+    color: rgba(31, 32, 65, 0.5);
+    font-size: 12px;
+    line-height: 14px;
+    padding-left: 30px;
+    margin-top: 5.5px;
+  }
+  &__aid-for-disabled {
+    margin-top: 12px;
+  }
 }

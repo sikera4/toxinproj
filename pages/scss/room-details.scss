@@ -6,227 +6,227 @@
 @use '../../common.blocks/footer/footer';
 @use '../../common.blocks/scss-mixins-variables/scss-mixins-variables';
 .room-details {
-    &__photos {
-        height: 30.3125rem;
-        display: flex;
+  &__photos {
+    height: 30.3125rem;
+    display: flex;
+  }
+  &__primary-photo {
+    background: url('../../assets/primary-photo.jpg');
+    background-size: cover;
+    height: 100%;
+    width: 68.125vw;
+  }
+  &__photo-col {
+    height: 100%;
+    width: 31.875vw;   
+  }
+  &__secondary-photo1 {
+    background: url('../../assets/secondary-photo1.jpg');
+    background-size: cover;
+    height: 50%;
+  }
+  &__secondary-photo2 {
+    background: url('../../assets/secondary-photo2.jpg');
+    background-size: cover;
+    height: 50%;
+  }
+  &__content {
+    padding: 4.375rem 8.75rem 4rem 8.75rem;
+    display: flex;
+    border-bottom: 1px solid rgba(31, 32, 65, 0.25);
+  }
+  &__info-blocks {
+    display: flex;
+  }
+  &__facilities {
+    .facility {
+      margin-top: 1.25rem;
     }
-    &__primary-photo {
-        background: url('../../assets/primary-photo.jpg');
-        background-size: cover;
-        height: 100%;
-        width: 68.125vw;
-    }
-    &__photo-col {
-        height: 100%;
-        width: 31.875vw;   
-    }
-    &__secondary-photo1 {
-        background: url('../../assets/secondary-photo1.jpg');
-        background-size: cover;
-        height: 50%;
-    }
-    &__secondary-photo2 {
-        background: url('../../assets/secondary-photo2.jpg');
-        background-size: cover;
-        height: 50%;
-    }
-    &__content {
-        padding: 4.375rem 8.75rem 4rem 8.75rem;
-        display: flex;
-        border-bottom: 1px solid rgba(31, 32, 65, 0.25);
-    }
-    &__info-blocks {
-        display: flex;
-    }
-    &__facilities {
-        .facility {
-            margin-top: 1.25rem;
-        }
-    }
-    &__chart {
-        margin-left: 5.0625rem;
-        .chart-container {
-            display: flex;
-            .chart {
-                position: relative;
-                width: 7.5625rem;
-                margin-top: 1.25rem;
-                &__text-info {
-                    position: absolute;
-                    top: 31%;
-                    left: 24%;
-                    h1 {
-                        color: #BC9CFF;
-                        text-align: center;
-                    }
-                    p {
-                        font-size: 0.75rem;
-                        line-height: 0.9375rem;
-                        text-transform: uppercase;
-                        color: #BC9CFF;
-                        font-weight: bold;
-                    }
-                }
-            }
-            .legend {
-                align-self: flex-end;
-                list-style-position: inside;
-                list-style: none;
-                margin-left: 1.75rem;
-                li {
-                    position: relative;
-                    z-index: 0;
-                    padding-left: 1rem;
-                    &::before {
-                        position: absolute;
-                        content: '';
-                        width: 10.43px;
-                        height: 10px;
-                        border-radius: 50%;
-                        left: 0px;
-                        top: 6.5px;
-                        z-index: 5;
-                    }
-                }
-                .awesome {
-                    &::before {
-                        background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
-                    }
-                }
-                .good {
-                    &::before {
-                        background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-                    }
-                }
-                .satisfactorily {
-                    &::before {
-                        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);;
-                    }
-                }
-                .disappointed {
-                    &::before {
-                        background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
-                    }
-                }
-            }
-        }
-    }
-    &__reviews {
-        margin-top: 0.75rem;
-        &-header {
-            display: flex;
-            justify-content: space-between;
-            p {
-                color: scss-mixins-variables.$dark50;
-            }
-        }
-    }
-    &__commentary {
+  }
+  &__chart {
+    margin-left: 5.0625rem;
+    .chart-container {
+      display: flex;
+      .chart {
+        position: relative;
+        width: 7.5625rem;
         margin-top: 1.25rem;
-    }
-    &__rules {
-        display: flex;
-        margin-top: 1.875rem;
-        justify-content: space-between;
-    }
-    &__living-rules {
-        h2 {
-            margin-left: 1.25rem;
-            margin-bottom: 1.125rem;
+        &__text-info {
+          position: absolute;
+          top: 31%;
+          left: 24%;
+          h1 {
+            color: #BC9CFF;
+            text-align: center;
+          }
+          p {
+            font-size: 0.75rem;
+            line-height: 0.9375rem;
+            text-transform: uppercase;
+            color: #BC9CFF;
+            font-weight: bold;
+          }
         }
-    }
-    &__cancellation {
-        max-width: 21.3125rem;
-        p {
-            margin-top: 1.125rem;
+      }
+      .legend {
+        align-self: flex-end;
+        list-style-position: inside;
+        list-style: none;
+        margin-left: 1.75rem;
+        li {
+          position: relative;
+          z-index: 0;
+          padding-left: 1rem;
+          &::before {
+            position: absolute;
+            content: '';
+            width: 10.43px;
+            height: 10px;
+            border-radius: 50%;
+            left: 0px;
+            top: 6.5px;
+            z-index: 5;
+          }
         }
+        .awesome {
+          &::before {
+            background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+          }
+        }
+        .good {
+          &::before {
+            background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+          }
+        }
+        .satisfactorily {
+          &::before {
+            background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);;
+          }
+        }
+        .disappointed {
+          &::before {
+            background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+          }
+        }
+      }
     }
-    &__final-counter-card {
-        margin-left: 4.375rem;
+  }
+  &__reviews {
+    margin-top: 0.75rem;
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      p {
+        color: scss-mixins-variables.$dark50;
+      }
     }
+  }
+  &__commentary {
+    margin-top: 1.25rem;
+  }
+  &__rules {
+    display: flex;
+    margin-top: 1.875rem;
+    justify-content: space-between;
+  }
+  &__living-rules {
+    h2 {
+      margin-left: 1.25rem;
+      margin-bottom: 1.125rem;
+    }
+  }
+  &__cancellation {
+    max-width: 21.3125rem;
+    p {
+      margin-top: 1.125rem;
+    }
+  }
+  &__final-counter-card {
+    margin-left: 4.375rem;
+  }
 }
 @include scss-mixins-variables.media-lg {
-    .room-details {
-        &__content {
-            flex-direction: column;
-        }
-        &__info-blocks {
-            justify-content: space-between;
-        }
-        &__final-counter-card {
-            margin: 3.5rem auto 0;
-        }
+  .room-details {
+    &__content {
+      flex-direction: column;
     }
+    &__info-blocks {
+      justify-content: space-between;
+    }
+    &__final-counter-card {
+      margin: 3.5rem auto 0;
+    }
+  }
 }
 @include scss-mixins-variables.media-md {
-    .room-details {
-        &__content {
-            padding: 4rem 8rem 4rem 8rem;
-        }
+  .room-details {
+    &__content {
+      padding: 4rem 8rem 4rem 8rem;
     }
+  }
 }
 @include scss-mixins-variables.media-sm {
-    .room-details {
-        &__photos {
-            flex-direction: column;
-            height: 40rem;
-        }
-        &__primary-photo {
-            width: 100%;
-            height: 67%;
-        }
-        &__photo-col {
-            display: flex;
-            width: 100%;
-            height: 33%;
-        }
-        &__secondary-photo1, &__secondary-photo2 {
-            width: 50%;
-            height: 100%;
-        }
-        &__content {
-            padding: 3rem 5rem 3rem 5rem;
-        }
+  .room-details {
+    &__photos {
+      flex-direction: column;
+      height: 40rem;
     }
+    &__primary-photo {
+      width: 100%;
+      height: 67%;
+    }
+    &__photo-col {
+      display: flex;
+      width: 100%;
+      height: 33%;
+    }
+    &__secondary-photo1, &__secondary-photo2 {
+      width: 50%;
+      height: 100%;
+    }
+    &__content {
+      padding: 3rem 5rem 3rem 5rem;
+    }
+  }
 }
 @include scss-mixins-variables.media-xs {
-    .room-details {
-        &__info-blocks {
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 3.5rem;
-        }
-        &__facilities {
-            margin-bottom: 2rem;
-        }
-        &__chart {
-            margin-left: 0;
-        }
-        &__rules {
-            flex-direction: column;
-        }
-        &__living-rules {
-            h2 {
-                margin-left: 0;
-            }
-        }
-        &__cancellation {
-            margin-top: 1.875rem;
-            max-width: 100%;
-        }
+  .room-details {
+    &__info-blocks {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 3.5rem;
     }
+    &__facilities {
+      margin-bottom: 2rem;
+    }
+    &__chart {
+      margin-left: 0;
+    }
+    &__rules {
+      flex-direction: column;
+    }
+    &__living-rules {
+      h2 {
+        margin-left: 0;
+      }
+    }
+    &__cancellation {
+      margin-top: 1.875rem;
+      max-width: 100%;
+    }
+  }
 }
 @include scss-mixins-variables.media-xxs {
-    .room-details {
-        &__content {
-            padding: 2rem 1rem;
-        }
+  .room-details {
+    &__content {
+      padding: 2rem 1rem;
     }
+  }
 }
 @include scss-mixins-variables.media-xxxs {
-    .room-details {
-        &__content {
-            padding: 2rem 0.5rem;
-        }
+  .room-details {
+    &__content {
+      padding: 2rem 0.5rem;
     }
+  }
 }

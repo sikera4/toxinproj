@@ -3,23 +3,23 @@
 @use '../../common.blocks/entry-card/entry-card';
 @use '../../common.blocks/footer/footer';
 .entry-page {
-    &__content {
-        background: url('../../assets/entry-page-background.jpg') no-repeat;
-        background-size: cover;
-        background-position: center bottom;
-        background-attachment: fixed;
-    }
-    &__registration-card {
-        margin: 0 auto;
-        max-width: 23.75rem;
-        padding: 1.1875rem 0;
-    }
-    &__entry-card {
-        margin: 0 auto;
-        padding: 10.75rem 0;
-        max-width: 23.75rem;
-    }
-    .display-none {
-        display: none;
-    }
+  &__content {
+    background: url('../../assets/entry-page-background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    background-attachment: fixed;
+  }
+  &__registration-card {
+    margin: 0 auto;
+    max-width: 23.75rem;
+    padding: 1.1875rem 0;
+  }
+  &__entry-card {
+    margin: 0 auto;
+    padding: 10.75rem 0;
+    max-width: 23.75rem;
+  }
+  .display-none {
+    display: none;
+  }
 }

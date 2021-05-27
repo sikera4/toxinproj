@@ -1,140 +1,140 @@
 @use '../scss-mixins-variables/scss-mixins-variables';
 @use '../text-field/text-field';
 .footer {
-    width: 100%;
-    background: #FFFFFF;
-    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  width: 100%;
+  background: #FFFFFF;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  &__content {
+    justify-content: center;
+    display: flex;
+    padding: 6.25rem 8.625rem 6rem 8.75rem;
+    border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+  }
+  @include scss-mixins-variables.media-sm {
     &__content {
-        justify-content: center;
-        display: flex;
-        padding: 6.25rem 8.625rem 6rem 8.75rem;
-        border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+      justify-self: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-row-gap: 2.5rem;
+      grid-column-gap: 1.5rem;
     }
-    &__logo {
-        height: 2.5rem;
+  }
+  @include scss-mixins-variables.media-xs {
+    &__content {
+      grid-template-columns: 1fr 1fr;
     }
-    &__company-description {
-        width: 16.25rem;
+  }
+  @include scss-mixins-variables.media-xxs {
+    &__content {
+      grid-template-columns: 1fr;
     }
-    &__description-text {
-        margin-top: 1.125rem;
+  }
+  &__logo {
+    height: 2.5rem;
+  }
+  &__company-description {
+    width: 16.25rem;
+  }
+  &__description-text {
+    margin-top: 1.125rem;
+  }
+  &__navigation {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.3125rem;
+    margin-left: 2.5rem;
+    color: scss-mixins-variables.$dark50;
+    width: 9rem;
+  }
+  &__text-aboutus {
+    margin-top: 1.125rem;
+  }
+  @each $entry in news, support, services, team, vacancies, investors, communities, contacts {
+    &__text-#{$entry} {
+      margin-top: 0.875rem;
     }
-    &__navigation {
-        & > div {
-            cursor: pointer;
-        }
-        margin-top: 0.3125rem;
-        margin-left: 2.5rem;
-        color: scss-mixins-variables.$dark50;
-        width: 9rem;
+  }
+  &__about-us {
+    margin-top: 0.3125rem;
+    margin-left: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    color: scss-mixins-variables.$dark50;
+  }
+  &__text-aboutservices {
+    margin-top: 1.125rem;
+  }
+  &__support {
+    width: 9.3125rem;
+    margin-top: 0.3125rem;
+    margin-left: 5.8125rem;
+    display: flex;
+    flex-direction: column;
+    color: scss-mixins-variables.$dark50;
+  }
+  &__text-agreements {
+    margin-top: 1.0625rem;
+  }
+  &__subscription {
+    margin-top: 0.3125rem;
+    margin-left: 3.1875rem;
+    width: 16.25rem;
+  }
+  &__text-subscription {
+    margin-top: 1.0625rem;
+    margin-bottom: 1.4375rem;
+  }
+  @include scss-mixins-variables.media-sm {
+    @each $entry in company-description, navigation, about-us, support, subscription {
+      &__#{$entry} {
+          margin-left: 0;
+      }
     }
-    &__text-aboutus {
-        margin-top: 1.125rem;
-    }
-    @each $entry in news, support, services, team, vacancies, investors, communities, contacts {
-        &__text-#{$entry} {
-            margin-top: 0.875rem;
-        }
-    }
-    &__about-us {
-        margin-top: 0.3125rem;
-        margin-left: 3.5rem;
-        color: scss-mixins-variables.$dark50;
-        & > div {
-            cursor: pointer;
-        }
-    }
-    &__text-aboutservices {
-        margin-top: 1.125rem;
-    }
-    &__support {
-        width: 9.3125rem;
-        margin-top: 0.3125rem;
-        margin-left: 5.8125rem;
-        color: scss-mixins-variables.$dark50;
-        & > div {
-            cursor: pointer;
-        }
-    }
-    &__text-agreements {
-        margin-top: 1.0625rem;
-    }
-    &__subscription {
-        margin-top: 0.3125rem;
-        margin-left: 3.1875rem;
-        width: 16.25rem;
-    }
-    &__text-subscription {
-        margin-top: 1.0625rem;
-        margin-bottom: 1.4375rem;
-    }
+  }
+  &__copyright-block {
+    display: flex;
+    padding: 1.4375rem 8.75rem;
+    justify-content: space-between;
+  }
+  @include scss-mixins-variables.media-xs {
     &__copyright-block {
-        display: flex;
-        padding: 1.4375rem 8.75rem;
-        justify-content: space-between;
+      flex-direction: column;
+      padding: 0.55rem 8.75rem;
     }
+    &__copyright-text {
+      align-self: center;
+    }
+  }
+  @include scss-mixins-variables.media-xxs {
+    &__copyright-text {
+      text-align: center;
+    }
+  }
+  @include scss-mixins-variables.media-xxs {
+    &__copyright-block {
+      flex-direction: column;
+      padding: 0.55rem 4rem;
+    }
+  }
+  &__icons {
+    font-size: 1.5rem;
+    margin-right: 0.0625rem;
+    .fa-facebook-square {
+      margin-right: 1.5rem;
+    }
+    .fa-twitter {
+      margin-right: 1.3125rem;
+    }
+    .fab {
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(188, 156, 255, 1)), to(rgba(139, 164, 249, 1)));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  @include scss-mixins-variables.media-xs {
     &__icons {
-        font-size: 1.5rem;
-        margin-right: 0.0625rem;
-        .fa-facebook-square {
-            margin-right: 1.5rem;
-        }
-        .fa-twitter {
-            margin-right: 1.3125rem;
-        }
-        .fab {
-            background: -webkit-gradient(linear, left top, left bottom, from(rgba(188, 156, 255, 1)), to(rgba(139, 164, 249, 1)));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+      align-self: center;
     }
-}
-
-@include scss-mixins-variables.media-sm {
-    .footer {
-        &__content {
-            justify-self: center;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            grid-row-gap: 2.5rem;
-            grid-column-gap: 1.5rem;
-        }
-        @each $entry in company-description, navigation, about-us, support, subscription {
-            &__#{$entry} {
-                margin-left: 0;
-            }
-        }
-    }
-}
-@include scss-mixins-variables.media-xs {
-    .footer {
-        &__content {
-            grid-template-columns: 1fr 1fr;
-        }
-        &__copyright-block {
-            flex-direction: column;
-            padding: 0.55rem 8.75rem;
-        }
-        &__copyright-text {
-            align-self: center;
-        }
-        &__icons {
-            align-self: center;
-        }
-    }
-}
-@include scss-mixins-variables.media-xxs {
-    .footer {
-        &__content {
-            grid-template-columns: 1fr;
-        }
-        &__copyright-block {
-            flex-direction: column;
-            padding: 0.55rem 4rem;
-        }
-        &__copyright-text {
-            text-align: center;
-        }
-    }
+  }
 }

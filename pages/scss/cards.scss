@@ -8,32 +8,32 @@
 @use '../../common.blocks/registration-card/registration-card';
 
 body {
-    background: #F4F4F6;;
+  background: #F4F4F6;;
 }
 .cards {
-    margin: 4.125rem 8.75rem 8.75rem 8.75rem;
-    display: flex;
-    &__col1 {
-        .registration {
-            margin: 2.5rem 0 0 0;
-        }
+  margin: 4.125rem 8.75rem 8.75rem 8.75rem;
+  display: flex;
+  &__col1 {
+    .registration {
+      margin: 2.5rem 0 0 0;
     }
-    &__col2 {
-        margin-left: 2.5rem;
-        .entry {
-            margin-top: 2.4375rem;
-        }
+  }
+  &__col2 {
+    margin-left: 2.5rem;
+    .entry {
+      margin-top: 2.4375rem;
     }
-    &__col3 {
-        margin-left: 2.5rem;
-        .room-card1 {
-            margin-top: 2.5rem;
-            .arrow-left, .arrow-right {
-                display: flex;
-            }
-        }
-        .room-card2 {
-            margin-top: 2.5rem;
-        }
+  }
+  &__col3 {
+    margin-left: 2.5rem;
+    .room-card1 {
+      margin-top: 2.5rem;
+      .arrow-left, .arrow-right {
+        display: flex;
+      }
     }
+    .room-card2 {
+      margin-top: 2.5rem;
+    }
+  }
 }

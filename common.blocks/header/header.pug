@@ -2,29 +2,30 @@ include ../buttons/buttons.pug
 mixin header(data)
     header.header 
         .header__content
-            .header__logo 
-                img(src=require('../assets/Logo.svg'))
+            a(href='./landing-page.html').header__logo 
+                img(src=require('../assets/logo.svg'))
             .header__menu-btn 
                 span.header__menu-btn-burger
             .header__rightside-content
                 nav.header__nav 
-                    .header__about О нас
-                    .header__services 
-                        .header__services-text Услуги
-                        .header__services-icon 
-                            span.material-icons expand_more
-                    .header__vacancies Вакансии
-                    .header__news Новости
-                    .header__agreements 
-                        .header__agreements-text Соглашения
-                        .header__agreements-icon 
-                            span.material-icons expand_more
+                    if data.location != 'page'
+                        a(href="/mock-address/change-me").header__about О нас
+                    else 
+                        a(href="/mock-address/change-me").header__about.header__about_location_page О нас
+                    a(href="/mock-address/change-me").header__services 
+                        p.header__services-text Услуги
+                        span.header__services-icon.material-icons expand_more                             
+                    a(href="/mock-address/change-me").header__vacancies Вакансии
+                    a(href="/mock-address/change-me").header__news Новости
+                    a(href="/mock-address/change-me").header__agreements 
+                        p.header__agreements-text Соглашения
+                        span.header__agreements-icon.material-icons expand_more         
                 .header__dependent 
                     if !data.loggedIn
                         .header__buttons
-                            .header__entry-button 
+                            a(href="./sign-in.html").header__entry-button 
                                 +button({type: 'button_empty button_header', header: 'войти'})
-                            .header__registration-button 
+                            a(href="./registration.html").header__registration-button 
                                 +button({type: 'button_long button_header', header: 'зарегистрироваться'})
                     else if data.loggedIn
                         .header__name= data.name 

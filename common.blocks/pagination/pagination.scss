@@ -1,52 +1,52 @@
 @use '../scss-mixins-variables/scss-mixins-variables';
 .pagination {
-    &__pages {
-        display: flex;
-        list-style: none;
-        width: 241px;
-        li {
-            height: 40px;
-            width: 40px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            a {
-                text-decoration: none;
-                font-size: 12px;
-                line-height: 15px;
-                color: rgba(31, 32, 65, 0.5);
-            }
-            &:hover {
-                background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-                a {
-                    color: #FFFFFF;
-                }
-            }
+  &__pages {
+    display: flex;
+    list-style: none;
+    width: 241px;
+    li {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      a {
+        text-decoration: none;
+        font-size: 12px;
+        line-height: 15px;
+        color: rgba(31, 32, 65, 0.5);
+      }
+      &:hover {
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        a {
+          color: #FFFFFF;
         }
-        .pagination__activelink {
-            background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-            a {
-                color: #FFFFFF;
-                font-weight: bold;
-                margin-right: 2px;
-            }
-        }
+      }
     }
-    
-    &__nextpage {
-        background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-        position: relative;
-    }
-    &__icon {
-        @include scss-mixins-variables.icon;
+    .pagination__activelink {
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      a {
         color: #FFFFFF;
-        left: -2px;
-        top: -1px;
+        font-weight: bold;
+        margin-right: 2px;
+      }
     }
-    &__comment {
-        margin-top: 9px;
-        margin-left: 5px;
-    }
+  }
+    
+  &__nextpage {
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    position: relative;
+  }
+  &__icon {
+    @include scss-mixins-variables.icon;
+    color: #FFFFFF;
+    left: -2px;
+    top: -1px;
+  }
+  &__comment {
+    margin-top: 9px;
+    margin-left: 5px;
+  }
 }

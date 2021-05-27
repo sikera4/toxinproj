@@ -4,11 +4,18 @@ mixin roomCard(data)
         if (data.cardPlace != 'page')
             .room-card__view
                 img(src=data.imgAddress alt=data.imgAlt).room-card__view-img
-                .room-card__arrows 
-                    .arrow-left 
-                        span.material-icons chevron_left
-                    .arrow-right
-                        span.material-icons chevron_left
+                if (data.order != '1')
+                    .room-card__arrows 
+                        .arrow-left 
+                            span.material-icons chevron_left
+                        .arrow-right
+                            span.material-icons chevron_left
+                else 
+                    .room-card__arrows.room-card__arrows_visible 
+                        .arrow-left 
+                            span.material-icons chevron_left
+                        .arrow-right
+                            span.material-icons chevron_left
                 .room-card__pic-switch 
                     .sw1 
                     .sw2 
@@ -33,11 +40,18 @@ mixin roomCard(data)
         else 
             .room-card__view.room-card_view-higher
                 img(src=data.imgAddress alt=data.imgAlt).room-card__view-img
-                .room-card__arrows 
-                    .arrow-left 
-                        span.material-icons chevron_left
-                    .arrow-right
-                        span.material-icons chevron_left
+                if (data.order != '1')
+                    .room-card__arrows 
+                        .arrow-left 
+                            span.material-icons chevron_left
+                        .arrow-right
+                            span.material-icons chevron_left
+                else 
+                    .room-card__arrows.room-card__arrows_visible 
+                        .arrow-left 
+                            span.material-icons chevron_left
+                        .arrow-right
+                            span.material-icons chevron_left
                 .room-card__pic-switch 
                     .sw1 
                     .sw2 

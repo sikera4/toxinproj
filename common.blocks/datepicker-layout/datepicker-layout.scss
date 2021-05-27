@@ -1,157 +1,72 @@
 @use '../scss-mixins-variables/scss-mixins-variables';
 .datepicker {
-        box-sizing: border-box;
-        width: 20rem;
-        font-family: 'Montserrat', sans-serif;
-        padding: 1.25rem 1.1875rem 1.125rem 1.1875rem;
-        box-shadow: 0px 10px 20px scss-mixins-variables.$dark05;
-        border: 1px solid scss-mixins-variables.$dark25;
-        .datepicker--nav {
-            align-items: flex-start;
-            color: scss-mixins-variables.$dark100;
-            font-size: 1.1875rem;
-            line-height: 1.4375rem;
-            font-weight: bold;
-            height: 2rem;
-            padding: 0;
-            border: none;
-            i {
-                color: inherit;
-                font-weight: inherit;
-            }
-            &-action {
-                color: scss-mixins-variables.$primary;
-                width: 1.5rem;
-            }
-        }
-        &--content {
-            padding: 0;
-            margin-top: 1.375rem;
-            margin-left: 0.0625rem;
-        }
-        &--days-names {
-            margin: 0;
-            height: 2.5rem;
-        }
-        &--day-name {
-            text-transform: none;
-            color: scss-mixins-variables.$primary;
-            font-weight: bold;
-        }
-        &--cell-month {
-            &::before {
-                display: none;
-            }
-        }
-        &--cells {
-            font-size: 0.75rem;
-            line-height: 0.9375rem;
-            color: scss-mixins-variables.$dark50;
-            .-selected- {
-                border-radius: 50%;
-                background: linear-gradient(180deg, scss-mixins-variables.$primary 0%, #8BA4F9 100%);
-                font-weight: bold;
-            }
-            .-in-range- {
-                border-radius: 0;
-                background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
-                color: scss-mixins-variables.$dark50;
-                position: relative;
-                z-index: 4;
-            }
-            .-range-from- {
-                border-radius: 50%;
-                background: linear-gradient(180deg, scss-mixins-variables.$primary 0%, #8BA4F9 100%);
-                color: #FFF;
-                border: none;
-                position: relative;
-                z-index: 5;
-                &::before {
-                    position: absolute;
-                    content: '';
-                    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-                    opacity: 0.25;
-                    height: 2.5rem;
-                    width: 50%;
-                    z-index: -2;
-                    right: 0;
-                }
-            }
-            .-range-from-.-selected-:hover {
-                &::before {
-                    display: none;
-                }
-            }
-            .-range-to- {
-                border-radius: 50%;
-                background: linear-gradient(180deg, scss-mixins-variables.$primary 0%, #8BA4F9 100%);
-                color: #FFF;
-                border: none;
-                position: relative;
-                z-index: 2;
-                &::before {
-                    position: absolute;
-                    content: '';
-                    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-                    opacity: 0.25;
-                    height: 2.5rem;
-                    width: 1.25rem;
-                    z-index: -2;
-                    left: 0;
-                }
-            }
-            .-focus- {
-                border-radius: 50%;
-                background: linear-gradient(180deg, scss-mixins-variables.$primary 0%, #8BA4F9 100%);
-                color: #FFF;
-                border: none;
-                position: relative; 
-            }
-            .-current- {
-                background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-                color: #FFF;
-                font-weight: bold;
-                border-radius: 50%;
-            }
-            .-in-range-.-focus- {
-                border-radius: 0;
-                background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
-            }
-        }
-        &--cell {
-            height: 2.5rem;
-            
-        }
-        &--buttons {
-            border: none;
-            font-size: 0.75rem;
-            line-height: 0.9375rem;
-            text-transform: uppercase;
-            font-weight: bold;
-            justify-content: space-between;
-            padding: 0;
-        }
-        &--button, .apply-button {
-            cursor: pointer;
-            display: flex;
-            color: scss-mixins-variables.$primary;
-            align-items: flex-end;
-            flex: 0;
-            margin-top: 0.1875rem;
-            &:hover {
-                background: none;
-                color: inherit;
-            }
-        }
-}
-
-.nobefore {
-    &::before {
-        display: none;
+  box-sizing: border-box;
+  width: 20rem;
+  font-family: 'Montserrat', sans-serif;
+  padding: 1.25rem 1.1875rem 1.125rem 1.1875rem;
+  box-shadow: 0px 10px 20px scss-mixins-variables.$dark05;
+  border: 1px solid scss-mixins-variables.$dark25;
+  .datepicker--nav {
+    align-items: flex-start;
+    color: scss-mixins-variables.$dark100;
+    font-size: 1.1875rem;
+    line-height: 1.4375rem;
+    font-weight: bold;
+    height: 2rem;
+    padding: 0;
+    border: none;
+    i {
+      color: inherit;
+      font-weight: inherit;
     }
-}
-.before.-focus- {
-    &::after {
+    &-action {
+      color: scss-mixins-variables.$primary;
+      width: 1.5rem;
+    }
+  }
+  &--content {
+    padding: 0;
+    margin-top: 1.375rem;
+    margin-left: 0.0625rem;
+  }
+  &--days-names {
+    margin: 0;
+    height: 2.5rem;
+  }
+  &--day-name {
+    text-transform: none;
+    color: scss-mixins-variables.$primary;
+    font-weight: bold;
+  }
+  &--cell-month {
+    &::before {
+      display: none;
+    }
+  }
+  &--cells {
+    font-size: 0.75rem;
+    line-height: 0.9375rem;
+    color: scss-mixins-variables.$dark50;
+    .-selected- {
+      border-radius: 50%;
+      background: linear-gradient(180deg, scss-mixins-variables.$primary 0%, #8BA4F9 100%);
+      font-weight: bold;
+    }
+    .-in-range- {
+      border-radius: 0;
+      background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
+      color: scss-mixins-variables.$dark50;
+      position: relative;
+      z-index: 4;
+    }
+    .-range-from- {
+      border-radius: 50%;
+      background: linear-gradient(180deg, scss-mixins-variables.$primary 0%, #8BA4F9 100%);
+      color: #FFF;
+      border: none;
+      position: relative;
+      z-index: 5;
+      &::before {
         position: absolute;
         content: '';
         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
@@ -160,5 +75,93 @@
         width: 50%;
         z-index: -2;
         right: 0;
+      }
     }
+    .-range-from-.-selected-:hover {
+      &::before {
+        display: none;
+      }
+    }
+    .-range-to- {
+      border-radius: 50%;
+      background: linear-gradient(180deg, scss-mixins-variables.$primary 0%, #8BA4F9 100%);
+      color: #FFF;
+      border: none;
+      position: relative;
+      z-index: 2;
+      &::before {
+        position: absolute;
+        content: '';
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        opacity: 0.25;
+        height: 2.5rem;
+        width: 1.25rem;
+        z-index: -2;
+        left: 0;
+      }
+    }
+    .-focus- {
+      border-radius: 50%;
+      background: linear-gradient(180deg, scss-mixins-variables.$primary 0%, #8BA4F9 100%);
+      color: #FFF;
+      border: none;
+      position: relative; 
+    }
+    .-current- {
+      background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+      color: #FFF;
+      font-weight: bold;
+      border-radius: 50%;
+    }
+    .-in-range-.-focus- {
+      border-radius: 0;
+      background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
+    }
+    .-in-range-.-current- {
+      border-radius: 0;
+      background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
+    }
+  }
+  &--cell {
+    height: 2.5rem;
+  }
+  &--buttons {
+    border: none;
+    font-size: 0.75rem;
+    line-height: 0.9375rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    justify-content: space-between;
+    padding: 0;
+  }
+  &--button, .apply-button {
+    cursor: pointer;
+    display: flex;
+    color: scss-mixins-variables.$primary;
+    align-items: flex-end;
+    flex: 0;
+    margin-top: 0.1875rem;
+    &:hover {
+      background: none;
+      color: inherit;
+    }
+  }
+}
+
+.nobefore {
+  &::before {
+    display: none;
+  }
+}
+.before.-focus- {
+  &::after {
+    position: absolute;
+    content: '';
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    opacity: 0.25;
+    height: 2.5rem;
+    width: 50%;
+    z-index: -2;
+    right: 0;
+  }
 }

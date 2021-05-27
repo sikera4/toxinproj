@@ -2,62 +2,60 @@
 @use '../../common.blocks/color-example/color-example';
 
 .colors-type {
-    padding: 3.75rem 9.875rem 9.0625rem 9.375rem;
+  padding: 3.75rem 9.875rem 9.0625rem 9.375rem;
+  display: flex;
+  justify-content: space-between;
+  &__colors {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    &__colors {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        .color-example {
-            margin-bottom: 1.25rem;
-        }
+    .color-example {
+      margin-bottom: 1.25rem;
     }
-    &__type {
-        max-width: 27.25rem;
-        display: flex;
-        flex-direction: column;
-    }
-    &__h1 {
-        display: flex;
-    }
-    &__h2 {
-        margin-top: 3.25rem;
-        display: flex;
-    }
-    &__h3 {
-        margin-top: 3.125rem;
-        display: flex;
-    }
-    &__body {
-        display: flex;
-        max-width: 23.125rem;
-        margin-top: 3rem;
-    }
-    &__name {
-        text-align: right;
-        color: rgba(31, 32, 65, 0.25); 
-    }
-    &__name_h1 {
-        font-size: 24px;
-        line-height: 29px;
-        margin-left: 8px;
-    }
-    &__name_h2 {
-        font-size: 19px;
-        line-height: 23px;
-        margin-left: 10px;
-    }
-    &__name_h3 {
-        font-size: 12px;
-        line-height: 15px;
-        margin-left: 20px;
-    }
-    &__name_h1, &__name_h2, &__name_h3, &__name_body {
-        margin-right: 1.875rem;
-    }
-    &__body {
-        font-size: 14px;
-        line-height: 24px;
-    }
+  }
+  &__type {
+    max-width: 27.25rem;
+    display: flex;
+    flex-direction: column;
+  }
+  &__h1 {
+    display: flex;
+  }
+  &__h2 {
+    margin-top: 3.25rem;
+    display: flex;
+  }
+  &__h3 {
+    margin-top: 3.125rem;
+    display: flex;
+  }
+  &__body {
+    display: flex;
+    max-width: 23.125rem;
+    margin-top: 3rem;
+  }
+  &__name-h1 {
+    font-size: 24px;
+    line-height: 29px;
+    margin-left: 8px;
+  }
+  &__name-h2 {
+    font-size: 19px;
+    line-height: 23px;
+    margin-left: 10px;
+  }
+  &__name-h3 {
+    font-size: 12px;
+    line-height: 15px;
+    margin-left: 20px;
+  }
+  &__name-h1, &__name-h2, &__name-h3, &__name-body {
+    margin-right: 1.875rem;
+    text-align: right;
+    color: rgba(31, 32, 65, 0.25); 
+  }
+  &__body {
+    font-size: 14px;
+    line-height: 24px;
+  }
 }

@@ -1,33 +1,33 @@
 @use '../scss-mixins-variables/scss-mixins-variables';
 .checkboxes {
-    max-width: 222px;
-    &__inputs {
-        margin-top: 18px;
-        display: flex;
-        flex-direction: column;
-        line-height: 18px;
-        input {
-            position: absolute;
-            z-index: -1;
-            opacity: 0;
-            &:checked ~ label::before {
-                border: 1px solid #BC9CFF;
-            }
-            &:checked + span.checkboxes__tick {
-                opacity: 1;
-            }
-        }
-        label {
-            @include scss-mixins-variables.checkboxLabel;
-        }  
+  max-width: 222px;
+  &__inputs {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    line-height: 18px;
+    input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+      &:checked ~ label::before {
+        border: 1px solid #BC9CFF;
+      }
+      &:checked + span.checkboxes__tick {
+        opacity: 1;
+      }
+    }
+    label {
+      @include scss-mixins-variables.checkboxLabel;
+    }  
     }
     &__tick {
-        @include scss-mixins-variables.tick;
+      @include scss-mixins-variables.tick;
     }
     &__box-pets {
-        margin-top: 13px;
+      margin-top: 13px;
     }
     &__box-guests {
-        margin-top: 12px; 
+      margin-top: 12px; 
     }
 }

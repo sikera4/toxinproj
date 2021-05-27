@@ -1,45 +1,44 @@
 @use '../scss-mixins-variables/scss-mixins-variables';
 .expchecklist {
-    position: relative;
-    &__icon {
-        @include scss-mixins-variables.icon;
-        left: 13.875rem;
-        top: -15px;
+  position: relative;
+  &__icon {
+    @include scss-mixins-variables.icon;
+    left: 13.875rem;
+    top: -15px;
+  }
+  h3 {
+    cursor: pointer;
+  }
+  &__inputs {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    line-height: 18px;
+    input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+      &:checked ~ label::before {
+        border: 1px solid #BC9CFF;
+      }
+      &:checked + span.expchecklist__tick {
+        opacity: 1;
+      }
     }
-    h3 {
-        cursor: pointer;
+    label {
+      @include scss-mixins-variables.checkboxLabel;
     }
-    &__inputs {
-        margin-top: 18px;
-        display: flex;
-        flex-direction: column;
-        line-height: 18px;
-        input {
-            position: absolute;
-            z-index: -1;
-            opacity: 0;
-            &:checked ~ label::before {
-                border: 1px solid #BC9CFF;
-            }
-            &:checked + span.expchecklist__tick {
-                opacity: 1;
-            }
-        }
-        label {
-            @include scss-mixins-variables.checkboxLabel;
-        }
-    }
-    &__tick {
-        @include scss-mixins-variables.tick;
-    }
-    .closed {
-        display: none;
-    }
-    &__box-2 {
-        margin-top: 14px;
-    }
-    @for $i from 3 through 6 {
-        .expchecklist__box-#{$i} {margin-top: 12.5px;}
-    }
-
+  }
+  &__tick {
+    @include scss-mixins-variables.tick;
+  }
+  .closed {
+    display: none;
+  }
+  &__box-2 {
+    margin-top: 14px;
+  }
+  @for $i from 3 through 6 {
+    .expchecklist__box-#{$i} {margin-top: 12.5px;}
+  }
 }

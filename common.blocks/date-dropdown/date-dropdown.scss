@@ -1,42 +1,42 @@
 @use '../scss-mixins-variables/scss-mixins-variables';
 .date-dd {
-    &__input-container {
-        position: relative;
-        max-width: 16.625rem;
-        input[type='text'], input {
-            font-family: Montserrat;
-            font-size: 0.875rem;
-            line-height: 1.125rem;
-            color: rgba(31, 32, 65, 0.75);
-            margin-top: 0.3125rem;
-            max-width: 9.375rem;
-            height: 2.75rem;
-            border: 1px solid rgba(31, 32, 65, 0.25);
-            box-sizing: border-box;
-            border-radius: 4px;
-            padding-left: .875rem;
-            position: relative;
-            z-index: 3;
-            background: none;
-            &::placeholder {
-                position:absolute;
-                top: 11px;
-                color: rgba(31, 32, 65, 0.75);
-            }
-        }
+  &__input-container {
+    position: relative;
+    max-width: 16.625rem;
+    input[type='text'], input {
+      font-family: Montserrat;
+      font-size: 0.875rem;
+      line-height: 1.125rem;
+      color: rgba(31, 32, 65, 0.75);
+      margin-top: 0.3125rem;
+      max-width: 9.375rem;
+      height: 2.75rem;
+      border: 1px solid rgba(31, 32, 65, 0.25);
+      box-sizing: border-box;
+      border-radius: 4px;
+      padding-left: .875rem;
+      position: relative;
+      z-index: 3;
+      background: none;
+      &::placeholder {
+        position:absolute;
+        top: 11px;
+        color: rgba(31, 32, 65, 0.75);
+      }
     }
-    &__icon {
-        @include scss-mixins-variables.icon;
-        right: 0;
+  }
+  &__icon {
+    @include scss-mixins-variables.icon;
+    right: 0;
+  }
+  &_location_filter {
+    input[type="text"], input {
+      margin-top: 0.34375rem;
+      min-width: 16.625rem;
+      height: 2.75rem;
     }
-    &_filter {
-        input[type="text"], input {
-            margin-top: 0.34375rem;
-            min-width: 16.625rem;
-            height: 2.75rem;
-        }
-        .date-dd__icon {
-            right: 0;
-        }
+    .date-dd__icon {
+      right: 0;
     }
+  }
 }

@@ -1,66 +1,75 @@
 @use '../scss-mixins-variables/scss-mixins-variables';
 @mixin input-text {
-    padding-left: 0.875rem;
-    height: 2.75rem;
-    max-width: 20rem;
-    width: 100%;
-    border: 1px solid scss-mixins-variables.$dark25;
-    border-radius: 4px;
-    font-family: Montserrat;
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-    color: scss-mixins-variables.$dark75;
-    &::placeholder {
-        color: scss-mixins-variables.$dark25;
-    }
+  padding-left: 0.875rem;
+  height: 2.75rem;
+  max-width: 20rem;
+  width: 100%;
+  border: 1px solid scss-mixins-variables.$dark25;
+  border-radius: 4px;
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: scss-mixins-variables.$dark75;
+  &::placeholder {
+    color: scss-mixins-variables.$dark25;
+  }
 }
 
 .text-field {
-    position: relative;
-    &__input {
-        input[type='text'], input[type='email'], input[type='password'], input {
-            @include input-text;
-            &:hover {
-                border: 1px solid scss-mixins-variables.$dark50;
-            }
-            &:focus {
-                border: 1px solid scss-mixins-variables.$dark50;
-            }
-        }
+  position: relative;
+  &__input {
+    input[type='text'], input[type='email'], input[type='password'], input {
+      @include input-text;
+      &:hover {
+        border: 1px solid scss-mixins-variables.$dark50;
+      }
+      &:focus {
+        border: 1px solid scss-mixins-variables.$dark50;
+      }
     }
-    &__icon {
-            position: absolute;
-            height: 2.75rem;
-            width: 2.75rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            top: 0;
-            color: scss-mixins-variables.$dark50;
-            cursor: pointer;
-            z-index: 1;
-            left: 13.875rem;
-            background: -webkit-gradient(linear, left top, left bottom, from(rgba(188, 156, 255, 1)), to(rgba(139, 164, 249, 1)));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+  }
+  &__input_focused {
+    input[type='text'] {
+      border: 1px solid rgba(31, 32, 65, 0.5);
+      &::placeholder {
+          color: rgba(31, 32, 65, 0.75);
+          letter-spacing: -0.18px;
+      }  
     }
-    &_subscription-form-elements, &__subscription-footer {
-        input[type='email'] {
-            position: relative;
-            z-index: 2;
-            max-width: 16.625rem;
-            background: none;
-            padding-left: 0.8125rem;
-        }
+  }
+  &__icon {
+    position: absolute;
+    height: 2.75rem;
+    width: 2.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    color: scss-mixins-variables.$dark50;
+    cursor: pointer;
+    z-index: 1;
+    left: 13.875rem;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(188, 156, 255, 1)), to(rgba(139, 164, 249, 1)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &_subscription-form-elements, &__subscription-footer {
+    input[type='email'] {
+      position: relative;
+      z-index: 2;
+      max-width: 16.625rem;
+      background: none;
+      padding-left: 0.8125rem;
     }
-    &_subscription-footer {
-        input[type='email'] {
-            min-width: 16.25rem;
-        }
-        .text-field__icon {
-            left: 13.5rem;
-        }
+  }
+  &_subscription-footer {
+    input[type='email'] {
+      min-width: 16.25rem;
     }
+    .text-field__icon {
+      left: 13.5rem;
+    }
+  }
 }
 
 

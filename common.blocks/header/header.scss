@@ -1,195 +1,200 @@
 @use '../scss-mixins-variables/scss-mixins-variables';
 @use '../buttons/buttons';
 .header {
-    padding: 15px 0;
-    background: #FFFFFF;
-    display: flex;
-    align-items: center;
-    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  padding: 15px 0;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  &__menu-btn {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 30%;
+    height: 20px;
+    width: 28px;
+    cursor: pointer;
+    @include scss-mixins-variables.transition-ease;
+  }
+  @include scss-mixins-variables.media-sm {
     &__menu-btn {
-        visibility: hidden;
-        position: absolute;
-        z-index: 1;
-        top: 30%;
-        height: 20px;
-        width: 28px;
-        cursor: pointer;
-        @include scss-mixins-variables.transition-ease;
+      display: block;
+      right: 4rem;
     }
-    &__menu-btn-burger {
-        position: absolute;
-        right: 0;
-        top: 0.5rem;
-        width: 28px;
-        height: 3px;
-        background: scss-mixins-variables.$primary;
-        @include scss-mixins-variables.transition-ease;
+  }
+  &__menu-btn-burger {
+    position: absolute;
+    right: 0;
+    top: 0.5rem;
+    width: 28px;
+    height: 3px;
+    background: scss-mixins-variables.$primary;
+    @include scss-mixins-variables.transition-ease;
 
-        &::before {
-            content: '';
-            position: absolute;
-            top: -8px;
-            width: 28px;
-            height: 3px;
-            background: scss-mixins-variables.$primary;
-            @include scss-mixins-variables.transition-ease;
-        }
-
-        &::after {
-            content: '';
-            position: absolute;
-            top: 8px;
-            width: 20px;
-            height: 3px;
-            background: scss-mixins-variables.$primary;
-            @include scss-mixins-variables.transition-ease;
-        }
-
-        &.open {
-            transform: rotate(720deg);
-            background: transparent;
-
-            &::before {
-                transform: rotate(45deg) translate(5px, 8px);
-            }
-
-            &::after {
-                width: 28px;
-                transform: rotate(-45deg) translate(3px, -7px);
-            }
-        }
+    &::before {
+      content: '';
+      position: absolute;
+      top: -8px;
+      width: 28px;
+      height: 3px;
+      background: scss-mixins-variables.$primary;
+      @include scss-mixins-variables.transition-ease;
     }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 8px;
+      width: 20px;
+      height: 3px;
+      background: scss-mixins-variables.$primary;
+      @include scss-mixins-variables.transition-ease;
+    }
+
+    &.open {
+      transform: rotate(720deg);
+      background: transparent;
+
+      &::before {
+        transform: rotate(45deg) translate(5px, 8px);
+      }
+
+      &::after {
+        width: 28px;
+        transform: rotate(-45deg) translate(3px, -7px);
+      }
+    }
+  }
     &__content {
-        padding: 0 8.75rem;
-        display: flex;
-        align-items: center;
-        position: relative;
-        z-index: 0;
-        justify-content: space-between;
-        width: 100%;
+      padding: 0 8.75rem;
+      display: flex;
+      align-items: center;
+      position: relative;
+      z-index: 0;
+      justify-content: space-between;
+      width: 100%;
+    }
+    @include scss-mixins-variables.media-md {
+      &__content {
+        padding: 0 4rem;
+      }
     }
     &__rightside-content {
-        display: flex;
-        &.open {
-            visibility: visible;
-        }
+      display: flex;
+      &.open {
+        visibility: visible;
+      }
+    }
+    @include scss-mixins-variables.media-sm {
+      &__rightside-content{
+        visibility: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+        opacity: 0.98;
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        background: rgba(184, 252, 212, 0.92);
+      }
     }
     &__logo {
-        height: 2.5rem;
+      height: 2.5rem;
     }
     &__nav {
-        color: scss-mixins-variables.$dark50;
-        display: flex;
+      color: scss-mixins-variables.$dark50;
+      display: flex;
+      align-items: center;
+    }
+    @include scss-mixins-variables.media-sm {
+      &__nav {
+        flex-flow: column wrap;
         align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        transform: translateY(-100%);
+        color: scss-mixins-variables.$dark100;
+        @include scss-mixins-variables.transition-ease;
+        &.open {
+          transform: translateY(0);
+        }
+      }
     }
     @each $navItem in services, vacancies, news, agreements {
+      &__#{$navItem} {
+        margin-right: 1.25rem;
+      }
+    }
+    @include scss-mixins-variables.media-sm {
+      @each $navItem in about, services, vacancies, news, agreements {
         &__#{$navItem} {
-            margin-right: 1.25rem;
-            cursor: pointer;
+          font-size: 2rem;
+          margin-top: 2rem;
+          margin-right: 0;
+          transform: translateX(100vw);
+          @include scss-mixins-variables.transition-ease;
+          &.open {
+            transform: translateX(0);
+          }
         }
+      }
+    }
+    @include scss-mixins-variables.media-xs {
+      @each $navItem in about, services, vacancies, news, agreements {
+        &__#{$navItem} {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+        }
+      }
     }
     &__about {
-        color: scss-mixins-variables.$dark75;
-        font-weight: bold;
-        cursor: pointer;
-        margin-right: 1.3125rem;
+      color: scss-mixins-variables.$dark75;
+      font-weight: bold;
+      cursor: pointer;
+      margin-right: 1.3125rem;
+    }
+    &__about_location_page {
+      font-weight: normal;
+      color: scss-mixins-variables.$dark50;
     }
     &__services {
-        display: flex;
-        align-items: center;
-        .material-icons {
-            vertical-align: middle;
-            margin-left: 0.0625rem;
-        }
+      display: flex;
+      align-items: center;
+      .material-icons {
+        vertical-align: middle;
+        margin-left: 0.0625rem;
+      }
     }
     &__agreements {
-        display: flex;
-        align-items: center;
-        .material-icons {
-            vertical-align: middle;
-            margin-left: 0.0625rem;
-        }
+      display: flex;
+      align-items: center;
+      .material-icons {
+        vertical-align: middle;
+        margin-left: 0.0625rem;
+      }
     }
     &__buttons {
-        display: flex;
+      display: flex;
+    }
+    @include scss-mixins-variables.media-sm {
+      &__buttons {
+        justify-content: center;
+        margin-top: 2rem;
+        transform: translateX(100vw);
+        @include scss-mixins-variables.transition-ease;
+        &.open {
+          visibility: visible;
+          transform: translateX(0);
+        }
+      }
     }
     &__entry-button {
-        margin-right: 1.25rem;
+      margin-right: 1.25rem;
     }
     &__name {
-        color: scss-mixins-variables.$dark50;
-        border-left: 1px solid rgba(31, 32, 65, 0.1);
-        padding-left: 1.25rem;
-    }
-}
-@include scss-mixins-variables.media-md {
-    .header {
-        &__content {
-            padding: 0 4rem;
-        }
-    }
-}
-@include scss-mixins-variables.media-sm {
-    .header {
-        &__rightside-content{
-            visibility: hidden;
-            position: fixed;
-            top: 0;
-            left: 0;
-            opacity: 0.98;
-            width: 100vw;
-            height: 100vh;
-            flex-direction: column;
-            justify-content: center;
-            background: rgba(184, 252, 212, 0.92);
-        }
-        &__nav {
-            flex-flow: column wrap;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            transform: translateY(-100%);
-            color: scss-mixins-variables.$dark100;
-            @include scss-mixins-variables.transition-ease;
-            &.open {
-                transform: translateY(0);
-            }
-        }
-        @each $navItem in about, services, vacancies, news, agreements {
-            &__#{$navItem} {
-                font-size: 2rem;
-                margin-top: 2rem;
-                margin-right: 0;
-                transform: translateX(100vw);
-                @include scss-mixins-variables.transition-ease;
-                &.open {
-                    transform: translateX(0);
-                }
-            }
-        }
-        &__buttons {
-            justify-content: center;
-            margin-top: 2rem;
-            transform: translateX(100vw);
-            @include scss-mixins-variables.transition-ease;
-            &.open {
-                visibility: visible;
-                transform: translateX(0);
-            }
-        }
-        &__menu-btn {
-            visibility: visible;
-            right: 4rem;
-        }
-    }
-}
-@include scss-mixins-variables.media-xs {
-    .header {
-        @each $navItem in about, services, vacancies, news, agreements {
-            &__#{$navItem} {
-                font-size: 1.5rem;
-                margin-top: 1rem;
-            }
-        }
+      color: scss-mixins-variables.$dark50;
+      border-left: 1px solid rgba(31, 32, 65, 0.1);
+      padding-left: 1.25rem;
     }
 }

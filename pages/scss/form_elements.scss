@@ -1,254 +1,255 @@
 @use '../../common.blocks/expandable-checkbox-list/expandable-checkbox';
 @use '../../common.blocks/rich-checkbox/rich-checkbox';
 @use '../../common.blocks/scss-mixins-variables/scss-mixins-variables';
-@import '../../common.blocks/ui-kit-layout/layout';
-@import '../../common.blocks/text-field/text-field';
-@import '../../common.blocks/date-dropdown/date-dropdown';
-@import '../../common.blocks/checkbox-btns/checkbox-btns';
-@import '../../common.blocks/radio-btns/radio-btns';
-@import '../../common.blocks/toggle/toggle';
-@import '../../common.blocks/like-btn/like-btn';
-@import '../../common.blocks/rating/rating';
-@import '../../common.blocks/range-slider/range-slider';
-@import '../../common.blocks/buttons/buttons';
-@import '../../common.blocks/pagination/pagination';
-@import '../../common.blocks/quantity-dropdown/quantity-dropdown';
-@import '../../common.blocks/bullet-list/bullet-list';
-@import '../../common.blocks/facility/facility';
-@import '../../common.blocks/commentary/commentary';
+@use '../../common.blocks/ui-kit-layout/layout';
+@use '../../common.blocks/text-field/text-field';
+@use '../../common.blocks/date-dropdown/date-dropdown';
+@use '../../common.blocks/checkbox-btns/checkbox-btns';
+@use '../../common.blocks/radio-btns/radio-btns';
+@use '../../common.blocks/toggle/toggle';
+@use '../../common.blocks/like-btn/like-btn';
+@use '../../common.blocks/rating/rating';
+@use '../../common.blocks/range-slider/range-slider';
+@use '../../common.blocks/buttons/buttons';
+@use '../../common.blocks/pagination/pagination';
+@use '../../common.blocks/quantity-dropdown/quantity-dropdown';
+@use '../../common.blocks/bullet-list/bullet-list';
+@use '../../common.blocks/facility/facility';
+@use '../../common.blocks/commentary/commentary';
 .form-elements {
-    &__row1 {
-        display: flex;
-        padding: 58px 141px 100px 141px;
-        .type {
-            position: absolute;
-            font-size: 12px;
-            line-height: 15px;
-            color: rgba(31, 32, 65, 0.5);
-        }
-        &-col1 {
-            min-width: 320px;   
-        }
-        &-col2 {
-            max-width: 260px;
-            margin-left: 126px;
-        }
-        &-col3 {
-            margin-left: 132px;
-            min-width: 320px;
-        }
-    }  
-    &__tfdefault {
-        position: relative;
-        h3 {
-            margin-bottom: 0.3125rem;
-        }
-        .type {
-            top: -3px;
-            right: 0;
-        }
+  &__row1 {
+    display: flex;
+    padding: 58px 141px 100.5px 141px;
+    &-col1 {
+      min-width: 320px;   
     }
-    &__tffocus {
-        h3 {
-            margin-bottom: 0.3125rem;
-        }
-        position: relative;
-        margin-top: 21px;
-            input[type='text'] {
-                border: 1px solid rgba(31, 32, 65, 0.5);
-                &::placeholder {
-                    color: rgba(31, 32, 65, 0.75);
-                    letter-spacing: -0.18px;
-            }  
-        }
-        .type {
-            text-transform: uppercase;
-            top: 0px;
-            left: 225px;
-            letter-spacing: -0.25px;
-        }
+    &-col2 {
+      max-width: 260px;
+      margin-left: 126px;
     }
-    &__dropdown  {
-        margin-top: 21px;
-        h3  {
-            margin-bottom: .3125rem;
-        }
+    &-col3 {
+      margin-left: 132px;
+      min-width: 320px;
     }
-    &__tfmasked {
-        h3 {
-            margin-bottom: 0.25rem;
-        }
-        margin-top: 1.4375rem;
-    }
-    &__datepickers {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 41px;
-    }
-    &__filterdatedrop {
-        margin-top: 41px;
-    }
-    &__tfsub {
-        h3 {
-            margin-bottom: 0.3125rem;
-        }
-        margin-top: 41.5px;
-    }
-    &__radiobtns {
-        margin-top: 42.5px;
-        .radio {
-            margin-top: 16px;
-        }
-    }
-    &__toggle {
-        margin-top: 37px;
-        letter-spacing: -0.55px;
-        h3 {
-            margin-bottom: 16px;
-        }
-        .toggle-switch {
-            margin-top: 9px;
-        }
-    }
-    &__likebtns {
-        margin-top: 41px;
-        h3 {
-            margin-bottom: 16px;
-        }
-        .lbtns {
-            display: flex;
-            .likebutton {
-                margin-right: 10px;
-            }
-        }
-    }
-    &__ratebtns {
-        margin-top: 40px;
-        .ratingexs {
-            display: flex;
-        }
-        .rating {
-            margin-top: 16px;
-            margin-right: 20px;
-        }
-    }
-    &__buttons {
-        margin-top: 44px;
-        .button_long {
-            margin-top: 30px;
-        }
-    }
-    &__btn-filled {
-        display: flex;
-        .button_filled {
-            margin-top: 16px;
-            margin-left: 0.1px;
-        }
-        .button_filled-disabled {
-            margin-left: 19px;
-        }
-    }
-    &__btn-empty {
-        display: flex;
-        margin-top: 30px;
-        margin-left: 0.5px;
-        .button_empty-disabled {
-            margin-left: 20px;
-        }
-    }
-    &__btn-noborder {
-        display: flex;
-        margin-top: 31px;
-        margin-left: 2px;
-        .button_noborder-disabled {
-            margin-left: 20px;
-        }
+  }  
+  &__tfdefault {
+    position: relative;
+    h3 {
+      margin-bottom: 0.3125rem;
     }
     
-    &__pagination {
-        margin-top: 41px;
-        margin-left: 1px;
-        .pagination {
-            margin-top: 16px;
-        }
+  }
+  &__tfdefault-type {
+    position: absolute;
+    font-size: 12px;
+    line-height: 15px;
+    color: rgba(31, 32, 65, 0.5);
+    top: -3px;
+    right: 0;
+  }
+  &__tffocus {
+    h3 {
+        margin-bottom: 0.3125rem;
     }
-    &__row2 {
-        display: flex;
-        padding: 0px 141px 0px 140px;
-        &-col1 {
-            .type {
-                position: absolute;
-                top: 0;
-                font-size: 12px;
-                line-height: 15px;
-                color: rgba(31, 32, 65, 0.5);
-                left: 210px;
-            }
-            width: 266px;
-        }
-        &-col2 {
-            width: 320px;
-            margin-left: 180px;   
-        }
-        &-col3 {
-            width: 320px;
-            margin-left: 73px;
-            h3 {
-                margin-bottom: 5px;
-            }
-        }
+    position: relative;
+    margin-top: 21px;
+    
+  }
+  &__tffocus-type {
+    text-transform: uppercase;
+    top: 0px;
+    left: 225px;
+    letter-spacing: -0.25px;
+    position: absolute;
+    font-size: 12px;
+    line-height: 15px;
+    color: rgba(31, 32, 65, 0.5);
+  }
+  &__dropdown  {
+    margin-top: 21px;
+    h3  {
+      margin-bottom: .3125rem;
     }
-    &__quantity-dropdown {
-        position: relative;
-        h3 {
-            margin-bottom: 5px;
-        }
+  }
+  &__tfmasked {
+    h3 {
+      margin-bottom: 0.25rem;
     }
-    &__quantity-dropdown-expanded {
-        margin-top: 21px;
-        position: relative;
-        h3 {
-            margin-bottom: 5px;
-        }
-        .type {
-            left: 196px;
-        }
+    margin-top: 1.4375rem;
+  }
+  &__datepickers {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 41px;
+  }
+  &__filterdatedrop {
+    margin-top: 41px;
+  }
+  &__tfsub {
+    h3 {
+      margin-bottom: 0.3125rem;
     }
-    &__dropdown-guests-expanded {
-        h3 {
-            margin-bottom: 5px;
-        }
-        margin-left: 1px;
+    margin-top: 41.5px;
+  }
+  &__radiobtns {
+    margin-top: 42.5px;
+    .radio {
+      margin-top: 16px;
     }
-    &__bullet-list {
-        margin-top: 256px;
-        .bulletlist {
-            margin-top: 14px;
-        }
+  }
+  &__toggle {
+    margin-top: 37px;
+    letter-spacing: -0.55px;
+    h3 {
+      margin-bottom: 16px;
     }
-    &__rich-checkbox-buttons {
-        margin-left: 1px;
-        margin-top: 256px;
-        .rich-check {
-            margin-top: -0.5px;
-        }
+    .toggle-switch {
+      margin-top: 9px;
     }
-    &__expandable-checkbox {
-        margin-top: 173px;
-        margin-left: 1px;
+  }
+  &__likebtns {
+    margin-top: 41px;
+    h3 {
+      margin-bottom: 16px;
     }
-    &__expandable-checkbox-expanded {
-        margin-top: 49px;
+    .lbtns {
+      display: flex;
+      .likebutton {
+        margin-right: 10px;
+      }
     }
-    &__row3 {
-        display: flex;
-        padding: 102px 142px 131px 140px;
+  }
+  &__ratebtns {
+    margin-top: 40px;
+    .ratingexs {
+      display: flex;
     }
-    &__fac2 {
-        margin-top: 20px;
+    .rating {
+      margin-top: 16px;
+      margin-right: 20px;
     }
-    &__typicalcomment {
-        margin-left: 167px;
-        margin-top: 10px;
+  }
+  &__buttons {
+    margin-top: 44px;
+  }
+  &__btn-filled {
+    display: flex;
+    .button_filled {
+      margin-top: 16px;
+      margin-left: 0.1px;
     }
+    .button_filled-disabled {
+      margin-left: 19px;
+    }
+  }
+  &__btn-empty {
+    display: flex;
+    margin-top: 30px;
+    margin-left: 0.5px;
+    .button_empty-disabled {
+      margin-left: 20px;
+    }
+  }
+  &__btn-noborder {
+    display: flex;
+    margin-top: 31px;
+    margin-left: 2px;
+    .button_noborder-disabled {
+      margin-left: 20px;
+    }
+  }
+  &__btn-long {
+    margin-top: 30px;
+  }
+  &__pagination {
+    margin-top: 41px;
+    margin-left: 1px;
+    h3 {
+      margin-bottom: 1rem;
+    }
+  }
+  &__row2 {
+    display: flex;
+    padding: 0px 141px 0px 140px;
+    &-col1 {
+      width: 266px;
+    }
+    &-col2 {
+      width: 320px;
+      margin-left: 180px;   
+    }
+    &-col3 {
+      width: 320px;
+      margin-left: 73px;
+      h3 {
+        margin-bottom: 5px;
+      }
+    }
+  }
+  &__quantity-dropdown {
+    position: relative;
+    h3 {
+      margin-bottom: 5px;
+    }
+  }
+  &__quantity-dropdown-type {
+    position: absolute;
+    top: 0;
+    font-size: 12px;
+    line-height: 15px;
+    color: rgba(31, 32, 65, 0.5);
+    left: 210px;
+  }
+  &__quantity-dropdown-expanded {
+    margin-top: 21px;
+    position: relative;
+    h3 {
+      margin-bottom: 5px;
+    }
+  }
+  &__quantity-dropdown-expanded-type {
+    position: absolute;
+    top: 0;
+    font-size: 12px;
+    line-height: 15px;
+    color: rgba(31, 32, 65, 0.5);
+    left: 196px;
+  }
+  &__dropdown-guests-expanded {
+    h3 {
+      margin-bottom: 5px;
+    }
+    margin-left: 1px;
+  }
+  &__bullet-list {
+    margin-top: 256px;
+    h3 {
+      margin-bottom: .875rem;
+    }
+  }
+  &__rich-checkbox-buttons {
+    margin-left: 1px;
+    margin-top: 256px;
+    h3 {
+      margin-bottom: 4px;
+    }
+  }
+  &__expandable-checkbox {
+    margin-top: 173px;
+    margin-left: 1px;
+  }
+  &__expandable-checkbox-expanded {
+    margin-top: 49px;
+  }
+  &__row3 {
+    display: flex;
+    padding: 102px 142px 131px 140px;
+  }
+  &__fac2 {
+    margin-top: 20px;
+  }
+  &__typicalcomment {
+    margin-left: 167px;
+    margin-top: 10px;
+  }
 }

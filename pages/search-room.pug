@@ -18,7 +18,7 @@ main.search-room
             .search-room__filter-settings
                 .search-room__filter-settings-col1
                     .search-room__datedropdown 
-                        +dateDropdown({header: 'даты пребывания в отеле', placeholder: '19 авг - 23 авг', modif: 'filter'})
+                        +dateDropdown({header: 'даты пребывания в отеле', placeholder: '19 авг - 23 авг', modif: 'date-dd_location_filter'})
                     .search-room__guestsdd 
                         h3 гости
                         +iqdropdown({type: 'guests', def1: '2', def2: '1', def3: '1', class: 'iqdropdown_filter'})
@@ -41,7 +41,7 @@ main.search-room
         .search-room__rooms
             h1.search-room__header Номера, которые мы для вас подобрали                
             .search-room__rooms-found 
-                    +roomCard({cardPlace: 'page', num: '888', sum: '9 990₽ ', grade: '5', reviewNum: '145', type: 'люкс', imgAddress: require('../assets/room1.jpg'), imgAlt: 'номер 888'}) 
+                    +roomCard({cardPlace: 'page', num: '888', sum: '9 990₽ ', grade: '5', reviewNum: '145', type: 'люкс', imgAddress: require('../assets/room1.jpg'), imgAlt: 'номер 888', order: '1'}) 
                     +roomCard({cardPlace: 'page', num: '840', sum: '9 900₽ ', grade: '4', reviewNum: '65', imgAddress: require('../assets/room2.jpg'), imgAlt: 'номер 840'})
                     +roomCard({cardPlace: 'page', num: '980', sum: '8 500₽ ', grade: '3', reviewNum: '35', type: 'люкс', imgAddress: require('../assets/room3.jpg'), imgAlt: 'номер 980'}) 
                     +roomCard({cardPlace: 'page', num: '856', sum: '7 300₽ ', grade: '5', reviewNum: '19', imgAddress: require('../assets/room4.jpg'), imgAlt: 'номер 856'})

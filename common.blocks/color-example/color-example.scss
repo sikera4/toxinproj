@@ -1,44 +1,44 @@
 @use '../scss-mixins-variables/scss-mixins-variables';
 .color-example {
+  display: flex;
+  &__color-caption {
     display: flex;
-    &__color-caption {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-        margin-left: 2.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-left: 2.5rem;
+  }
+  &__color-name {
+    line-height: 1.75rem;
+  }
+  &__hex-name {
+    font-size: 1.1875rem;
+    line-height: 1.75rem;
+  }
+  &__color-display {
+    height: 70px;
+    width: 70px;
+    border-radius: 6px;
+    &_dark100 {
+      background: scss-mixins-variables.$dark100;
     }
-    &__color-name {
-        line-height: 1.75rem;
+    &_dark75 {
+      background: scss-mixins-variables.$dark75;
     }
-    &__hex-name {
-        font-size: 1.1875rem;
-        line-height: 1.75rem;
+    &_dark50 {
+      background: scss-mixins-variables.$dark50;
     }
-    &__color-display {
-        height: 70px;
-        width: 70px;
-        border-radius: 6px;
-        &_dark100 {
-            background: scss-mixins-variables.$dark100;
-        }
-        &_dark75 {
-            background: scss-mixins-variables.$dark75;
-        }
-        &_dark50 {
-            background: scss-mixins-variables.$dark50;
-        }
-        &_dark25 {
-            background: scss-mixins-variables.$dark25;
-        }
-        &_dark05 {
-            background: scss-mixins-variables.$dark05;
-        }
-        &_primary {
-            background: scss-mixins-variables.$primary;
-        }
-        &_secondary {
-            background: scss-mixins-variables.$secondary;
-        }
+    &_dark25 {
+      background: scss-mixins-variables.$dark25;
     }
+    &_dark05 {
+      background: scss-mixins-variables.$dark05;
+    }
+    &_primary {
+      background: scss-mixins-variables.$primary;
+    }
+    &_secondary {
+      background: scss-mixins-variables.$secondary;
+    }
+  }
 }

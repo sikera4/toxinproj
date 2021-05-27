@@ -4,34 +4,28 @@ mixin footer
         .footer__content 
             .footer__company-description 
                 .footer__logo 
-                    img(src=require('../assets/Logo.svg'))
-                .footer__description-text 
-                    p Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+                    img(src=require('../assets/logo.svg'))
+                p.footer__description-text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
             .footer__navigation 
-                .footer__nav-header 
-                    h3 навигация
-                .footer__text-aboutus О нас
-                .footer__text-news Новости
-                .footer__text-support Служба поддержки
-                .footer__text-services Услуги
+                h3.footer__nav-header навигация
+                a(href="/mock-address/change-me").footer__text-aboutus О нас
+                a(href="/mock-address/change-me").footer__text-news Новости
+                a(href="/mock-address/change-me").footer__text-support Служба поддержки
+                a(href="/mock-address/change-me").footer__text-services Услуги
             .footer__about-us
-                .footer__about-us-header
-                    h3 О нас
-                .footer__text-aboutservices О сервисе
-                .footer__text-team Наша команда
-                .footer__text-vacancies Вакансии
-                .footer__text-investors Инвесторы
+                h3.footer__about-us-header О нас   
+                a(href="/mock-address/change-me").footer__text-aboutservices О сервисе
+                a(href="/mock-address/change-me").footer__text-team Наша команда
+                a(href="/mock-address/change-me").footer__text-vacancies Вакансии
+                a(href="/mock-address/change-me").footer__text-investors Инвесторы
             .footer__support 
-                .footer__support-header 
-                    h3 служба поддержки
-                .footer__text-agreements Соглашения
-                .footer__text-communities Сообщества
-                .footer__text-contacts Связь с нами
+                h3.footer__support-header служба поддержки
+                a(href="/mock-address/change-me").footer__text-agreements Соглашения
+                a(href="/mock-address/change-me").footer__text-communities Сообщества
+                a(href="/mock-address/change-me").footer__text-contacts Связь с нами
             .footer__subscription 
-                .footer__subscription-header 
-                    h3 подписка
-                .footer__text-subscription 
-                    p Получайте специальные предложения и новости сервиса
+                h3.footer__subscription-header подписка   
+                p.footer__text-subscription Получайте специальные предложения и новости сервиса
                 .footer__text-field 
                     +textField({modif: 'text-field_subscription-footer', placeholder: 'Email', type: 'email'})
         .footer__copyright-block 

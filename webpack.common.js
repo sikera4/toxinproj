@@ -30,7 +30,8 @@ module.exports = {
         'landing-page-guestsdd': './js/landing-page.js',
         'search-room': './js/search-room.js',
         'room-details': './js/room-details.js',
-        'signin-registration': './js/signin-registration.js'
+        'registration': './js/signin-registration.js',
+        'sign-in': './js/signin-registration.js'
     },
     plugins: [
         ...templates,
