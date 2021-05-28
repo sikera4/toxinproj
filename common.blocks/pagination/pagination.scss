@@ -1,10 +1,11 @@
-@use '../scss-mixins-variables/scss-mixins-variables';
+@use '../theme/scss-mixins-variables';
 .pagination {
+  @include scss-mixins-variables.common-font-style;
   &__pages {
     display: flex;
     list-style: none;
     width: 241px;
-    li {
+    .pagination__page {
       height: 40px;
       width: 40px;
       border-radius: 50%;

@@ -1,4 +1,4 @@
-@use '../scss-mixins-variables/scss-mixins-variables';
+@use '../theme/scss-mixins-variables';
 .rich-check {
   &__inputs {
     margin-top: 18px;
@@ -35,8 +35,12 @@
     line-height: 14px;
     padding-left: 30px;
     margin-top: 5.5px;
+    max-width: 14.5rem;
   }
   &__aid-for-disabled {
     margin-top: 12px;
+    .rich-check__info {
+      max-width: 16rem;
+    }
   }
 }

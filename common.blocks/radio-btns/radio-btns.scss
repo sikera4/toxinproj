@@ -1,4 +1,6 @@
+@use '../theme/scss-mixins-variables';
 .radio {
+  @include scss-mixins-variables.common-font-style;
   display: flex;
   &__woman {
     margin-left: 88px;

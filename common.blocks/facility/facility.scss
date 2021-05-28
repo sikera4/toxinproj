@@ -1,4 +1,6 @@
+@use '../theme/scss-mixins-variables';
 .facility {
+  @include scss-mixins-variables.common-font-style;
   display: flex;
   min-width: 280px;
   padding-bottom: 20px;

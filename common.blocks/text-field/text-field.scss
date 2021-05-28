@@ -1,25 +1,10 @@
-@use '../scss-mixins-variables/scss-mixins-variables';
-@mixin input-text {
-  padding-left: 0.875rem;
-  height: 2.75rem;
-  max-width: 20rem;
-  width: 100%;
-  border: 1px solid scss-mixins-variables.$dark25;
-  border-radius: 4px;
-  font-family: Montserrat;
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: scss-mixins-variables.$dark75;
-  &::placeholder {
-    color: scss-mixins-variables.$dark25;
-  }
-}
+@use '../theme/scss-mixins-variables';
 
 .text-field {
   position: relative;
   &__input {
     input[type='text'], input[type='email'], input[type='password'], input {
-      @include input-text;
+      @include scss-mixins-variables.input-text;
       &:hover {
         border: 1px solid scss-mixins-variables.$dark50;
       }

@@ -1,6 +1,6 @@
 mixin expandableCheckbox(data)
     .expchecklist
-        h3=data.header 
+        h3.expchecklist__header=data.header 
             .expchecklist__icon
                 if (data.type === 'closed')
                     span.material-icons expand_more

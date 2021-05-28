@@ -1,6 +1,7 @@
-@use '../scss-mixins-variables/scss-mixins-variables';
+@use '../theme/scss-mixins-variables';
 .color-example {
   display: flex;
+  font-family: 'Montserrat', Arial, sans-serif;
   &__color-caption {
     display: flex;
     flex-direction: column;
@@ -9,11 +10,15 @@
     margin-left: 2.5rem;
   }
   &__color-name {
+    font-weight: bold;
+    font-size: 1.1875rem;
     line-height: 1.75rem;
+    color: scss-mixins-variables.$dark100;
   }
   &__hex-name {
     font-size: 1.1875rem;
     line-height: 1.75rem;
+    color: scss-mixins-variables.$dark100;
   }
   &__color-display {
     height: 70px;

@@ -2,8 +2,7 @@ include ../text-field/text-field.pug
 include ../buttons/buttons.pug
 mixin entryCard
     .entry-card 
-        .entry-card__header 
-            h1 Войти
+        h1.entry-card__header Войти
         form
             .entry-card__text-inputs
                 .entry-card__email-input 
@@ -11,8 +10,8 @@ mixin entryCard
                 .entry-card__password-input
                     +textField({placeholder: 'Пароль', type: 'password'})
             .entry-card__enter-button 
-                +button({type: 'button_long', header: 'войти'})
+                +button({type: 'button_long', text: 'войти'})
         .entry-card__registration-section 
             .text Нет аккаунта на Toxin?
-            +button({type: 'button_empty', header: 'создать'})
+            +button({type: 'button_empty', text: 'создать'})
 

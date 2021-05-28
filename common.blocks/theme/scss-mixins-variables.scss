@@ -6,6 +6,52 @@ $dark05: rgba(31, 32, 65, 0.05);
 $primary: rgba(188, 156, 255, 1);
 $secondary: rgba(111, 207, 151, 1);
 
+@mixin common-font-style {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.5rem;
+  color: $dark75;
+}
+
+@mixin h1-style {
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 1.8125rem;
+  color: $dark100;
+}
+
+@mixin h2-style {
+  font-weight: bold;
+  font-size: 1.1875rem;
+  line-height: 1.5rem;
+  color: $dark100;
+}
+
+@mixin h3-style {
+  font-weight: bold;
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
+  text-transform: uppercase;
+  color: $dark100;
+}
+
+@mixin input-text {
+  padding-left: 0.875rem;
+  height: 2.75rem;
+  max-width: 20rem;
+  width: 100%;
+  border: 1px solid $dark25;
+  border-radius: 4px;
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: $dark75;
+  &::placeholder {
+    color: $dark25;
+  }
+}
+
 @mixin icon {
   position: absolute;
   height: 44px;
@@ -50,6 +96,9 @@ $secondary: rgba(111, 207, 151, 1);
   margin-left: 30px;
   display: block;
   position: relative;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
   color: rgba(31, 32, 65, 0.5);
   &::before {
     top: -1px;

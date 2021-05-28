@@ -1,5 +1,7 @@
 @use '../like-btn/like-btn';
+@use '../theme/scss-mixins-variables';
 .commentary {
+  @include scss-mixins-variables.common-font-style;
   max-width: 711px;
   display: flex;
   &__person {

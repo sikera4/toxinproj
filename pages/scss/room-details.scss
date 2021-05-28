@@ -1,14 +1,22 @@
+@use '../../common.blocks/theme/global';
 @use '../../common.blocks/page-layouts/page-layout';
 @use '../../common.blocks/facility/facility';
 @use '../../common.blocks/final-counter-card/final-counter-card';
 @use '../../common.blocks/commentary/commentary';
 @use '../../common.blocks/bullet-list/bullet-list';
 @use '../../common.blocks/footer/footer';
-@use '../../common.blocks/scss-mixins-variables/scss-mixins-variables';
+@use '../../common.blocks/theme/scss-mixins-variables';
+
 .room-details {
   &__photos {
     height: 30.3125rem;
     display: flex;
+  }
+  @include scss-mixins-variables.media-sm {
+    &__photos {
+      flex-direction: column;
+      height: 40rem;
+    }
   }
   &__primary-photo {
     background: url('../../assets/primary-photo.jpg');
@@ -16,9 +24,22 @@
     height: 100%;
     width: 68.125vw;
   }
+  @include scss-mixins-variables.media-sm {
+    &__primary-photo {
+      width: 100%;
+      height: 67%;
+    }
+  }
   &__photo-col {
     height: 100%;
     width: 31.875vw;   
+  }
+  @include scss-mixins-variables.media-sm {
+    &__photo-col {
+      display: flex;
+      width: 100%;
+      height: 33%;
+    }
   }
   &__secondary-photo1 {
     background: url('../../assets/secondary-photo1.jpg');
@@ -30,17 +51,65 @@
     background-size: cover;
     height: 50%;
   }
+  @include scss-mixins-variables.media-sm {
+    &__secondary-photo1, &__secondary-photo2 {
+      width: 50%;
+      height: 100%;
+    }
+  }
   &__content {
     padding: 4.375rem 8.75rem 4rem 8.75rem;
     display: flex;
     border-bottom: 1px solid rgba(31, 32, 65, 0.25);
   }
+  @include scss-mixins-variables.media-sm {
+    &__content {
+      padding: 3rem 5rem 3rem 5rem;
+    }
+  }
+  @include scss-mixins-variables.media-lg {
+    &__content {
+      flex-direction: column;
+    }
+  }
+  @include scss-mixins-variables.media-md {
+    &__content {
+      padding: 4rem 8rem 4rem 8rem;
+    }
+  }
+  @include scss-mixins-variables.media-xxs {
+    &__content {
+      padding: 2rem 1rem;
+    }
+  }
+  @include scss-mixins-variables.media-xxxs {
+    &__content {
+      padding: 2rem 0.5rem;
+    }
+  }
   &__info-blocks {
     display: flex;
+  }
+  @include scss-mixins-variables.media-lg {
+    &__info-blocks {
+      justify-content: space-between;
+    }
+  }
+  @include scss-mixins-variables.media-xs {
+    &__info-blocks {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 3.5rem;
+    }
   }
   &__facilities {
     .facility {
       margin-top: 1.25rem;
+    }
+  }
+  @include scss-mixins-variables.media-xs {
+    &__facilities {
+      margin-bottom: 2rem;
     }
   }
   &__chart {
@@ -111,14 +180,19 @@
       }
     }
   }
+  @include scss-mixins-variables.media-xs {
+    &__chart {
+      margin-left: 0;
+    }
+  }
   &__reviews {
     margin-top: 0.75rem;
     &-header {
       display: flex;
       justify-content: space-between;
-      p {
-        color: scss-mixins-variables.$dark50;
-      }
+    }
+    &-num {
+      color: scss-mixins-variables.$dark50;
     }
   }
   &__commentary {
@@ -129,10 +203,22 @@
     margin-top: 1.875rem;
     justify-content: space-between;
   }
+  @include scss-mixins-variables.media-xs {
+    &__rules {
+      flex-direction: column;
+    }
+  }
   &__living-rules {
     h2 {
       margin-left: 1.25rem;
       margin-bottom: 1.125rem;
+    }
+  }
+  @include scss-mixins-variables.media-xs {
+    &__living-rules {
+      h2 {
+        margin-left: 0;
+      }
     }
   }
   &__cancellation {
@@ -141,92 +227,23 @@
       margin-top: 1.125rem;
     }
   }
-  &__final-counter-card {
-    margin-left: 4.375rem;
-  }
-}
-@include scss-mixins-variables.media-lg {
-  .room-details {
-    &__content {
-      flex-direction: column;
-    }
-    &__info-blocks {
-      justify-content: space-between;
-    }
-    &__final-counter-card {
-      margin: 3.5rem auto 0;
-    }
-  }
-}
-@include scss-mixins-variables.media-md {
-  .room-details {
-    &__content {
-      padding: 4rem 8rem 4rem 8rem;
-    }
-  }
-}
-@include scss-mixins-variables.media-sm {
-  .room-details {
-    &__photos {
-      flex-direction: column;
-      height: 40rem;
-    }
-    &__primary-photo {
-      width: 100%;
-      height: 67%;
-    }
-    &__photo-col {
-      display: flex;
-      width: 100%;
-      height: 33%;
-    }
-    &__secondary-photo1, &__secondary-photo2 {
-      width: 50%;
-      height: 100%;
-    }
-    &__content {
-      padding: 3rem 5rem 3rem 5rem;
-    }
-  }
-}
-@include scss-mixins-variables.media-xs {
-  .room-details {
-    &__info-blocks {
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 3.5rem;
-    }
-    &__facilities {
-      margin-bottom: 2rem;
-    }
-    &__chart {
-      margin-left: 0;
-    }
-    &__rules {
-      flex-direction: column;
-    }
-    &__living-rules {
-      h2 {
-        margin-left: 0;
-      }
-    }
+  @include scss-mixins-variables.media-xs {
     &__cancellation {
       margin-top: 1.875rem;
       max-width: 100%;
     }
   }
-}
-@include scss-mixins-variables.media-xxs {
-  .room-details {
-    &__content {
-      padding: 2rem 1rem;
-    }
+  &__final-counter-card {
+    margin-left: 4.375rem;
+    min-width: 380px;
   }
-}
-@include scss-mixins-variables.media-xxxs {
-  .room-details {
-    &__content {
-      padding: 2rem 0.5rem;
+  @include scss-mixins-variables.media-lg {
+    &__final-counter-card {
+      max-width: 380px;
+      margin: 3.5rem 0 0;
+      display: flex;
+      justify-content: center;
+      align-self: center;
     }
   }
 }

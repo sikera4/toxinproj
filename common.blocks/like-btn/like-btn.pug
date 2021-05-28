@@ -2,7 +2,7 @@ mixin likebtn(likedta)
     .likebutton
         .likebutton__container(class=likedta.type)
             .likebutton__heart
-                if (likedta.type == 'focused')
+                if (likedta.type == 'likebutton_focused')
                     span.material-icons favorite
                 else 
                     span.material-icons favorite_border

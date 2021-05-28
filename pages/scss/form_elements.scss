@@ -1,6 +1,7 @@
+@use '../../common.blocks/theme/global';
 @use '../../common.blocks/expandable-checkbox-list/expandable-checkbox';
 @use '../../common.blocks/rich-checkbox/rich-checkbox';
-@use '../../common.blocks/scss-mixins-variables/scss-mixins-variables';
+@use '../../common.blocks/theme/scss-mixins-variables';
 @use '../../common.blocks/ui-kit-layout/layout';
 @use '../../common.blocks/text-field/text-field';
 @use '../../common.blocks/date-dropdown/date-dropdown';

@@ -1,7 +1,9 @@
+@use '../../common.blocks/theme/global';
 @use '../../common.blocks/page-layouts/page-layout';
 @use '../../common.blocks/registration-card/registration-card';
 @use '../../common.blocks/entry-card/entry-card';
 @use '../../common.blocks/footer/footer';
+
 .entry-page {
   &__content {
     background: url('../../assets/entry-page-background.jpg') no-repeat;

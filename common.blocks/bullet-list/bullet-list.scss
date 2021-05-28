@@ -1,4 +1,6 @@
+@use '../theme/scss-mixins-variables';
 .bulletlist {
+  @include scss-mixins-variables.common-font-style;
   list-style: none;
   &__listitem {
     position: relative;

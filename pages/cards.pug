@@ -1,25 +1,26 @@
 include ../common.blocks/ui-kit-layout/layout.pug
+include ../common.blocks/booking-card/booking-card.pug 
+include ../common.blocks/registration-card/registration-card.pug
+include ../common.blocks/final-counter-card/final-counter-card.pug
+include ../common.blocks/entry-card/entry-card.pug
+include ../common.blocks/datepicker-layout/datepicker-layout.pug
+include ../common.blocks/room-card/room-card.pug
 +uiKitLayout('Cards')
 .cards 
     .cards__col1 
         .booking
-            include ../common.blocks/booking-card/booking-card.pug 
             +bookingCard({phArrival: 'ДД.ММ.ГГГГ', phDeparture: 'ДД.ММ.ГГГГ', def1: '0', def2: '0'})
         .registration 
-            include ../common.blocks/registration-card/registration-card.pug
             +registrationCard({registerBtn: false})
     .cards__col2 
         .final-counter 
-            include ../common.blocks/final-counter-card/final-counter-card.pug
             +finalCounterCard({luxspaced: false})
         .entry 
-            include ../common.blocks/entry-card/entry-card.pug
             +entryCard
     .cards__col3 
         .calendar-layout 
-            include ../common.blocks/datepicker-layout/datepicker-layout.pug
+            +datepickerLayout
         .room-card1 
-            include ../common.blocks/room-card/room-card.pug
             +roomCard({id: '1', num: '888', type: 'люкс', sum: '9 990₽ ', reviewNum: '145', grade: '5', imgAddress: require('../assets/room1.jpg')})
         .room-card2 
             +roomCard({id: '2', num: '840', sum: '9 900₽ ', reviewNum: '65', grade: '4', imgAddress: require('../assets/room2.jpg')})

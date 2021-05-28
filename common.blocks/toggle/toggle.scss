@@ -1,5 +1,6 @@
-@use '../scss-mixins-variables/scss-mixins-variables';
+@use '../theme/scss-mixins-variables';
 .toggle-switch {
+  @include scss-mixins-variables.common-font-style;
   position: relative;
   &__label {
     position: relative;

@@ -1,6 +1,7 @@
-@use '../scss-mixins-variables/scss-mixins-variables';
+@use '../theme/scss-mixins-variables';
 @use '../buttons/buttons';
 .header {
+  @include scss-mixins-variables.common-font-style;
   padding: 15px 0;
   background: #FFFFFF;
   display: flex;
@@ -197,4 +198,12 @@
       border-left: 1px solid rgba(31, 32, 65, 0.1);
       padding-left: 1.25rem;
     }
+}
+.header_location_page {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  max-width: 120rem;
+  min-width: 20rem;
 }

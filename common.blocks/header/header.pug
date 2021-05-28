@@ -1,33 +1,58 @@
 include ../buttons/buttons.pug
 mixin header(data)
-    header.header 
-        .header__content
-            a(href='./landing-page.html').header__logo 
-                img(src=require('../assets/logo.svg'))
-            .header__menu-btn 
-                span.header__menu-btn-burger
-            .header__rightside-content
-                nav.header__nav 
-                    if data.location != 'page'
+    if data.location != 'page'
+        header.header
+            .header__content
+                a(href='./landing-page.html').header__logo 
+                    img(src=require('../assets/logo.svg'))
+                .header__menu-btn 
+                    span.header__menu-btn-burger
+                .header__rightside-content
+                    nav.header__nav 
                         a(href="/mock-address/change-me").header__about О нас
-                    else 
+                        a(href="/mock-address/change-me").header__services 
+                            p.header__services-text Услуги
+                            span.header__services-icon.material-icons expand_more                             
+                        a(href="/mock-address/change-me").header__vacancies Вакансии
+                        a(href="/mock-address/change-me").header__news Новости
+                        a(href="/mock-address/change-me").header__agreements 
+                            p.header__agreements-text Соглашения
+                            span.header__agreements-icon.material-icons expand_more         
+                    .header__dependent 
+                        if !data.loggedIn
+                            .header__buttons
+                                a(href="./sign-in.html").header__entry-button 
+                                    +button({type: 'button_empty button_header', text: 'войти'})
+                                a(href="./registration.html").header__registration-button 
+                                    +button({type: 'button_long button_header', text: 'зарегистрироваться'})
+                        else if data.loggedIn
+                            .header__name= data.name  
+    else 
+        header.header.header_location_page
+            .header__content
+                a(href='./landing-page.html').header__logo 
+                    img(src=require('../assets/logo.svg'))
+                .header__menu-btn 
+                    span.header__menu-btn-burger
+                .header__rightside-content
+                    nav.header__nav 
                         a(href="/mock-address/change-me").header__about.header__about_location_page О нас
-                    a(href="/mock-address/change-me").header__services 
-                        p.header__services-text Услуги
-                        span.header__services-icon.material-icons expand_more                             
-                    a(href="/mock-address/change-me").header__vacancies Вакансии
-                    a(href="/mock-address/change-me").header__news Новости
-                    a(href="/mock-address/change-me").header__agreements 
-                        p.header__agreements-text Соглашения
-                        span.header__agreements-icon.material-icons expand_more         
-                .header__dependent 
-                    if !data.loggedIn
-                        .header__buttons
-                            a(href="./sign-in.html").header__entry-button 
-                                +button({type: 'button_empty button_header', header: 'войти'})
-                            a(href="./registration.html").header__registration-button 
-                                +button({type: 'button_long button_header', header: 'зарегистрироваться'})
-                    else if data.loggedIn
-                        .header__name= data.name 
+                        a(href="/mock-address/change-me").header__services 
+                            p.header__services-text Услуги
+                            span.header__services-icon.material-icons expand_more                             
+                        a(href="/mock-address/change-me").header__vacancies Вакансии
+                        a(href="/mock-address/change-me").header__news Новости
+                        a(href="/mock-address/change-me").header__agreements 
+                            p.header__agreements-text Соглашения
+                            span.header__agreements-icon.material-icons expand_more         
+                    .header__dependent 
+                        if !data.loggedIn
+                            .header__buttons
+                                a(href="./sign-in.html").header__entry-button 
+                                    +button({type: 'button_empty button_header', text: 'войти'})
+                                a(href="./registration.html").header__registration-button 
+                                    +button({type: 'button_long button_header', text: 'зарегистрироваться'})
+                        else if data.loggedIn
+                            .header__name= data.name 
 
 

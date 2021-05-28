@@ -1,6 +1,7 @@
-@use '../scss-mixins-variables/scss-mixins-variables';
+@use '../theme/scss-mixins-variables';
 @use '../rating/rating';
 .room-card {
+  @include scss-mixins-variables.common-font-style;
   height: 16.0625rem;
   width: 16.875rem;
   background: #FFFFFF;

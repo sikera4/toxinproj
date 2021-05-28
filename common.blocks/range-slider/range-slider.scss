@@ -1,5 +1,12 @@
+@use '../theme/scss-mixins-variables';
 .rangeslider {
+  @include scss-mixins-variables.common-font-style;
   position: relative;
+  &__header {
+    @include scss-mixins-variables.h3-style;
+    margin-top: 1px;
+    margin-bottom: 23px;
+  }
   &__slider {
     max-width: 266px;
   }
@@ -10,10 +17,6 @@
     font-size: 12px;
     line-height: 15px;
     color: rgba(31, 32, 65, 0.5);
-  }
-  h3 {
-    margin-top: 1px;
-    margin-bottom: 23px;
   }
   .noUi-horizontal {
     height: 6px;

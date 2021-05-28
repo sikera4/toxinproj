@@ -1,10 +1,10 @@
 mixin button(type)
     .button(class=type.type)
         if (type.type === 'button_long')
-            h3= type.header 
+            h3.button__text= type.text 
             .button__icon
                 span.material-icons &#xe5c8
         else 
-            h3= type.header 
+            h3.button__text= type.text 
         
         

@@ -3,8 +3,7 @@ include ../quantity-dropdown/quantity-dropdown.pug
 include ../buttons/buttons.pug
 mixin bookingCard(data)
     .booking-card 
-        .booking-card__header 
-            h1 Найдём номера под ваши пожелания
+        h1.booking-card__header Найдём номера под ваши пожелания 
         form
             .booking-card__date-pickers
                 .booking-card__date-picker-arrival
@@ -12,8 +11,8 @@ mixin bookingCard(data)
                 .booking-card__date-picker-departure
                     +dateDropdown({header: 'выезд', placeholder: data.phDeparture, id: 'end'})
             .booking-card__guests-num
-                h3 Гости
+                h3.booking-card__guests-num-header Гости
                 +iqdropdown({type:'guests',def1: data.def1, def2: data.def2, class: data.drdclass})
             .booking-card__button 
-                +button({type: 'button_long', header: 'подобрать номер'})
+                +button({type: 'button_long', text: 'подобрать номер'})
 

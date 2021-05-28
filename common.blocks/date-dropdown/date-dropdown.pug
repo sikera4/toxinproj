@@ -1,6 +1,6 @@
 mixin dateDropdown(ddrData)
     .date-dd
-        h3= ddrData.header
+        h3.date-dd__header= ddrData.header
         .date-dd__input-container(class=ddrData.modif)
             input(type='text' placeholder=ddrData.placeholder id=ddrData.id).datepicker-here
             .date-dd__icon

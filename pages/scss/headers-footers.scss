@@ -1,7 +1,9 @@
+@use '../../common.blocks/theme/global';
 @use '../../common.blocks/ui-kit-layout/layout';
 @use '../../common.blocks/header/header';
 @use '../../common.blocks/footer/footer';
 @use '../../common.blocks/copyright/copyright';
+
 body {
   background: #F4F4F6;;
 }
@@ -17,7 +19,7 @@ body {
   }
   &__copyright-block {
     .copyright {
-        margin: 2.5rem auto 8.75rem auto;
+      margin: 2.5rem auto 8.75rem auto;
     }
   }
 }

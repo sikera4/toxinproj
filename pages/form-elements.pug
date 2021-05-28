@@ -64,9 +64,9 @@ include ../common.blocks/commentary/commentary.pug
             .form-elements__likebtns 
                 h3 like button
                 .lbtns 
-                    - const likedta = {count: 2, type: 'unfocused'}
+                    - const likedta = {count: 2, type: 'likebutton_unfocused'}
                     +likebtn(likedta)
-                    - const lkdta = {count: 12, type: 'focused'}
+                    - const lkdta = {count: 12, type: 'likebutton_focused'}
                     +likebtn(lkdta)
             .form-elements__ratebtns 
                 h3 rate button
@@ -79,21 +79,21 @@ include ../common.blocks/commentary/commentary.pug
             .form-elements__buttons 
                 h3 buttons 
                 .form-elements__btn-filled
-                    - const btn1 = {type: 'button_filled', header: 'click me'};
+                    - const btn1 = {type: 'button_filled', text: 'click me'};
                     +button(btn1)
-                    - const btn2 = {type: 'button_filled button_filled-disabled', header: 'click me'};
+                    - const btn2 = {type: 'button_filled button_filled-disabled', text: 'click me'};
                     +button(btn2)
                 .form-elements__btn-empty 
-                    - const btn3 = {type: 'button_empty', header: 'click me'};
+                    - const btn3 = {type: 'button_empty', text: 'click me'};
                     +button(btn3)
-                    - const btn4 = {type: 'button_empty button_empty-disabled', header: 'click me'};
+                    - const btn4 = {type: 'button_empty button_empty-disabled', text: 'click me'};
                     +button(btn4)
                 .form-elements__btn-noborder 
-                    - const btn5 = {type: 'button_noborder', header: 'click me'};
+                    - const btn5 = {type: 'button_noborder', text: 'click me'};
                     +button(btn5)
-                    - const btn6 = {type: 'button_noborder button_noborder-disabled', header: 'click me'};
+                    - const btn6 = {type: 'button_noborder button_noborder-disabled', text: 'click me'};
                     +button(btn6)
-                - const btn7 = {type: 'button_long', header: 'перейти к оплате'}
+                - const btn7 = {type: 'button_long', text: 'перейти к оплате'}
                 .form-elements__btn-long
                     +button(btn7)
             .form-elements__pagination 
@@ -138,7 +138,7 @@ include ../common.blocks/commentary/commentary.pug
                 - const facdt2 = {icon: 'location_city', name: 'Удобство', description: 'Окно в каждой из спален'}
                 +facility(facdt2)
         .form-elements__typicalcomment 
-            - const cmtdta = {name: 'Мурад Сарафанов', personImg: require('../assets/murad.jpg'), when: '5 дней назад', liked: 'focused', likesnum: '12', text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.', imgId:'comment1'}
+            - const cmtdta = {name: 'Мурад Сарафанов', personImg: require('../assets/murad.jpg'), when: '5 дней назад', liked: 'likebutton_focused', likesnum: '12', text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'}
             +commentary(cmtdta)
             
 

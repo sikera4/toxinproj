@@ -2,9 +2,10 @@
 @use '../radio-btns/radio-btns';
 @use '../toggle/toggle';
 @use '../buttons/buttons';
-@use '../scss-mixins-variables/scss-mixins-variables';
+@use '../theme/scss-mixins-variables';
 
 .registration-card {
+  @include scss-mixins-variables.common-font-style;
   background: #FFFFFF;
   z-index: 0;
   position: relative;
@@ -14,6 +15,9 @@
   border-radius: 4px;
   max-width: 23.75rem;
   padding: 2.5rem 1.8125rem 1.8125rem 1.8125rem;
+  &__header {
+    @include scss-mixins-variables.h1-style;
+  }
   &__name-inputs {
     margin-top: 1.25rem;
   }
@@ -23,13 +27,15 @@
   }
   &__date-of-birth {
     margin-top: 1.25rem;
-    h3 {
+    &-header {
       margin-bottom: 0.3125rem;
+      @include scss-mixins-variables.h3-style;
     }
   }
   &__entry-data {
-    h3 {
+    &-header {
       margin-bottom: 0.3125rem;
+      @include scss-mixins-variables.h3-style;
     }
     margin-top: 1.3125rem;
   }
@@ -38,7 +44,7 @@
   }
   &__submit-button {
     margin-top: 1.187rem;
-    h3 {
+    .button__text {
       margin-right: 0.1rem;
     }
   }
@@ -47,7 +53,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .text {
+    &-text {
       color: #000000;
     }
   }

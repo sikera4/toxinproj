@@ -1,13 +1,14 @@
-@use '../scss-mixins-variables/scss-mixins-variables';
+@use '../theme/scss-mixins-variables';
 .expchecklist {
   position: relative;
+  &__header {
+    cursor: pointer;
+    @include scss-mixins-variables.h3-style;
+  }
   &__icon {
     @include scss-mixins-variables.icon;
     left: 13.875rem;
     top: -15px;
-  }
-  h3 {
-    cursor: pointer;
   }
   &__inputs {
     margin-top: 18px;

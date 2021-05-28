@@ -1,7 +1,8 @@
 @use '../text-field/text-field';
 @use '../buttons/buttons';
-@use '../scss-mixins-variables/scss-mixins-variables';
+@use '../theme/scss-mixins-variables';
 .entry-card {
+  @include scss-mixins-variables.common-font-style;
   max-width: 23.75rem;
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
@@ -11,6 +12,9 @@
   padding: 2.5rem 1.8125rem 2rem 1.8125rem;
   position: relative;
   z-index: 0;
+  &__header {
+    @include scss-mixins-variables.h1-style;
+  }
   &__text-inputs {
     margin-top: 1.25rem;
   }
@@ -19,7 +23,7 @@
   }
   &__enter-button {
     margin-top: 1.25rem;
-    h3 {
+    .button__text {
       margin-right: 0;
       margin-left: 0.125rem;
     }

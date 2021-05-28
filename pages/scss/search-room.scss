@@ -1,5 +1,6 @@
+@use '../../common.blocks/theme/global';
 @use '../../common.blocks/page-layouts/page-layout';
-@use '../../common.blocks/scss-mixins-variables/scss-mixins-variables';
+@use '../../common.blocks/theme/scss-mixins-variables';
 @use '../../common.blocks/date-dropdown/date-dropdown';
 @use '../../common.blocks/quantity-dropdown/quantity-dropdown';
 @use '../../common.blocks/checkbox-btns/checkbox-btns';

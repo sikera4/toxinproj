@@ -1,5 +1,8 @@
-@use '../scss-mixins-variables/scss-mixins-variables';
+@use '../theme/scss-mixins-variables';
 .date-dd {
+  &__header {
+    @include scss-mixins-variables.h3-style;
+  }
   &__input-container {
     position: relative;
     max-width: 16.625rem;

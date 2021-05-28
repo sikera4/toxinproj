@@ -1,36 +1,21 @@
 mixin rating(data)
     if (data.grade==='4')
         .rating
-            .rating__star 
-                span.material-icons star 
-            .rating__star 
-                span.material-icons star
-            .rating__star 
-                span.material-icons star
-            .rating__star 
-                span.material-icons star
+            for i in [1, 2, 3, 4]
+                .rating__star 
+                    span.material-icons star 
             .rating__star 
                 span.material-icons star_border
     else if (data.grade==='5')
         .rating
-            .rating__star 
-                span.material-icons star 
-            .rating__star 
-                span.material-icons star
-            .rating__star 
-                span.material-icons star
-            .rating__star 
-                span.material-icons star
-            .rating__star 
-                span.material-icons star
+            for i in [1, 2, 3, 4, 5]
+                .rating__star 
+                    span.material-icons star 
     else if (data.grade==='3')
         .rating 
-            .rating__star 
-                span.material-icons star 
-            .rating__star 
-                span.material-icons star
-            .rating__star 
-                span.material-icons star
+            for i in [1, 2, 3]
+                .rating__star 
+                    span.material-icons star 
             .rating__star 
                 span.material-icons star_border
             .rating__star 
