@@ -21,19 +21,19 @@ include ../common.blocks/commentary/commentary.pug
         .form-elements__row1-col1 
             .form-elements__tfdefault
                 span.form-elements__tfdefault-type DEFAULT
-                h3 text field
+                h3.form-elements__tfdefault-header text field
                 - const c = {placeholder: 'Email', type: 'email'} 
                 +textField(c)
             .form-elements__tffocus 
                 span.form-elements__tffocus-type Hover / Focus
-                h3 text field
+                h3.form-elements__tffocus-header text field
                 - const d = {placeholder: 'This is pretty awesome', type: 'text', modif: 'focused'} 
                 +textField(d)
             .form-elements__dropdown 
-                h3 dropdown
+                h3.form-elements__dropdown-header dropdown
                 +iqdropdown({type: 'guests'})
             .form-elements__tfmasked 
-                h3 masked text field
+                h3.form-elements__tfmasked-header masked text field
                 - const masked = {placeholder: 'ДД.ММ.ГГГГ', modif: 'masked', type: 'text'}
                 +textField(masked)
             .form-elements__datepickers 
@@ -45,68 +45,80 @@ include ../common.blocks/commentary/commentary.pug
                 - const dt = {header: 'filter date dropdown', placeholder: '19 авг - 23 авг', modif: 'date-dd_location_filter'}
                 +dateDropdown(dt)
             .form-elements__tfsub 
-                h3 subscription text field
+                h3.form-elements__tfsub-header subscription text field
                 - const sub = {placeholder: 'Email', modif: 'text-field_subscription-form-elements', type: 'email'}
                 +textField(sub)
         .form-elements__row1-col2 
             .form-elements__checkboxbtns
-                h3 checkbox buttons
+                h3.form-elements__checkboxbtns-header checkbox buttons
                 +checkbox
             .form-elements__radiobtns
-                h3 radio buttons
+                h3.form-elements__radiobtns-header radio buttons
                 +radio
-            .form-elements__toggle
-                h3 toggle
-                - const tgl = {checked: true, label: 'Получать спецпредложения', id: 'sw1'}
-                +toggle(tgl)
-                - const tgl2 = {label: 'Получать спецпредложения', id: 'sw2'}
-                +toggle(tgl2)
+            .form-elements__toggles
+                h3.form-elements__toggle-header toggle
+                .form-elements__toggle-on
+                    - const tgl = {checked: true, label: 'Получать спецпредложения', id: 'sw1'}
+                    +toggle(tgl)
+                .form-elements__toggle-off
+                    - const tgl2 = {label: 'Получать спецпредложения', id: 'sw2'}
+                    +toggle(tgl2)
             .form-elements__likebtns 
-                h3 like button
-                .lbtns 
-                    - const likedta = {count: 2, type: 'likebutton_unfocused'}
-                    +likebtn(likedta)
-                    - const lkdta = {count: 12, type: 'likebutton_focused'}
-                    +likebtn(lkdta)
+                h3.form-elements__likebtns-header like button
+                .form-elements__likebtns-container
+                    .form-elements__likebutton-unfocused 
+                        - const likedta = {count: 2, type: 'likebutton_unfocused'}
+                        +likebtn(likedta)
+                    .form-elements__likebutton-focused 
+                        - const lkdta = {count: 12, type: 'likebutton_focused'}
+                        +likebtn(lkdta)
             .form-elements__ratebtns 
-                h3 rate button
-                .ratingexs 
-                    +rating({grade: '4'})
-                    +rating({grade: '5'})
+                h3.form-elements__ratebtns-header rate button
+                .form-elements__ratebtns-ratingexamples 
+                    .form-elements__rating-grade-4
+                        +rating({grade: '4'})
+                    .form-elements__rating-grade-5
+                        +rating({grade: '5'})
         .form-elements__row1-col3 
             .form-elements__range
                 +rangeslider('range slider')
             .form-elements__buttons 
-                h3 buttons 
+                h3.form-elements__buttons-header buttons 
                 .form-elements__btn-filled
-                    - const btn1 = {type: 'button_filled', text: 'click me'};
-                    +button(btn1)
-                    - const btn2 = {type: 'button_filled button_filled-disabled', text: 'click me'};
-                    +button(btn2)
+                    .form-elements__btn-filled-enabled
+                        - const btn1 = {type: 'button_filled', text: 'click me'};
+                        +button(btn1)
+                    .form-elements__btn-filled-disabled
+                        - const btn2 = {type: 'button_filled button_filled_disabled', text: 'click me'};
+                        +button(btn2)
                 .form-elements__btn-empty 
-                    - const btn3 = {type: 'button_empty', text: 'click me'};
-                    +button(btn3)
-                    - const btn4 = {type: 'button_empty button_empty-disabled', text: 'click me'};
-                    +button(btn4)
-                .form-elements__btn-noborder 
-                    - const btn5 = {type: 'button_noborder', text: 'click me'};
-                    +button(btn5)
-                    - const btn6 = {type: 'button_noborder button_noborder-disabled', text: 'click me'};
-                    +button(btn6)
+                    .form-elements__btn-empty-enabled
+                        - const btn3 = {type: 'button_empty', text: 'click me'};
+                        +button(btn3)
+                    .form-elements__btn-empty-disabled
+                        - const btn4 = {type: 'button_empty button_empty_disabled', text: 'click me'};
+                        +button(btn4)
+                .form-elements__btn-noborder
+                    .form-elements__btn-noborder-enabled
+                        - const btn5 = {type: 'button_noborder', text: 'click me'};
+                        +button(btn5)
+                    .form-elements__btn-noborder-disabled
+                        - const btn6 = {type: 'button_noborder button_noborder_disabled', text: 'click me'};
+                        +button(btn6)
                 - const btn7 = {type: 'button_long', text: 'перейти к оплате'}
                 .form-elements__btn-long
                     +button(btn7)
             .form-elements__pagination 
-                h3 pagination
+                h3.form-elements__pagination-header pagination
                 +pagination
     .form-elements__row2
         .form-elements__row2-col1
             .form-elements__quantity-dropdown 
-                h3 dropdown
+                h3.form-elements__quantity-dropdown-header dropdown
                 +iqdropdown({type: 'default', def1: '2', def2: '2'})
                 span.form-elements__quantity-dropdown-type DEFAULT
             .form-elements__quantity-dropdown-expanded 
-                h3 dropdown 
+                h3.form-elements__quantity-dropdown-expanded-header dropdown 
                 +iqdropdown({type: 'expanded', def1: '2', def2: '2'})
                 span.form-elements__quantity-dropdown-expanded-type EXPANDED
             .form-elements__expandable-checkbox 
@@ -117,17 +129,17 @@ include ../common.blocks/commentary/commentary.pug
                 +expandableCheckbox(expData2)
         .form-elements__row2-col2 
             .form-elements__dropdown-guests-expanded 
-                h3 dropdown 
+                h3.form-elements__dropdown-guests-expanded-header dropdown 
                 +iqdropdown({type: 'guests', class: 'menu-open', def1: '0', def2: '0'})
             .form-elements__rich-checkbox-buttons 
-                h3 rich checkbox buttons
+                h3.form-elements__rich-checkbox-buttons-header rich checkbox buttons
                 +richCheckbox
         .form-elements__row2-col3 
             .form-elements__dropdown-guests-expanded2 
-                h3 dropdown 
+                h3.form-elements__dropdown-guests-expanded2-header dropdown 
                 +iqdropdown({type: 'guests', class: 'menu-open', def1: '2', def2: '1'})
             .form-elements__bullet-list 
-                h3 bullet list
+                h3.form-elements__bullet-list-header bullet list
                 +bulletList
     .form-elements__row3 
         .form-elements__facilities 

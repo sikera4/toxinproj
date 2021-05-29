@@ -52,11 +52,11 @@
     color: #BC9CFF;
   }
 }
-.button_filled-disabled {
+.button_filled_disabled {
   opacity: 0.5;
   cursor: default;
 }
-.button_empty-disabled {
+.button_empty_disabled {
   cursor: default;
   &::before {
     opacity: 0.5;
@@ -68,7 +68,7 @@
     color: #BC9CFF;
   }
 }
-.button_noborder-disabled {
+.button_noborder_disabled {
   cursor: default;
   .button__text {
     color: rgba(31, 32, 65, 0.5);
