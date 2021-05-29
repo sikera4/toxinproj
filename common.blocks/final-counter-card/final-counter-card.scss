@@ -128,5 +128,6 @@
 @include scss-mixins-variables.media-xxxs {
   .final-counter-card {
     padding: 1.5rem 0.5rem;
+    max-width: 20rem;
   }
 }

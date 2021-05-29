@@ -1,0 +1,14 @@
+mixin chart
+    .chart 
+        h2.chart__header Впечатления от номера
+        .chart__container
+            .chart__doughnut
+                canvas.chart__diagram.js-reviews-chart
+                .chart__text-info 
+                    h1.chart__votes-num 260
+                    p.chart__votes голосов
+            ul.chart__legend
+                li.chart__grade-awesome Великолепно
+                li.chart__grade-good Хорошо
+                li.chart__grade-satisfactorily Удовлетворительно
+                li.chart__grade-disappointed Разочарован
