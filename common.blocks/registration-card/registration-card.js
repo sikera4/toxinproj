@@ -1,7 +1,7 @@
-import {maskedInput} from '../text-field/text-field';
+import maskedInput from '../text-field/text-field';
 
 function registrationCard() {
-    maskedInput();
+  maskedInput();
 }
 
-export {registrationCard};
+export default registrationCard;

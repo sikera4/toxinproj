@@ -1,9 +1,9 @@
-import { iqDropdown } from '../quantity-dropdown/quantity-dropdown';
-import { datepickerData } from '../datepicker-layout/datepicker-layout';
+import iqDropdown from '../quantity-dropdown/quantity-dropdown';
+import datepickerData from '../datepicker-layout/datepicker-layout';
 
 function finalCounterCard() {
-    iqDropdown('guests-info', 0);
-    datepickerData();
+  iqDropdown('guests-info', 0);
+  datepickerData();
 }
 
-export {finalCounterCard};
+export default finalCounterCard;

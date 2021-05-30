@@ -1,56 +1,86 @@
+/* eslint-disable no-undef */
+/* eslint-disable object-shorthand */
 import '../../node_modules/air-datepicker/dist/css/datepicker.min.css';
 import 'air-datepicker/dist/js/datepicker.min';
 
-function datepickerData() {
-    let $start = $('#start');
-    let $end = $('#end');
-    let datepickers = $('.datepicker-here');
-    let startDate = new Date(2019, 7, 19);
-    let finalDate = new Date(2019, 7, 23);
-    datepickers.datepicker({
-        prevHtml: '<span class="material-icons">arrow_back</span>',
-        nextHtml: '<span class="material-icons">arrow_forward</span>',
-        clearButton: true,
-        navTitles: {
-            days: 'MM yyyy'
-        },
-        offset: 5,
-        startDate: startDate,
-        range: true,
-        multipleDatesSeparator: '-',
-        onSelect: function(fd, date) {
-            $end.data('datepicker').update('selectedDates', $start.data('datepicker').selectedDates);
-            let start = fd.split('-')[0];
-            let end = fd.split('-')[1];
-            if (end) {
-                $start.val(start);
-                $end.val(end);
-            } else {
-                $end.val('');
-            }
-            console.log($start.data('datepicker'));
-        }
-    }).data('datepicker').selectDate(startDate, finalDate);
-    // removing that nasty arrow
-    $('.datepicker .datepicker--pointer').remove();
-    // inserting apply button
-    let applyBtn = $('<span class="apply-button" data-action="apply">применить</span>');
-    $('.datepicker .datepicker--buttons').append(applyBtn);
-    $("[data-action='apply']").on('click', function() {
-        datepickers.datepicker().data('datepicker').hide();
-    })
-    // making date selection look gorgeous :P
-    $('.datepicker .-range-from-').addClass('nobefore');
-    $('.datepicker .datepicker--cells-days').on('mouseover', function() {
-        if ($('.datepicker .-range-to-').length > 0) {
-            $('.datepicker .-range-from-').addClass('before');
-        }
-    })
-    $('.datepicker .datepicker--cells-days').on('mouseleave', function() {
-        if ($('.datepicker .-range-to-').length === 0) {
-            $('.datepicker .-range-from-').addClass('nobefore');
-        }
-    })
+function handleApplyButtonClick() {
+  const $datepickers = $('.datepicker-here');
+  $datepickers.datepicker().data('datepicker').hide();
 }
 
-export {datepickerData};
+function applyButtonInserter() {
+  const $applyBtn = $('<span class="apply-button" data-action="apply">применить</span>');
+  const $datepickerButtons = $('.datepicker .datepicker--buttons');
+  const $applyAction = $("[data-action='apply']");
+  $datepickerButtons.append($applyBtn);
+  $applyAction.on('click', handleApplyButtonClick());
+}
+
+function handleDayCellsMouseOver() {
+  const $rangeToCell = $('.datepicker .-range-to-');
+  const $rangeFromCell = $('.datepicker .-range-from-');
+  if ($rangeToCell.length > 0) {
+    $rangeFromCell.addClass('before');
+  }
+}
+
+function handleDayCellsMouseLeave() {
+  const $rangeToCell = $('.datepicker .-range-to-');
+  const $rangeFromCell = $('.datepicker .-range-from-');
+  if ($rangeToCell.length > 0) {
+    $rangeFromCell.addClass('nobefore');
+  }
+}
+
+function datepickerStylingConfig() {
+  const $datepickerArrow = $('.datepicker .datepicker--pointer');
+  const $rangeFromCell = $('.datepicker .-range-from-');
+  const $dayCells = $('.datepicker .datepicker--cells-days');
+  $rangeFromCell.addClass('nobefore');
+  // removing that nasty arrow
+  $datepickerArrow.remove();
+  $dayCells.on('mouseover', handleDayCellsMouseOver);
+  $dayCells.on('mouseleave', handleDayCellsMouseLeave);
+}
+
+function datepickerConfig() {
+  const $startInput = $('#start');
+  const $endInput = $('#end');
+  const $datepickers = $('.datepicker-here');
+  const startDate = new Date(2019, 7, 19);
+  const finalDate = new Date(2019, 7, 23);
+  $datepickers.datepicker({
+    prevHtml: '<span class="material-icons">arrow_back</span>',
+    nextHtml: '<span class="material-icons">arrow_forward</span>',
+    clearButton: true,
+    navTitles: {
+      days: 'MM yyyy',
+    },
+    offset: 5,
+    startDate: startDate,
+    range: true,
+    multipleDatesSeparator: '-',
+    // eslint-disable-next-line no-unused-vars
+    onSelect: function (fd, date) {
+      $endInput.data('datepicker').update('selectedDates', $startInput.data('datepicker').selectedDates);
+      const start = fd.split('-')[0];
+      const end = fd.split('-')[1];
+      if (end) {
+        $startInput.val(start);
+        $endInput.val(end);
+      } else {
+        $endInput.val('');
+      }
+    },
+  }).data('datepicker').selectDate(startDate, finalDate);
+}
+
+function datepickerMethods() {
+  datepickerConfig();
+  // inserting apply button
+  applyButtonInserter();
+  // making date selection look gorgeous :P
+  datepickerStylingConfig();
+}
+
+export default datepickerMethods;
