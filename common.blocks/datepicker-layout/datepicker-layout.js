@@ -32,7 +32,7 @@ function handleDayCellsMouseLeave() {
   }
 }
 
-function datepickerStylingConfig() {
+function makeDatepickerStyler() {
   const $datepickerArrow = $('.datepicker .datepicker--pointer');
   const $rangeFromCell = $('.datepicker .-range-from-');
   const $dayCells = $('.datepicker .datepicker--cells-days');
@@ -43,7 +43,7 @@ function datepickerStylingConfig() {
   $dayCells.on('mouseleave', handleDayCellsMouseLeave);
 }
 
-function datepickerConfig() {
+function makeDatepickerConfig() {
   const $startInput = $('#start');
   const $endInput = $('#end');
   const $datepickers = $('.datepicker-here');
@@ -75,12 +75,12 @@ function datepickerConfig() {
   }).data('datepicker').selectDate(startDate, finalDate);
 }
 
-function datepickerMethods() {
-  datepickerConfig();
+function makeDatepickerLauncher() {
+  makeDatepickerConfig();
   // inserting apply button
   applyButtonInserter();
   // making date selection look gorgeous :P
-  datepickerStylingConfig();
+  makeDatepickerStyler();
 }
 
-export default datepickerMethods;
+export default makeDatepickerLauncher;

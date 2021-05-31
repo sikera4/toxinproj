@@ -1,9 +1,9 @@
-import iqDropdown from '../quantity-dropdown/quantity-dropdown';
-import datepickerData from '../datepicker-layout/datepicker-layout';
+import makeDropdownLauncher from '../quantity-dropdown/quantity-dropdown';
+import makeDatepickerLauncher from '../datepicker-layout/datepicker-layout';
 
-function finalCounterCard() {
-  iqDropdown('guests-info', 0);
-  datepickerData();
+function makeFinalCounterCardLauncher() {
+  makeDropdownLauncher('guests-info', 0);
+  makeDatepickerLauncher();
 }
 
-export default finalCounterCard;
+export default makeFinalCounterCardLauncher;

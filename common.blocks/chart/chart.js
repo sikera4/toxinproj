@@ -1,6 +1,6 @@
 import Chart from 'chart.js/auto';
 
-function chartConstruct() {
+function makeChartConstructor() {
   const ctx = document.getElementsByClassName('js-reviews-chart')[0].getContext('2d');
 
   const gradientPurple = ctx.createLinearGradient(0, 0, 0, 120);
@@ -53,4 +53,4 @@ function chartConstruct() {
   });
 }
 
-export default chartConstruct;
+export default makeChartConstructor;

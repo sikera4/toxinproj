@@ -22,7 +22,7 @@ function clearButtonConfig(totalItems, clearBlockNum) {
   }
 }
 
-function guestsInfoDropdownConfig(clearBlockNum) {
+function makeGuestsInfoDropdown(clearBlockNum) {
   const $dropdown = $('.guests-info .iqdropdown');
   $dropdown.iqDropdown({
     controls: {
@@ -58,7 +58,7 @@ function guestsInfoDropdownConfig(clearBlockNum) {
   });
 }
 
-function roomTypeDropdownConfig() {
+function makeRoomTypeDropdown() {
   const $dropdown = $('.room-type .iqdropdown');
   $dropdown.iqDropdown({
     controls: {
@@ -100,12 +100,12 @@ function roomTypeDropdownConfig() {
   });
 }
 
-function iqDropdown(data, clearBlockNum) {
+function makeDropdownLauncher(data, clearBlockNum) {
   if (data === 'guests-info') {
-    guestsInfoDropdownConfig(clearBlockNum);
+    makeGuestsInfoDropdown(clearBlockNum);
   } else if (data === 'room-type') {
-    roomTypeDropdownConfig();
+    makeRoomTypeDropdown();
   }
 }
 
-export default iqDropdown;
+export default makeDropdownLauncher;

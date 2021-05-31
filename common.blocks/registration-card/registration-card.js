@@ -1,7 +1,7 @@
 import maskedInput from '../text-field/text-field';
 
-function registrationCard() {
+function makeRegistrationCardLauncher() {
   maskedInput();
 }
 
-export default registrationCard;
+export default makeRegistrationCardLauncher;

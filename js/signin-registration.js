@@ -1,20 +1,21 @@
 /* eslint-disable no-undef */
 import '../pages/scss/signin-registration.scss';
-import registrationCard from '../common.blocks/registration-card/registration-card';
-import menuBtn from '../common.blocks/header/header';
+import makeRegistrationCardLauncher from '../common.blocks/registration-card/registration-card';
+import makeMenuBtnClicker from '../common.blocks/header/header';
 
-function cardChange() {
-  const $emptyButton = $('.entry-page .button_empty');
+function handleSigninRegistrateButtonClick() {
   const $registrationCard = $('.entry-page__registration-card');
   const $entryCard = $('.entry-page__entry-card');
-  $emptyButton.on('click', () => {
-    $registrationCard.toggleClass('display-none');
-    $entryCard.toggleClass('display-none');
-  });
+  $registrationCard.toggleClass('display-none');
+  $entryCard.toggleClass('display-none');
 }
-
-$(() => {
-  cardChange();
-  registrationCard();
-  menuBtn();
-});
+function makeCardChanger() {
+  const $emptyButton = $('.entry-page .button_empty');
+  $emptyButton.on('click', handleSigninRegistrateButtonClick);
+}
+function makeSignInRegistrationPageElementsLauncher() {
+  makeCardChanger();
+  makeRegistrationCardLauncher();
+  makeMenuBtnClicker();
+}
+$(makeSignInRegistrationPageElementsLauncher());

@@ -1,23 +1,24 @@
 /* eslint-disable no-undef */
-import iqDropdown from '../common.blocks/quantity-dropdown/quantity-dropdown';
-import checkList from '../common.blocks/expandable-checkbox-list/expandable-checkbox-list';
-import sliderActivation from '../common.blocks/range-slider/range-slider';
-import menuBtn from '../common.blocks/header/header';
+import makeDropdownLauncher from '../common.blocks/quantity-dropdown/quantity-dropdown';
+import makeCheckListOpener from '../common.blocks/expandable-checkbox-list/expandable-checkbox-list';
+import makeSliderActivator from '../common.blocks/range-slider/range-slider';
+import makeMenuBtnClicker from '../common.blocks/header/header';
 import '../pages/scss/search-room.scss';
 
-function filter() {
-  const filterHeader = $('.search-room__filter-header');
-  const filterSettings = $('.search-room__filter-settings');
-  filterHeader.on('click', () => {
-    filterSettings.toggleClass('open');
-  });
+function handleFilterHeaderClick() {
+  const $filterSettings = $('.search-room__filter-settings');
+  $filterSettings.toggleClass('open');
 }
-
-$(() => {
-  checkList();
-  iqDropdown('guests-info');
-  iqDropdown('room-type');
-  sliderActivation();
-  filter();
-  menuBtn();
-});
+function makeFilterOpener() {
+  const $filterHeader = $('.search-room__filter-header');
+  $filterHeader.on('click', handleFilterHeaderClick);
+}
+function makeSearchRoomElementsLauncher() {
+  makeCheckListOpener();
+  makeDropdownLauncher('guests-info', 0);
+  makeDropdownLauncher('room-type');
+  makeSliderActivator();
+  makeFilterOpener();
+  makeMenuBtnClicker();
+}
+$(makeSearchRoomElementsLauncher());
