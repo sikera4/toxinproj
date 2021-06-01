@@ -6,7 +6,7 @@ import * as wNumb from 'wnumb';
 
 function makeSliderActivator() {
   const slider = document.getElementById('rangeslider');
-  const $sliderOutput = $('.rangeslider__output').eq(0);
+  const $sliderOutput = $('.js-rangeslider__output').eq(0);
 
   noUiSlider.create(slider, {
     start: [5000, 10000],

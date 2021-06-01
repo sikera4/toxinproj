@@ -1,12 +1,12 @@
 mixin expandableCheckbox(data)
-    .expchecklist
-        h3.expchecklist__header=data.header 
+    .expchecklist.js-expchecklist
+        h3.expchecklist__header.js-expchecklist__header=data.header 
             .expchecklist__icon
                 if (data.type === 'closed')
-                    span.material-icons expand_more
+                    span.material-icons.js-material-icons expand_more
                 else
-                    span.material-icons expand_less
-        .expchecklist__checkboxes(class=data.type)
+                    span.material-icons.js-material-icons expand_less
+        .expchecklist__checkboxes.js-expchecklist__checkboxes(class=data.type)
             .expchecklist__inputs
                 .expchecklist__box-1
                     input(type='checkbox' id='breakfast').breakfast

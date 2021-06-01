@@ -3,10 +3,10 @@ include ../common.blocks/page-layouts/page-layout.pug
 include ../common.blocks/registration-card/registration-card.pug
 include ../common.blocks/entry-card/entry-card.pug
 include ../common.blocks/footer/footer.pug
-.entry-page 
+.entry-page.js-entry-page  
     .entry-page__content 
-        .entry-page__registration-card
+        .entry-page__registration-card.js-entry-page__registration-card
             +registrationCard({registerBtn: true})
-        .entry-page__entry-card.display-none
+        .entry-page__entry-card.js-entry-page__entry-card.display-none
             +entryCard
 +footer

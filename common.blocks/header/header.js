@@ -1,11 +1,11 @@
 /* eslint-disable no-undef */
 function handleMenuButtonClick() {
-  const $btn = $('.header__menu-btn');
-  const $hamburger = $('.header__menu-btn-burger');
-  const $rightsideContent = $('.header__rightside-content');
-  const $nav = $('.header__nav');
-  const $navChildren = $('.header__nav').children();
-  const $headerBtns = $('.header__buttons');
+  const $btn = $('.js-header__menu-btn');
+  const $hamburger = $('.js-header__menu-btn-burger');
+  const $rightsideContent = $('.js-header__rightside-content');
+  const $nav = $('.js-header__nav');
+  const $navChildren = $('.js-header__nav').children();
+  const $headerBtns = $('.js-header__buttons');
   $btn.toggleClass('open');
   $hamburger.toggleClass('open');
   $rightsideContent.toggleClass('open');
@@ -15,7 +15,7 @@ function handleMenuButtonClick() {
 }
 
 function makeMenuBtnClicker() {
-  const $btn = $('.header__menu-btn');
+  const $btn = $('.js-header__menu-btn');
   $btn.on('click', handleMenuButtonClick);
 }
 

@@ -17,17 +17,17 @@ function applyButtonInserter() {
 }
 
 function handleDayCellsMouseOver() {
-  const $rangeToCell = $('.datepicker .-range-to-');
   const $rangeFromCell = $('.datepicker .-range-from-');
+  const $rangeToCell = $('.datepicker .-range-to-');
   if ($rangeToCell.length > 0) {
     $rangeFromCell.addClass('before');
   }
 }
 
 function handleDayCellsMouseLeave() {
-  const $rangeToCell = $('.datepicker .-range-to-');
   const $rangeFromCell = $('.datepicker .-range-from-');
-  if ($rangeToCell.length > 0) {
+  const $rangeToCell = $('.datepicker .-range-to-');
+  if ($rangeToCell.length === 0) {
     $rangeFromCell.addClass('nobefore');
   }
 }

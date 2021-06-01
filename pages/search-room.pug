@@ -12,10 +12,10 @@ include ../common.blocks/page-layouts/page-layout.pug
 main.search-room 
     .search-room__content
         .search-room__filter
-            .search-room__filter-header
+            .search-room__filter-header.js-search-room__filter-header
                 h2 Фильтр
                 span.material-icons sort
-            .search-room__filter-settings
+            .search-room__filter-settings.js-search-room__filter-settings
                 .search-room__filter-settings-col1
                     .search-room__datedropdown 
                         +dateDropdown({header: 'даты пребывания в отеле', placeholder: '19 авг - 23 авг', modif: 'date-dd_location_filter'})

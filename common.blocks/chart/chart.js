@@ -1,7 +1,7 @@
 import Chart from 'chart.js/auto';
 
 function makeChartConstructor() {
-  const ctx = document.getElementsByClassName('js-reviews-chart')[0].getContext('2d');
+  const ctx = document.getElementsByClassName('js-chart__diagram')[0].getContext('2d');
 
   const gradientPurple = ctx.createLinearGradient(0, 0, 0, 120);
   gradientPurple.addColorStop(0, '#BC9CFF');

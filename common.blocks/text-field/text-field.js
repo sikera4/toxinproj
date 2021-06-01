@@ -2,7 +2,7 @@
 import 'inputmask/dist/jquery.inputmask';
 
 function maskedInputLauncher() {
-  const $maskedInput = $('.masked input');
+  const $maskedInput = $('.js-masked input');
   // eslint-disable-next-line quote-props
   $maskedInput.inputmask('99.99.9999', { 'placeholder': 'ДД.ММ.ГГГГ' });
 }

@@ -14,7 +14,7 @@ function decrementButtonDisabler() {
 }
 
 function clearButtonConfig(totalItems, clearBlockNum) {
-  const $clearbl = $('.guests-info .clear').eq(clearBlockNum);
+  const $clearbl = $('.js-guests-info .js-clear').eq(clearBlockNum);
   if (totalItems > 0) {
     $clearbl.removeClass('not-visible');
   } else if (!$clearbl.hasClass('not-visible')) {
@@ -23,7 +23,7 @@ function clearButtonConfig(totalItems, clearBlockNum) {
 }
 
 function makeGuestsInfoDropdown(clearBlockNum) {
-  const $dropdown = $('.guests-info .iqdropdown');
+  const $dropdown = $('.js-guests-info .js-iqdropdown');
   $dropdown.iqDropdown({
     controls: {
       controlsCls: 'new-controls',
@@ -59,7 +59,7 @@ function makeGuestsInfoDropdown(clearBlockNum) {
 }
 
 function makeRoomTypeDropdown() {
-  const $dropdown = $('.room-type .iqdropdown');
+  const $dropdown = $('.js-room-type .js-iqdropdown');
   $dropdown.iqDropdown({
     controls: {
       controlsCls: 'new-controls',

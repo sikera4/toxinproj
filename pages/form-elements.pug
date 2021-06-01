@@ -34,7 +34,7 @@ include ../common.blocks/commentary/commentary.pug
                 +iqdropdown({type: 'guests'})
             .form-elements__tfmasked 
                 h3.form-elements__tfmasked-header masked text field
-                - const masked = {placeholder: 'ДД.ММ.ГГГГ', modif: 'masked', type: 'text'}
+                - const masked = {placeholder: 'ДД.ММ.ГГГГ', modif: 'js-masked', type: 'text'}
                 +textField(masked)
             .form-elements__datepickers 
                 - const dtpckr1 = {header: 'date dropdown', placeholder: 'ДД.ММ.ГГГГ'}

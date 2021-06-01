@@ -11,14 +11,14 @@ function changeCheckboxListArrows(checkbox, arrow) {
   }
 }
 function makeCheckListOpener() {
-  const $expandableCheckboxList = $('.expchecklist');
+  const $expandableCheckboxList = $('.js-expchecklist');
   for (let i = 0; i < $expandableCheckboxList.length; i += 1) {
-    const $checkListHeader = $expandableCheckboxList.eq(i).children('.expchecklist__header');
+    const $checkListHeader = $expandableCheckboxList.eq(i).children('.js-expchecklist__header');
     $checkListHeader.eq(0)
       .on('click', () => {
-        const $checkboxes = $('.expchecklist').eq(i).children('.expchecklist__checkboxes').eq(0);
+        const $checkboxes = $('.js-expchecklist').eq(i).children('.js-expchecklist__checkboxes').eq(0);
         toggleClassClosed($checkboxes);
-        const $icon = $('.expchecklist').eq(i).find('.material-icons').eq(0);
+        const $icon = $('.js-expchecklist').eq(i).find('.js-material-icons').eq(0);
         changeCheckboxListArrows($checkboxes, $icon);
       });
   }

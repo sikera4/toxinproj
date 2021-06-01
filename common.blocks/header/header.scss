@@ -133,6 +133,7 @@
           font-size: 2rem;
           margin-top: 2rem;
           margin-right: 0;
+          color: scss-mixins-variables.$dark100;
           transform: translateX(100vw);
           @include scss-mixins-variables.transition-ease;
           &.open {
@@ -158,6 +159,11 @@
     &__about_location_page {
       font-weight: normal;
       color: scss-mixins-variables.$dark50;
+    }
+    @include scss-mixins-variables.media-sm {
+      &__about_location_page {
+        color: scss-mixins-variables.$dark100;
+      }
     }
     &__services {
       display: flex;

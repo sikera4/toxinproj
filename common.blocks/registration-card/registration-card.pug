@@ -14,7 +14,7 @@ mixin registrationCard(data)
                 +radio
             .registration-card__date-of-birth 
                 h3.registration-card__date-of-birth-header дата рождения
-                +textField({placeholder: 'ДД.ММ.ГГГГ', modif: 'masked', type: 'text'})
+                +textField({placeholder: 'ДД.ММ.ГГГГ', modif: 'js-masked', type: 'text'})
             .registration-card__entry-data 
                 h3.registration-card__entry-data-header данные для входа в сервис
                 .registration-card__email-input
@@ -29,5 +29,5 @@ mixin registrationCard(data)
                     +button({type: 'button_long', text: 'зарегистрироваться'})
             .registration-card__entry-section 
                 .registration-card__entry-section-text Уже есть аккаунт на Toxin
-                +button({type: 'button_empty', text: 'войти'})
+                +button({type: 'button_empty js-card-switch-button', text: 'войти'})
 

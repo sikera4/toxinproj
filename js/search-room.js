@@ -6,11 +6,11 @@ import makeMenuBtnClicker from '../common.blocks/header/header';
 import '../pages/scss/search-room.scss';
 
 function handleFilterHeaderClick() {
-  const $filterSettings = $('.search-room__filter-settings');
+  const $filterSettings = $('.js-search-room__filter-settings');
   $filterSettings.toggleClass('open');
 }
 function makeFilterOpener() {
-  const $filterHeader = $('.search-room__filter-header');
+  const $filterHeader = $('.js-search-room__filter-header');
   $filterHeader.on('click', handleFilterHeaderClick);
 }
 function makeSearchRoomElementsLauncher() {

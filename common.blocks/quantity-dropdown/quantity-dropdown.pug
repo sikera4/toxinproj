@@ -1,7 +1,7 @@
 mixin iqdropdown(type)
     if (type.type === 'default')
-        .room-type
-            .iqdropdown 
+        .room-type.js-room-type
+            .iqdropdown.js-iqdropdown 
                 .icon
                     span.material-icons expand_more
                 p.iqdropdown-selection
@@ -16,8 +16,8 @@ mixin iqdropdown(type)
                         div 
                             h3.iqdropdown-item ванные комнаты
     else if (type.type === 'expanded')
-        .room-type
-            .iqdropdown.menu-open
+        .room-type.js-room-type
+            .iqdropdown.menu-open.js-iqdropdown
                 .icon
                     span.material-icons expand_more
                 p.iqdropdown-selection
@@ -32,8 +32,8 @@ mixin iqdropdown(type)
                         div 
                             h3.iqdropdown-item ванные комнаты
     else if (type.type === 'guests')
-        .guests-info
-            .iqdropdown(class=type.class)
+        .guests-info.js-guests-info
+            .iqdropdown(class=type.class).js-iqdropdown
                 .icon
                     span.material-icons expand_more
                 p.iqdropdown-selection
@@ -48,7 +48,7 @@ mixin iqdropdown(type)
                         div 
                             h3.iqdropdown-item младенцы
                     .buttons 
-                        - const btndt = {type: 'noborder clear not-visible', text: 'очистить'}
+                        - const btndt = {type: 'noborder clear js-clear not-visible', text: 'очистить'}
                         +button(btndt)
                         - const btndt2 = {type: 'noborder', text: 'применить'}
                         +button(btndt2)
