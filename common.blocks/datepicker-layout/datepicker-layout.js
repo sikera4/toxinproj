@@ -5,15 +5,19 @@ import 'air-datepicker/dist/js/datepicker.min';
 
 function handleApplyButtonClick() {
   const $datepickers = $('.datepicker-here');
-  $datepickers.datepicker().data('datepicker').hide();
+  for (let i = 0; i < $datepickers.length; i += 1) {
+    $datepickers.eq(i).datepicker().data('datepicker').hide();
+  }
 }
 
 function applyButtonInserter() {
   const $applyBtn = $('<span class="apply-button" data-action="apply">применить</span>');
   const $datepickerButtons = $('.datepicker .datepicker--buttons');
-  const $applyAction = $("[data-action='apply']");
   $datepickerButtons.append($applyBtn);
-  $applyAction.on('click', handleApplyButtonClick());
+  const $applyButtonSelector = $('.apply-button');
+  for (let i = 0; i < $applyButtonSelector.length; i += 1) {
+    $applyButtonSelector.eq(i).on('click', handleApplyButtonClick);
+  }
 }
 
 function handleDayCellsMouseOver() {

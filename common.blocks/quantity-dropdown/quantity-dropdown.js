@@ -14,12 +14,28 @@ function decrementButtonDisabler() {
 }
 
 function clearButtonConfig(totalItems, clearBlockNum) {
-  const $clearbl = $('.js-guests-info .js-clear').eq(clearBlockNum);
+  const $clearBlock = $('.js-guests-info .js-clear').eq(clearBlockNum);
   if (totalItems > 0) {
-    $clearbl.removeClass('not-visible');
-  } else if (!$clearbl.hasClass('not-visible')) {
-    $clearbl.addClass('not-visible');
+    $clearBlock.removeClass('not-visible');
+  } else if (!$clearBlock.hasClass('not-visible')) {
+    $clearBlock.addClass('not-visible');
   }
+}
+
+function handleClearButtonClick() {
+  // it's the best i could come up with
+  const $newControls = $('.new-controls');
+  $newControls.remove();
+  const $dropdownContainer = $('.js-guests-info');
+  const $removedDropdown = $('.js-guests-info .js-iqdropdown').remove();
+  $dropdownContainer.append($removedDropdown);
+  // eslint-disable-next-line no-use-before-define
+  makeGuestsInfoDropdown();
+}
+
+function makeClearButtonClickHandler() {
+  const $clearButton = $('.js-guests-info .js-clear');
+  $clearButton.on('click', handleClearButtonClick);
 }
 
 function makeGuestsInfoDropdown(clearBlockNum) {
@@ -56,6 +72,7 @@ function makeGuestsInfoDropdown(clearBlockNum) {
       return res;
     },
   });
+  makeClearButtonClickHandler(clearBlockNum);
 }
 
 function makeRoomTypeDropdown() {
