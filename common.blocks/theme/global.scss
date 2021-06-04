@@ -1,7 +1,7 @@
 @use './scss-mixins-variables';
-@use '../..//fonts/fonts';
-@import '../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
-@import '../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss';
+@use '../../fonts/fonts';
+@import '../../fonts/font-awesome/scss/fontawesome.scss';
+@import '../../fonts/font-awesome/scss/brands.scss';
 
 * {
   box-sizing: border-box;
