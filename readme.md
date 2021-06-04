@@ -27,6 +27,7 @@ To run the project you should go through the following steps
    ```sh
    npm install
    ```
+### Usage
 * To run the project in development mode use:
    ```sh
    npm start
