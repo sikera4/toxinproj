@@ -3,14 +3,14 @@
 The project represents layout practice project with live sliders, datepickers and dropdowns. 
 Model layout can be found here: https://www.figma.com/file/MumYcKVk9RkKZEG6dR5E3A/MetaLamp-(former-FSD)-frontend-education-program.-The-2nd-task?node-id=0%3A1
 The pages themselves can be found here:
-* [Colors & Type](https://sikera4.github.io/toxinproj/dist/colors-type.html)
-* [Form Elements](https://sikera4.github.io/toxinproj/dist/form-elements.html)
-* [Cards](https://sikera4.github.io/toxinproj/dist/cards.html)
-* [Headers & Footers](https://sikera4.github.io/toxinproj/dist/headers-footers.html)
-* [Landing Page](https://sikera4.github.io/toxinproj/dist/landing-page.html)
-* [Search Room](https://sikera4.github.io/toxinproj/dist/search-room.html)
-* [Room Details](https://sikera4.github.io/toxinproj/dist/room-details.html)
-* [Sign In / Registration Page](https://sikera4.github.io/toxinproj/dist/sign-in.html)
+* [Colors & Type](https://sikera4.github.io/toxinproj/colors-type.html)
+* [Form Elements](https://sikera4.github.io/toxinproj/form-elements.html)
+* [Cards](https://sikera4.github.io/toxinproj/cards.html)
+* [Headers & Footers](https://sikera4.github.io/toxinproj/headers-footers.html)
+* [Landing Page](https://sikera4.github.io/toxinproj/landing-page.html)
+* [Search Room](https://sikera4.github.io/toxinproj/search-room.html)
+* [Room Details](https://sikera4.github.io/toxinproj/room-details.html)
+* [Sign In / Registration Page](https://sikera4.github.io/toxinproj/sign-in.html)
 ### Built With
 * [Pug](https://pugjs.org/api/getting-started.html)
 * [SCSS](https://sass-lang.com)
